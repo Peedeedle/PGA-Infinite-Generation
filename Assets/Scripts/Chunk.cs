@@ -96,8 +96,10 @@ public static class Chunk
             // (calculate) get index from position (x,y,z)
             int index = GetIndexFromPosition(chunkData, x, y, z);
 
-            // return the chunk data blocks with index
-            return chunkData.blocks[index];
+            // reference to the world, return all of the data for x, y and z to the World script GetBlockFromChunkCoordinates()
+            // add the world position to the x, y and z to get the block coordinates in the world space
+            return chunkData.WorldReference.GetBlockFromChunkCoordinates
+                (chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
 
         } else {
 
@@ -158,14 +160,44 @@ public static class Chunk
 
 
 
+
     // mesh data that takes in the chunk data
     public static MeshData GetChunkMeshData(ChunkData chunkData) {
 
         // mesh data takes in a bool to generate mesh data
         MeshData meshData = new MeshData(true);
 
-        // return the mesh data
+        // loop through the blocks and look for each block in chunkData, pass in x,y,z coordinate, set meshData = BlockHelper
+        // GetMeshData method and pass in chunkData, x, y, z, meshData, chunkData.blocks, select specific block by using the
+        // GetIndexFromPosition method, pass in chunkData, x, y, z
+        LoopThroughTheBlocks(chunkData, (x, y, z) => meshData = 
+        BlockHelper.GetMeshData(chunkData, x, y, z, meshData, chunkData.blocks[GetIndexFromPosition(chunkData, x, y, z)]));
+
+        // return the mesh data so then it can be generated
         return meshData;
 
     }
+
+    // take the x,y,x coordinates from a specific block in the world coordinates
+    internal static Vector3Int ChunkPositionFromBlockCoords(World world, int x, int y, int z) {
+
+        // create a new vector 3 int called pos
+        Vector3Int pos = new Vector3Int {
+
+            // floor to int, x divided by float world chunk size to get a valid position of the chunk
+            x = Mathf.FloorToInt(x / (float)world.chunkSize) * world.chunkSize,
+
+            // floor to int, y divided by float world chunk height to get a valid position of the chunk
+            y = Mathf.FloorToInt(y / (float)world.chunkHeight) * world.chunkHeight,
+
+            // floor to int, z divided by float world chunk size to get a valid position of the chunk
+            z = Mathf.FloorToInt(z / (float)world.chunkSize) * world.chunkSize,
+
+        };
+
+        // return the position value
+        return pos;
+
+    }
+
 }
