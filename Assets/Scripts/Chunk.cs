@@ -96,18 +96,17 @@ public static class Chunk
             // (calculate) get index from position (x,y,z)
             int index = GetIndexFromPosition(chunkData, x, y, z);
 
+            // return the chunk data blocks with the index
+            return chunkData.blocks[index];
+
+        }
+
             // reference to the world, return all of the data for x, y and z to the World script GetBlockFromChunkCoordinates()
             // add the world position to the x, y and z to get the block coordinates in the world space
             return chunkData.WorldReference.GetBlockFromChunkCoordinates
                 (chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
 
-        } else {
-
-            // 
-            throw new Exception("Ask world for appropriate chunk");
-
-        }
-
+        
 
     }
 

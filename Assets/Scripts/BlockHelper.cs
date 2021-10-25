@@ -41,10 +41,14 @@ public static class BlockHelper
     public static MeshData GetMeshData (ChunkData chunk, int x, int y, int z, MeshData meshData, BlockType blockType) {
 
         // if the block type is air or nothing (do not render those blocks)
-        if (blockType == BlockType.Air || blockType == BlockType.Nothing)
+        if (blockType == BlockType.Air || blockType == BlockType.Nothing) {
 
             // Retun the meshData
             return meshData;
+
+        }
+
+            
 
         // look for each direction
         foreach (Direction direction in directions) {
@@ -64,10 +68,14 @@ public static class BlockHelper
                 if (blockType == BlockType.Water) {
 
                     // if the water is a neighbout of the air
-                    if (neighbourBlockType == BlockType.Air)
+                    if (neighbourBlockType == BlockType.Air) {
 
                         // generate face on the water mesh
                         meshData.waterMesh = GetFaceDataIn(direction, chunk, x, y, z, meshData.waterMesh, blockType);
+
+                    }
+
+                        
 
                 } else {
 
@@ -240,6 +248,12 @@ public static class BlockHelper
                 // break the switch statement
                 break;
 
+            //
+            default:
+
+                //
+                break;
+
         }
 
     }
@@ -261,16 +275,16 @@ public static class BlockHelper
         // new vector 2 taking in the tile size * tile position texture
         // - offset of the texture to avoid errors of computers storing float values (do the same for the Y)
         UVs[1] = new Vector2(BlockDataManager.tileSizeX * tilePos.x + BlockDataManager.tileSizeX - BlockDataManager.textureOffset,
-            BlockDataManager.tileSizeY * tilePos.y + BlockDataManager.textureOffset);
+            BlockDataManager.tileSizeY * tilePos.y + BlockDataManager.tileSizeY - BlockDataManager.textureOffset);
 
         // new vector 2 taking in the tile size * tile position texture
         // - offset of the texture to avoid errors of computers storing float values (do the same for the Y)
-        UVs[2] = new Vector2(BlockDataManager.tileSizeX * tilePos.x + BlockDataManager.tileSizeX - BlockDataManager.textureOffset,
-            BlockDataManager.tileSizeY * tilePos.y + BlockDataManager.textureOffset);
+        UVs[2] = new Vector2(BlockDataManager.tileSizeX * tilePos.x + BlockDataManager.textureOffset,
+            BlockDataManager.tileSizeY * tilePos.y + BlockDataManager.tileSizeY - BlockDataManager.textureOffset);
 
         // new vector 2 taking in the tile size * tile position texture
         // - offset of the texture to avoid errors of computers storing float values (do the same for the Y)
-        UVs[3] = new Vector2(BlockDataManager.tileSizeX * tilePos.x + BlockDataManager.tileSizeX - BlockDataManager.textureOffset,
+        UVs[3] = new Vector2(BlockDataManager.tileSizeX * tilePos.x + BlockDataManager.textureOffset,
             BlockDataManager.tileSizeY * tilePos.y + BlockDataManager.textureOffset);
 
         // Return the UVs
