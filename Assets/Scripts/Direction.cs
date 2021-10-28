@@ -17,11 +17,11 @@ public enum Direction
     // +Z direction
     forward,
 
-    // -Z direction
-    backwards,
-
     // +X direction
     right,
+
+    // -Z direction
+    backwards,
 
     // -X direction
     left,
