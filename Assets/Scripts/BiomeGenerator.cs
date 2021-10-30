@@ -18,18 +18,17 @@ public class BiomeGenerator : MonoBehaviour
     // int for the water threshold (water surface at specific height)
     public int waterThreshold = 50;
 
-    // int for the noise scale of the chunk / mesh (Generate noise (Perlin Noise))
-    public float noiseScale = 0.03f;
+    // reference to the noise settings called biomeNoiseSettings
+    public NoiseSettings biomeNoiseSettings;
 
     // Generate the chunk data using the data and a int for the x, z and a vector 2 for the mapSeedOffset
-    public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset) { 
+    public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset) {
 
-        // generate noise value to set level of the ground using world position (x and z values) then * noiseScale
-        float noiseValue = Mathf.PerlinNoise((mapSeedOffset.x + data.worldPosition.x + x) * noiseScale,
-            (mapSeedOffset.y + data.worldPosition.z + z) * noiseScale);
+        // noise settings world offset = mapSeedOffset
+        biomeNoiseSettings.worldOffset = mapSeedOffset;
 
         // int for ground position where dirt and grass will be generated, above = air, below = water etc
-        int groundPosition = Mathf.RoundToInt(noiseValue * data.chunkHeight);
+        int groundPosition = GetSurfaceHeightNoise(data.worldPosition.x + x, data.worldPosition.z + z, data.chunkHeight);
 
         // look for each z local coordinate from 0 - chunkHeight
         // for chunks above the ground
@@ -74,6 +73,24 @@ public class BiomeGenerator : MonoBehaviour
 
         // Return the data
         return data;
+
+    }
+
+    // get the surface height noise using ints for x, z and the chunk height for y
+    private int GetSurfaceHeightNoise(int x, int z, int chunkHeight) {
+
+        // float for the terrain height = MyNoise script.OctavePerlin (Amplitude + frequency etc)
+        // and x,z and biomenoise settings for y
+        float terrainHeight = MyNoise.OctavePerlin(x, z, biomeNoiseSettings);
+
+        // terrain height = redistribution passing in the terrain height and the noise settings
+        terrainHeight = MyNoise.Redistribution(terrainHeight, biomeNoiseSettings);
+
+        // surface height = remapped value int from 0-1 passing in the terrainHeight(x), 0(z), chunkheight(y)
+        int surfaceHeight = (int)MyNoise.RemapValue01ToInt(terrainHeight, 0, chunkHeight);
+
+        // return the surface height
+        return surfaceHeight;
 
     }
 }
