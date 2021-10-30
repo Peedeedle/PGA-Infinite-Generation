@@ -17,10 +17,11 @@ public enum BlockType
     // Block types
     Nothing,
     Air,
+    Grass_Dirt,
     Dirt,
-    Grass,
-    //Stone,
-    Water
+    Stone,
+    Water,
+    Sand
 
 
 }

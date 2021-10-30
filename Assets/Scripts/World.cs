@@ -23,14 +23,14 @@ public class World : MonoBehaviour
     // int for the chunk size and chunk height
     public int chunkSize = 16, chunkHeight = 16;
 
-    // int for the water threshold (water surface at specific height)
-    public int waterThreshold = 50;
-
-    // int for the noise scale of the chunk / mesh (Generate noise (Perlin Noise))
-    public float noiseScale = 0.03f;
-
     // chunk prefab GameObject
     public GameObject chunkPrefab;
+
+    // Reference to the terrain generator script
+    public TerrainGenerator terrainGenerator;
+
+    // vector 2 int for the map seed offset (allowing different seeds and randomization etc)
+    public Vector2Int mapSeedOffset;
 
 
     // Dictionary of Vector3Ints and ChunkData (Store the data of chunks we want to generate on map)
@@ -70,10 +70,13 @@ public class World : MonoBehaviour
                 ChunkData data = new ChunkData(chunkSize, chunkHeight, this, new Vector3Int(x * chunkSize, 0, z * chunkSize));
 
                 // Generate the voxels using data
-                GenerateVoxels(data);
+                //GenerateVoxels(data);
 
-                // add to the chunkDataDictionary
-                chunkDataDictionary.Add(data.worldPosition, data);
+                // new chunk data of the terrainGenerator. call GenerateChunkData method passing through data and the mapSeedOffset
+                ChunkData newData = terrainGenerator.GenerateChunkData(data, mapSeedOffset);
+
+                // add to the chunkDataDictionary (pass in new data to the dictionary^^)
+                chunkDataDictionary.Add(newData.worldPosition, data);
 
             }
 
@@ -109,58 +112,7 @@ public class World : MonoBehaviour
     // Generate Voxels which takes in the chunk data
     private void GenerateVoxels(ChunkData data) {
 
-        // look for each x local coordinate from 0 - chunksize
-        for (int x = 0; x < data.chunkSize; x++) {
-
-            // look for each z local coordinate from 0 - chunksize
-            for (int z = 0; z < data.chunkSize; z++) {
-
-                // generate noise value to set level of the ground using world position (x and z values) then * noiseScale
-                float noiseValue = Mathf.PerlinNoise((data.worldPosition.x + x) * noiseScale, 
-                    (data.worldPosition.z + z) * noiseScale);
-
-                // int for ground position where dirt and grass will be generated, above = air, below = water etc
-                int groundPosition = Mathf.RoundToInt(noiseValue * chunkHeight);
-
-                // look for each z local coordinate from 0 - chunkHeight
-                // for chunks above the ground
-                for (int y = 0; y < chunkHeight; y++) {
-
-                    // create block type of dirt
-                    BlockType voxelType = BlockType.Dirt;
-
-                    // if y value is more than ground position
-                    if (y > groundPosition) {
-
-                        // if y value is less than the water threshold
-                        if (y < waterThreshold) {
-
-                            // block type = water
-                            voxelType = BlockType.Water;
-
-                        } else {
-
-                            // else the block type is air
-                            voxelType = BlockType.Air;
-
-                        }
-
-                        // else if y is = to the ground position
-                    } else if (y == groundPosition) {
-
-                        // block type = grass
-                        voxelType = BlockType.Grass;
-
-                    }
-
-                    //  if none of these "if" are met, use voxel type dirt of Chunk on Line 62
-                    Chunk.SetBlock(data, new Vector3Int(x, y, z), voxelType);
-
-                }
-
-            }
-
-        }
+        
 
     }
 
