@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 30/10/21
+// Date Last Edited: 02/11/21
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
@@ -15,14 +15,23 @@ using UnityEngine;
 public class BiomeGenerator : MonoBehaviour
 {
 
+    // rreference to the domain warping script 
+    public DomainWarping domainWarping;
+
+    // bool for using the domain warping or not
+    public bool useDomainWarping = true;
+
     // int for the water threshold (water surface at specific height)
     public int waterThreshold = 50;
 
     // reference to the noise settings called biomeNoiseSettings
     public NoiseSettings biomeNoiseSettings;
 
-    //
+    // blockLayerHandler called startLayerHandler
     public BlockLayerHandler startLayerHandler;
+
+    // list of the blocklayerhandlers called additionLayerHandlers
+    public List<BlockLayerHandler> additionalLayerHandlers;
 
     // Generate the chunk data using the data and a int for the x, z and a vector 2 for the mapSeedOffset
     public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset) {
@@ -78,6 +87,14 @@ public class BiomeGenerator : MonoBehaviour
 
         }
 
+        // for each layer in additionalLayersHandlers
+        foreach (var layer in additionalLayerHandlers) {
+
+            // Handle the layer, pass through data, x position, data.worldPosition.y, z position, groundPosition and mapSeedOffset 
+            layer.Handle(data, x, data.worldPosition.y, z, groundPosition, mapSeedOffset);
+
+        }
+
         // Return the data
         return data;
 
@@ -86,9 +103,25 @@ public class BiomeGenerator : MonoBehaviour
     // get the surface height noise using ints for x, z and the chunk height for y
     private int GetSurfaceHeightNoise(int x, int z, int chunkHeight) {
 
-        // float for the terrain height = MyNoise script.OctavePerlin (Amplitude + frequency etc)
-        // and x,z and biomenoise settings for y
-        float terrainHeight = MyNoise.OctavePerlin(x, z, biomeNoiseSettings);
+        // float terrainHeight
+        float terrainHeight;
+
+        // if use domain warping is false
+        if (useDomainWarping == false) {
+
+            // float for the terrain height = MyNoise script.OctavePerlin (Amplitude + frequency etc)
+            // and x,z and biomenoise settings for y
+            terrainHeight = MyNoise.OctavePerlin(x, z, biomeNoiseSettings);
+
+        } else {
+
+            // float for the terrain height = domain warping generateDomainNoise using the x, z, and biome noise settings
+            terrainHeight = domainWarping.GenerateDomainNoise(x, z, biomeNoiseSettings);
+
+        }
+
+        
+
 
         // terrain height = redistribution passing in the terrain height and the noise settings
         terrainHeight = MyNoise.Redistribution(terrainHeight, biomeNoiseSettings);
@@ -100,4 +133,5 @@ public class BiomeGenerator : MonoBehaviour
         return surfaceHeight;
 
     }
+
 }

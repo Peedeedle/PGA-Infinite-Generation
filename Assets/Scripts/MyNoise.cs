@@ -14,6 +14,7 @@ using UnityEngine;
 public static class MyNoise
 {
 
+
     // public static float for Remapping the values, from the (minvalue) 0---1 (Max value), (OutputMin) 0---HeightOfChunk (OutputMax)
     public static float RemapValue(float value, float initialMin, float initialMax, float outputMin, float outputMax) {
 
@@ -70,12 +71,13 @@ public static class MyNoise
         // normalize value between 0-1
         float amplitudeSum = 0;
 
+        
         // for each number of octaves
         for (int i = 0; i < settings.octaves; i++) {
 
             // Calculate the total, perlin noise, offset for noise settings and the world offset to include the seed for
             // the generation, multiply by frequency, multiply perlin noise by amplitude
-            total += Mathf.PerlinNoise((settings.offset.x + settings.worldOffset.x + x) * frequency, 
+            total += Mathf.PerlinNoise((settings.offset.x + settings.worldOffset.x + x) * frequency,
                 (settings.offset.y + settings.worldOffset.y + z) * frequency) * amplitude;
 
             // amplitude sum = amplitude (normalize value)
@@ -89,9 +91,12 @@ public static class MyNoise
 
         }
 
+
         // return value of the total value of the noise divided by the sum of the amplitude
         return total / amplitudeSum;
 
     }
+
+
 
 }

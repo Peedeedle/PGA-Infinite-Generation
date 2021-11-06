@@ -17,6 +17,8 @@ using UnityEngine;
 public class World : MonoBehaviour
 {
 
+
+
     // int for map size in chunks
     public int mapSizeInChunks = 6;
 
@@ -45,10 +47,10 @@ public class World : MonoBehaviour
     // Generate the World / Meshes
     public void GenerateWorld() {
 
-        // clear the chunk data dictionary
+        ////// clear the chunk data dictionary
         chunkDataDictionary.Clear();
 
-        // for each (ALL) chunk in the ChunkDataDictionary
+        ////// for each (ALL) chunk in the ChunkDataDictionary
         foreach (ChunkRenderer chunk in chunkDictionary.Values) {
 
             // destroy the chunks
@@ -56,8 +58,11 @@ public class World : MonoBehaviour
 
         }
 
-        // clear the ChunkDictionary
+        //clear the ChunkDictionary
         chunkDictionary.Clear();
+
+        //
+        //WorldGenerationData worldGenerationData = GetStartingPosition(Vector3Int.zero);
 
         // for each x value in the mapSizeInChunks
         for (int x = 0; x < mapSizeInChunks; x++) {
@@ -107,6 +112,14 @@ public class World : MonoBehaviour
 
     }
 
+    /*
+    private WorldGenerationData GetStartingPosition(Vector3Int zero) {
+        
+        
+        throw new NotImplementedException();
+
+    }
+    */
 
 
     // Generate Voxels which takes in the chunk data
@@ -142,6 +155,27 @@ public class World : MonoBehaviour
         return Chunk.GetBlockFromChunkCoordinates(containerChunk, blockInChunkCoordinates);
 
     }
+
+    /*
+
+    //
+    public struct WorldGenerationData
+    {
+
+        //
+        public List<Vector3Int> chunkPositionsToCreate;
+
+        //
+        public List<Vector3Int> chunkDataPositionsToCreate;
+
+
+        //
+        //public List<Vector3Int> GetStartingPosition;
+
+    }
+
+    */
+
 }
 
 /*
