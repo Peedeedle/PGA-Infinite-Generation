@@ -21,6 +21,13 @@ public class TerrainGenerator : MonoBehaviour
     // Generate the chunk data using the data and a vector 2 for the mapSeedOffset
     public ChunkData GenerateChunkData(ChunkData data, Vector2Int mapSeedOffset) {
 
+        // tree data = GetTreeData passing in the data and mapSeedOffset
+        TreeData treeData = biomeGenerator.GetTreeData(data, mapSeedOffset);
+
+        // include data from the tree data
+        // (Include data before world is rendered)
+        data.treeData = treeData;
+
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {
 

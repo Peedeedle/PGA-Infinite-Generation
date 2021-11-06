@@ -24,6 +24,13 @@ public class BiomeGenerator : MonoBehaviour
     // int for the water threshold (water surface at specific height)
     public int waterThreshold = 50;
 
+    internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        //
+        throw new NotImplementedException();
+
+    }
+
     // reference to the noise settings called biomeNoiseSettings
     public NoiseSettings biomeNoiseSettings;
 

@@ -34,6 +34,9 @@ public class ChunkData
     // bool for if something has been modified by the player
     public bool modifiedByThePlayer = false;
 
+    //
+    internal TreeData treeData;
+
 
     // Contructor for the chunk data
     public ChunkData (int chunkSize, int chunkHeight, World world, Vector3Int worldPosition) {
