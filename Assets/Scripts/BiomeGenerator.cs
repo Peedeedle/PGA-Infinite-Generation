@@ -7,6 +7,8 @@
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
+/*
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,21 +26,36 @@ public class BiomeGenerator : MonoBehaviour
     // int for the water threshold (water surface at specific height)
     public int waterThreshold = 50;
 
-    internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
-
-        //
-        throw new NotImplementedException();
-
-    }
-
     // reference to the noise settings called biomeNoiseSettings
     public NoiseSettings biomeNoiseSettings;
 
     // blockLayerHandler called startLayerHandler
     public BlockLayerHandler startLayerHandler;
 
+
+    // tree generator
+    public TreeGenerator treeGenerator;
+
+    //
+    internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // if tree generator = null (Don't generate trees)
+        if (treeGenerator == null) 
+
+            // return tree data values which are 0
+            return new TreeData();
+
+        // return generate tree with data and map seed offset for positions
+        return treeGenerator.GenerateTreeData(data, mapSeedOffset);
+
+        
+
+    }
+
+
     // list of the blocklayerhandlers called additionLayerHandlers
     public List<BlockLayerHandler> additionalLayerHandlers;
+
 
     // Generate the chunk data using the data and a int for the x, z and a vector 2 for the mapSeedOffset
     public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset) {
@@ -55,42 +72,6 @@ public class BiomeGenerator : MonoBehaviour
 
             //start handling the layers with the inputs
             startLayerHandler.Handle(data, x, y, z, groundPosition, mapSeedOffset);
-
-
-            //// create block type of dirt
-            //BlockType voxelType = BlockType.Dirt;
-
-            //// if y value is more than ground position
-            //if (y > groundPosition) {
-
-            //    // if y value is less than the water threshold
-            //    if (y < waterThreshold) {
-
-            //        // block type = water
-            //        voxelType = BlockType.Water;
-
-            //    } else {
-
-            //        // else the block type is air
-            //        voxelType = BlockType.Air;
-
-            //    }
-
-            //    // else if y is = to the ground position and y is less than the water threshold
-            //} else if (y == groundPosition && y < waterThreshold) {
-
-            //    // block type = sand
-            //    voxelType = BlockType.Sand;
-
-            //} else if (y == groundPosition) {
-
-            //    // block type = grass dirt
-            //    voxelType = BlockType.Grass_Dirt;
-
-            //}
-
-            ////  if none of these "if" are met, use voxel type dirt of Chunk on Line 62
-            //Chunk.SetBlock(data, new Vector3Int(x, y, z), voxelType);
 
         }
 
@@ -141,4 +122,65 @@ public class BiomeGenerator : MonoBehaviour
 
     }
 
+}
+*/
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BiomeGenerator : MonoBehaviour
+{
+    public int waterThreshold = 50;
+
+    public NoiseSettings biomeNoiseSettings;
+
+    public DomainWarping domainWarping;
+
+    public bool useDomainWarping = true;
+
+    public BlockLayerHandler startLayerHandler;
+
+    public TreeGenerator treeGenerator;
+
+    internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+        if (treeGenerator == null)
+            return new TreeData();
+        return treeGenerator.GenerateTreeData(data, mapSeedOffset);
+    }
+
+    public List<BlockLayerHandler> additionalLayerHandlers;
+
+    public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset, int? terrainHeightNoise) {
+        biomeNoiseSettings.worldOffset = mapSeedOffset;
+
+        int groundPosition;
+        if (terrainHeightNoise.HasValue == false)
+            groundPosition = GetSurfaceHeightNoise(data.worldPosition.x + x, data.worldPosition.z + z, data.chunkHeight);
+        else
+            groundPosition = terrainHeightNoise.Value;
+
+        for (int y = data.worldPosition.y; y < data.worldPosition.y + data.chunkHeight; y++) {
+            startLayerHandler.Handle(data, x, y, z, groundPosition, mapSeedOffset);
+        }
+
+        foreach (var layer in additionalLayerHandlers) {
+            layer.Handle(data, x, data.worldPosition.y, z, groundPosition, mapSeedOffset);
+        }
+        return data;
+    }
+
+    public int GetSurfaceHeightNoise(int x, int z, int chunkHeight) {
+        float terrainHeight;
+        if (useDomainWarping == false) {
+            terrainHeight = MyNoise.OctavePerlin(x, z, biomeNoiseSettings);
+        } else {
+            terrainHeight = domainWarping.GenerateDomainNoise(x, z, biomeNoiseSettings);
+        }
+
+        terrainHeight = MyNoise.Redistribution(terrainHeight, biomeNoiseSettings);
+        int surfaceHeight = MyNoise.RemapValue01ToInt(terrainHeight, 0, chunkHeight);
+        return surfaceHeight;
+    }
 }

@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 1219438273}
   - component: {fileID: 1219438272}
   - component: {fileID: 1219438274}
+  - component: {fileID: 1219438275}
   m_Layer: 0
   m_Name: BiomeGenerator
   m_TagString: Untagged
@@ -727,8 +728,10 @@ MonoBehaviour:
   waterThreshold: 6
   biomeNoiseSettings: {fileID: 11400000, guid: 0f66064339a10fe4d8e1bcbcfd84b482, type: 2}
   startLayerHandler: {fileID: 1557547812}
+  treeGenerator: {fileID: 1219438275}
   additionalLayerHandlers:
   - {fileID: 1221505229}
+  - {fileID: 1332322779}
 --- !u!4 &1219438273
 Transform:
   m_ObjectHideFlags: 0
@@ -764,6 +767,20 @@ MonoBehaviour:
   noiseDomainY: {fileID: 11400000, guid: 5a5699e3dfeb0a242b805253b1963b4c, type: 2}
   amplitudeX: 80
   amplitudeY: 80
+--- !u!114 &1219438275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219438271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9151f6ab78f3c3d4a9556f212f5ebf4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeNoiseSettings: {fileID: 11400000, guid: 8c0b0054e4b63e54cb085099c245ff82, type: 2}
+  domainWarping: {fileID: 1219438274}
 --- !u!1 &1221505227
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +877,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1332322777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332322778}
+  - component: {fileID: 1332322779}
+  m_Layer: 0
+  m_Name: TreeLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1332322778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332322777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1531631817}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332322779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332322777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0d82728231e6e4c8f9f0957a03e808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Next: {fileID: 0}
+  terrainHeightLimit: 25
 --- !u!1 &1531631816
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +950,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1221505228}
+  - {fileID: 1332322778}
   m_Father: {fileID: 1219438273}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

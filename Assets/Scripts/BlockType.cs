@@ -21,7 +21,9 @@ public enum BlockType
     Dirt,
     Stone,
     Water,
-    Sand
+    Sand,
+    TreeLog,
+    TreeLeavesSolid
 
 
 }

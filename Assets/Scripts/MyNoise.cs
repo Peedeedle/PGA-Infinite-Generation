@@ -32,7 +32,7 @@ public static class MyNoise
     }
 
     // public static float for Remapping the value to an int
-    public static float RemapValue01ToInt(float value, float outputMin, float outputMax) {
+    public static int RemapValue01ToInt(float value, float outputMin, float outputMax) {
 
         // cast RemapValue01 to an int and then return it
         return (int)RemapValue01(value, outputMin, outputMax);
