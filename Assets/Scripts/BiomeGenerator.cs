@@ -3,11 +3,10 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 02/11/21
+// Date Last Edited: 11/11/21
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
-/*
 
 using System;
 using System.Collections;
@@ -17,24 +16,25 @@ using UnityEngine;
 public class BiomeGenerator : MonoBehaviour
 {
 
-    // rreference to the domain warping script 
-    public DomainWarping domainWarping;
-
-    // bool for using the domain warping or not
-    public bool useDomainWarping = true;
-
     // int for the water threshold (water surface at specific height)
     public int waterThreshold = 50;
 
     // reference to the noise settings called biomeNoiseSettings
     public NoiseSettings biomeNoiseSettings;
 
+    // rreference to the domain warping script 
+    public DomainWarping domainWarping;
+
+    // bool for using the domain warping or not
+    public bool useDomainWarping = true;
+
     // blockLayerHandler called startLayerHandler
     public BlockLayerHandler startLayerHandler;
 
-
     // tree generator
     public TreeGenerator treeGenerator;
+
+
 
     //
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
@@ -58,17 +58,31 @@ public class BiomeGenerator : MonoBehaviour
 
 
     // Generate the chunk data using the data and a int for the x, z and a vector 2 for the mapSeedOffset
-    public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset) {
+    public ChunkData ProcessChunkColumn(ChunkData data, int x, int z, Vector2Int mapSeedOffset, int? terrainHeightNoise) {
 
         // noise settings world offset = mapSeedOffset
         biomeNoiseSettings.worldOffset = mapSeedOffset;
 
         // int for ground position where dirt and grass will be generated, above = air, below = water etc
-        int groundPosition = GetSurfaceHeightNoise(data.worldPosition.x + x, data.worldPosition.z + z, data.chunkHeight);
+        int groundPosition; //= GetSurfaceHeightNoise(data.worldPosition.x + x, data.worldPosition.z + z, data.chunkHeight);
+
+        //
+        if(terrainHeightNoise.HasValue == false) {
+
+            //
+            groundPosition = GetSurfaceHeightNoise(data.worldPosition.x + x, data.worldPosition.z + z, data.chunkHeight);
+
+        }
+        else {
+
+            //
+            groundPosition = terrainHeightNoise.Value;
+
+        }
 
         // look for each z local coordinate from 0 - chunkHeight
         // for chunks above the ground
-        for (int y = 0; y < data.chunkHeight; y++) {
+        for (int y = data.worldPosition.y; y < data.worldPosition.y + data.chunkHeight; y++){ //0; y < data.chunkHeight; y++) {
 
             //start handling the layers with the inputs
             startLayerHandler.Handle(data, x, y, z, groundPosition, mapSeedOffset);
@@ -89,7 +103,7 @@ public class BiomeGenerator : MonoBehaviour
     }
 
     // get the surface height noise using ints for x, z and the chunk height for y
-    private int GetSurfaceHeightNoise(int x, int z, int chunkHeight) {
+    public int GetSurfaceHeightNoise(int x, int z, int chunkHeight) {
 
         // float terrainHeight
         float terrainHeight;
@@ -123,7 +137,8 @@ public class BiomeGenerator : MonoBehaviour
     }
 
 }
-*/
+
+/*
 
 using System;
 using System.Collections;
@@ -184,3 +199,5 @@ public class BiomeGenerator : MonoBehaviour
         return surfaceHeight;
     }
 }
+
+*/

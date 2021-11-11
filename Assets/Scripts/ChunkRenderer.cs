@@ -45,6 +45,8 @@ public class ChunkRenderer : MonoBehaviour
     // Reference to the chunk data property
     public ChunkData ChunkData { get; private set; }
 
+    
+
     // bool for if the player modifies chunks
     public bool ModifiedByThePlayer {
 
@@ -64,6 +66,8 @@ public class ChunkRenderer : MonoBehaviour
         }
 
     }
+
+    
 
     // On awake
     private void Awake() {
@@ -93,11 +97,13 @@ public class ChunkRenderer : MonoBehaviour
         // Clear the current mesh
         mesh.Clear();
 
+
         // Different material for each submesh (good for water)
         mesh.subMeshCount = 2;
 
         // set vertices = vertices in mesh data, add the vertices from water mesh and the mesh data (Concatenate)
         mesh.vertices = meshData.lVertices.Concat(meshData.waterMesh.lVertices).ToArray();
+
 
         // Each submesh needs it's own triangles set seperately, set the mesh data (index of 0) triangles 
         mesh.SetTriangles(meshData.iTriangles.ToArray(), 0);
@@ -105,11 +111,13 @@ public class ChunkRenderer : MonoBehaviour
         // set the water mesh triangles, set the value to the mesh data vertices count to array, with a index of 1
         mesh.SetTriangles(meshData.waterMesh.iTriangles.Select(val => val + meshData.lVertices.Count).ToArray(), 1);
 
+
         // get the mesh data from the uv and the water mesh uv data and convert them to an array
         mesh.uv = meshData.uv.Concat(meshData.waterMesh.uv).ToArray();
 
         // to have correct calculation of light on mesh, recalculate normals
         mesh.RecalculateNormals();
+
 
         // Create collider
         // set the mesh colliders to not shared
