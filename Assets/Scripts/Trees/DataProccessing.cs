@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 06/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 07/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Proccessing the data of the meshes
 //////////////////////////////////////////////////////////// 
 
 using System;
@@ -72,7 +72,7 @@ public static class DataProccessing
 
         }
 
-        //
+        // return the maximas
         return maximas;
 
     }

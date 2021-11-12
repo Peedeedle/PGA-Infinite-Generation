@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 30/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: return my noise values to impact the mesh
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;

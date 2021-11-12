@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 02/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 02/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Handler for the Stone layer 
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -22,10 +22,10 @@ public class StoneLayerHandler : BlockLayerHandler
     [SerializeField]
     private NoiseSettings stoneNoiseSettings;
 
-    //
+    // reference to the domain warping
     public DomainWarping domainWarping;
 
-    //
+    // try handling bool method 
     protected override bool TryHandling(ChunkData chunkData, int x, int y, int z, int surfaceHeightNoise, Vector2Int mapSeedOffset) {
 
         // if the chunk data is greater than the surface height (do not change air blocks into stone blocks at that height)
@@ -36,18 +36,11 @@ public class StoneLayerHandler : BlockLayerHandler
 
         }
 
-        //^^
-             // New lines
-        //vv
-
         // noise settings world offset = map seed offset
         stoneNoiseSettings.worldOffset = mapSeedOffset;
 
         // terrain height = octave perlin with the chunk data x and z positions and the stone noise settings (new noise for stone layer)
         float stoneNoise = MyNoise.OctavePerlin(chunkData.worldPosition.x + x, chunkData.worldPosition.z + z, stoneNoiseSettings);
-
-        //
-        //float stoneNoise = domainWarping.GenerateDomainNoise(chunkData.worldPosition.x + x, chunkData.worldPosition.z + z, stoneNoiseSettings);
 
         // int for the end position = suface height noise (height of terrain)
         int endPosition = surfaceHeightNoise;

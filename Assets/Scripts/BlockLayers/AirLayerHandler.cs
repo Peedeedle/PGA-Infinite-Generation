@@ -4,7 +4,7 @@
 // Date Created: 31/10/21
 // Last Edited By: Jack Peedle
 // Date Last Edited: 31/10/21
-// Brief: 
+// Brief: Handler for the air layer 
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -13,7 +13,6 @@ using UnityEngine;
 
 public class AirLayerHandler : BlockLayerHandler
 {
-
 
     // return true if the handler has handled the specific layer and input parameters
     protected override bool TryHandling(ChunkData chunkData, int x, int y, int z, int surfaceHeightNoise, Vector2Int mapSeedOffset) {

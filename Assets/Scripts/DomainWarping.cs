@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 02/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 02/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Domain warping to control the amplitude and noise values 
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;

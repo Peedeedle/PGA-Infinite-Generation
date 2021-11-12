@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 25/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 25/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: script to set the directions for the blocks
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;

@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 25/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 25/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Direction extentions sets the directions to vector 3 ints
 //////////////////////////////////////////////////////////// 
 
 
@@ -49,25 +49,3 @@ public static class DirectionExtensions
     }
 
 }
-
-/*
-
-using System;
-using UnityEngine;
-
-public static class DirectionExtensions
-{
-    public static Vector3Int GetVector(this Direction direction) {
-        return direction switch {
-            Direction.up => Vector3Int.up,
-            Direction.down => Vector3Int.down,
-            Direction.right => Vector3Int.right,
-            Direction.left => Vector3Int.left,
-            Direction.forward => Vector3Int.forward,
-            Direction.backwards => Vector3Int.back,
-            _ => throw new Exception("Invalid input direction")
-        };
-    }
-}
-
-*/

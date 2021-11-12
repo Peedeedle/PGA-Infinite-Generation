@@ -3,14 +3,13 @@
 // Author: Jack Peedle
 // Date Created: 06/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 06/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Tree data which handles the tree positions and trea leaves positions
 //////////////////////////////////////////////////////////// 
 
 using System.Collections.Generic;
 using UnityEngine;
 
-//
 public class TreeData
 {
 

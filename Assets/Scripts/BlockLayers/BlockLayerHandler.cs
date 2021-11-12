@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 31/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 31/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Handler for the Block layer 
 //////////////////////////////////////////////////////////// 
 
 using System;
@@ -28,6 +28,7 @@ public abstract class BlockLayerHandler : MonoBehaviour
         // if TryHandling returned true with this data
         if (TryHandling(chunkData, x, y, z, surfaceHeightNoise, mapSeedOffset)) {
 
+            // return true
             return true;
 
         }
@@ -43,10 +44,6 @@ public abstract class BlockLayerHandler : MonoBehaviour
 
             // if it is null then return false
             return false;
-
-        
-
-        
 
     }
 

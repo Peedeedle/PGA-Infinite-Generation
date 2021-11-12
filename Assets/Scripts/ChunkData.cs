@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 20/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: script to store the chunk data
 //////////////////////////////////////////////////////////// 
 
 
@@ -34,7 +34,7 @@ public class ChunkData
     // bool for if something has been modified by the player
     public bool modifiedByThePlayer = false;
 
-    //
+    // reference to the tree data
     public TreeData treeData;
 
 

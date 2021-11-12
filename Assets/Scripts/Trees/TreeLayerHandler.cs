@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 07/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 07/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Script for handling the tree layers and data like where they are allowed to spawn
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -16,7 +16,6 @@ public class TreeLayerHandler : BlockLayerHandler
 
     // set a height limit for the terrain
     public float terrainHeightLimit = 25;
-
 
     // public static list of the tree leaves layout
     public static List<Vector3Int> treeLeavesStaticLayout = new List<Vector3Int>() {
@@ -95,10 +94,6 @@ public class TreeLayerHandler : BlockLayerHandler
             // if the type of block is grass_Dirt
             if (type == BlockType.Grass_Dirt) {
 
-                // local position = get block in chunk coordinates passing in the chunk data and a new vector 3 int for the X, 
-                // Surface noise (Y) and the Z
-                //Vector3Int localPos = Chunk.GetBlockInChunkCoordinates(chunkData, new Vector3Int(x, surfaceHeightNoise, z));
-
                 // set the block of the local position to dirt
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Dirt);
 
@@ -127,7 +122,7 @@ public class TreeLayerHandler : BlockLayerHandler
 
         }
 
-        //
+        // return false
         return false;
 
     }

@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 02/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 02/11/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: Camera controller to limit the player to a isometric view and boundaries of the map
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -20,11 +20,8 @@ public class CameraController : MonoBehaviour
     // border thickness
     public float borderThickness = 10f;
 
-    //
+    // vector 2 for the screen limit
     public Vector2 screenLimit;
-
-    //
-    //public float scrollSpeed = 2f;
 
     // Update
     public void Update() {
@@ -64,77 +61,15 @@ public class CameraController : MonoBehaviour
 
         }
 
-        //
-        //float scroll = Input.GetAxis("Mouse ScrollWheel");
-
-        //
-        //pos.y -= scrollSpeed * 10f * Time.deltaTime;
-
-        //
+        // clamp the x position 
         pos.x = Mathf.Clamp(pos.x, -screenLimit.x, screenLimit.x);
 
-        //
+        // clamp the z position
         pos.z = Mathf.Clamp(pos.z, -screenLimit.y, screenLimit.y);
 
         // transform.position is = to pos
         transform.position = pos;
 
     }
-
-
-
-
-
-
-
-
-    /*
-
-    //
-    public GameObject GameObjectToMove;
-
-    [Header("X Values")]
-    [SerializeField]
-    // Minimum and maximum X value
-    private float minXValue;
-    [SerializeField]
-    private float maxXValue;
-
-
-    [Header("Y Values")]
-    [SerializeField]
-    // Minimum and maximum Y value
-    private float minYValue;
-    [SerializeField]
-    private float maxYValue;
-
-
-    [SerializeField]
-    // Camera Speed
-    private float cameraSpeed = 10;
-
-
-    // Update
-    public void Update() {
-
-        // get the axis for the horizontal
-        float horizontal = Input.GetAxisRaw("Horizontal");
-
-        // get the axis for the vertical
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        // vector 3 for direction, X, Y, Z, y = 0 because of the 3D space we don't want the camera movinbg up and down
-        // Relative to the worlds space, we want it to move left and right
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-        // if it is moving in a direction
-        if (direction.magnitude >= 0.1f) {
-
-
-        }
-
-    }
-
-    */
 
 }

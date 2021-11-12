@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 21/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 21/10/21
-// Brief: 
+// Date Last Edited: 12/11/21
+// Brief: chunk script to get and set blocks in the chunk
 //////////////////////////////////////////////////////////// 
 
 
@@ -31,8 +31,6 @@ public static class Chunk
 
     }
 
-
-
     // Get the position from the index
     private static Vector3Int GetPositionFromIndex(ChunkData chunkData, int index) {
 
@@ -49,10 +47,6 @@ public static class Chunk
         return new Vector3Int(x, y, z);
 
     }
-
-
-
-
 
     // if the axisCoordinate (x,y,z) is in range of the chunk
     private static bool InRange (ChunkData chunkData, int axisCoordinate) {
@@ -79,7 +73,6 @@ public static class Chunk
 
     }
 
-
     // Overload of the same method below, pass through vector 3 int, chunk data and chunk coordinates
     public static BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, Vector3Int chunkCoordinates) {
 
@@ -87,7 +80,6 @@ public static class Chunk
         return GetBlockFromChunkCoordinates(chunkData, chunkCoordinates.x, chunkCoordinates.y, chunkCoordinates.z);
 
     }
-
 
     // get block from chunk coordinates, access block type from block type array, pass in chunk data and x,y,z
     public static BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, int x, int y, int z) {
@@ -108,8 +100,6 @@ public static class Chunk
             return chunkData.WorldReference.GetBlockFromChunkCoordinates
                 (chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
 
-        
-
     }
 
     // set the block, pass in chunk data and local position, block type
@@ -126,10 +116,10 @@ public static class Chunk
 
         } else {
 
-            // 
+            // set the block at the world reference (X), local position(Y), world position (Z) and set the block to Block
             WorldDataHelper.SetBlock(chunkData.WorldReference, localPosition + chunkData.worldPosition, block);
 
-            Debug.Log("Set the block Else Statement");
+            //Debug.Log("Set the block Else Statement");
 
         }
 
@@ -143,8 +133,6 @@ public static class Chunk
         return x + chunkData.chunkSize * y + chunkData.chunkSize * chunkData.chunkHeight * z;
 
     }
-
-
 
     // get the block in the chunk coordinates, distinguish between world and chunk coordinates
     public static Vector3Int GetBlockInChunkCoordinates(ChunkData chunkData, Vector3Int pos) {
@@ -160,9 +148,6 @@ public static class Chunk
         };
 
     }
-
-
-
 
     // mesh data that takes in the chunk data
     public static MeshData GetChunkMeshData(ChunkData chunkData) {
@@ -203,225 +188,93 @@ public static class Chunk
 
     }
 
-    //
+    // get the neighbouring chunk using the chunkData and world position
     internal static List<ChunkData> GetEdgeNeighbourChunk(ChunkData chunkData, Vector3Int worldPosition) {
 
-
-        //
+        // Chunk position = GetBlockInChunkCoOrdinates using the chunk data and world position
         Vector3Int chunkPosition = GetBlockInChunkCoordinates(chunkData, worldPosition);
 
-        //
+        // list of chunk data neighbours to update = new list of chunk dataw
         List<ChunkData> neighboursToUpdate = new List<ChunkData>();
 
-        //
+        // if the chunk position X = 0
         if (chunkPosition.x == 0) {
 
-            //
+            //add the chunk data world reference, world position - vector 3 int right to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.right));
 
         }
 
-        //
+        // if chunk position X == chunk size - 1
         if (chunkPosition.x == chunkData.chunkSize - 1) {
 
-            //
+            //add the chunk data world reference, world position + vector 3 int right to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.right));
 
         }
 
-        //
+        // if the chunk position Y = 0
         if (chunkPosition.y == 0) {
 
-            //
+            //add the chunk data world reference, world position - vector 3 int up to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.up));
 
         }
 
-        //
+        // if chunk position Y == chunk height - 1
         if (chunkPosition.y == chunkData.chunkHeight - 1) {
 
-            //
+            //add the chunk data world reference, world position + vector 3 int up to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.up));
 
         }
 
-        //
+        // if the chunk position Z = 0
         if (chunkPosition.z == 0) {
 
-            //
+            //add the chunk data world reference, world position - vector 3 int forward to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.forward));
 
         }
 
-        //
+        // if chunk position Z == chunk size - 1
         if (chunkPosition.z == chunkData.chunkSize - 1) {
 
-            //
+            //add the chunk data world reference, world position + vector 3 int forward to the neighbours to update
             neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.forward));
 
         }
 
 
-        //
+        // return the neighb ours to update
         return neighboursToUpdate;
 
     }
 
-
-    //
+    // bool is on edge pass in the chunk data and world position
     internal static bool IsOnEdge (ChunkData chunkData, Vector3Int worldPosition) {
 
-        //
+        // vector3int chunk position = get block in chunk coordinates (chunk data, world position)
         Vector3Int chunkPosition = GetBlockInChunkCoordinates(chunkData, worldPosition);
 
-        //
+        // If
         if (
-            //
+
+            // chunk position x = 0 or chunk position x = chunk size - 1 or
             chunkPosition.x == 0 || chunkPosition.x == chunkData.chunkSize - 1 ||
 
-            //
+            // chunk position y = 0 or chunk position y = chunk height - 1 or
             chunkPosition.y == 0 || chunkPosition.y == chunkData.chunkHeight - 1 ||
 
-            //
+            // chunk position z = 0 or chunk position z = chunk size - 1
             chunkPosition.z == 0 || chunkPosition.z == chunkData.chunkSize - 1)
 
-            //
+            // return true
             return true;
 
-        //
+        // if not return false
         return false;
 
     }
 
-
 }
-
-
-/*
-
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class Chunk
-{
-
-    public static void LoopThroughTheBlocks(ChunkData chunkData, Action<int, int, int> actionToPerform) {
-        for (int index = 0; index < chunkData.blocks.Length; index++) {
-            var position = GetPostitionFromIndex(chunkData, index);
-            actionToPerform(position.x, position.y, position.z);
-        }
-    }
-
-    private static Vector3Int GetPostitionFromIndex(ChunkData chunkData, int index) {
-        int x = index % chunkData.chunkSize;
-        int y = (index / chunkData.chunkSize) % chunkData.chunkHeight;
-        int z = index / (chunkData.chunkSize * chunkData.chunkHeight);
-        return new Vector3Int(x, y, z);
-    }
-
-    //in chunk coordinate system
-    private static bool InRange(ChunkData chunkData, int axisCoordinate) {
-        if (axisCoordinate < 0 || axisCoordinate >= chunkData.chunkSize)
-            return false;
-
-        return true;
-    }
-
-    //in chunk coordinate system
-    private static bool InRangeHeight(ChunkData chunkData, int ycoordinate) {
-        if (ycoordinate < 0 || ycoordinate >= chunkData.chunkHeight)
-            return false;
-
-        return true;
-    }
-
-    public static BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, Vector3Int chunkCoordinates) {
-        return GetBlockFromChunkCoordinates(chunkData, chunkCoordinates.x, chunkCoordinates.y, chunkCoordinates.z);
-    }
-
-    public static BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, int x, int y, int z) {
-        if (InRange(chunkData, x) && InRangeHeight(chunkData, y) && InRange(chunkData, z)) {
-            int index = GetIndexFromPosition(chunkData, x, y, z);
-            return chunkData.blocks[index];
-        }
-
-        return chunkData.WorldReference.GetBlockFromChunkCoordinates(chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
-    }
-
-    public static void SetBlock(ChunkData chunkData, Vector3Int localPosition, BlockType block) {
-        if (InRange(chunkData, localPosition.x) && InRangeHeight(chunkData, localPosition.y) && InRange(chunkData, localPosition.z)) {
-            int index = GetIndexFromPosition(chunkData, localPosition.x, localPosition.y, localPosition.z);
-            chunkData.blocks[index] = block;
-        } else {
-            WorldDataHelper.SetBlock(chunkData.WorldReference, localPosition + chunkData.worldPosition, block);
-        }
-    }
-
-    private static int GetIndexFromPosition(ChunkData chunkData, int x, int y, int z) {
-        return x + chunkData.chunkSize * y + chunkData.chunkSize * chunkData.chunkHeight * z;
-    }
-
-    public static Vector3Int GetBlockInChunkCoordinates(ChunkData chunkData, Vector3Int pos) {
-        return new Vector3Int {
-            x = pos.x - chunkData.worldPosition.x,
-            y = pos.y - chunkData.worldPosition.y,
-            z = pos.z - chunkData.worldPosition.z
-        };
-    }
-
-    public static MeshData GetChunkMeshData(ChunkData chunkData) {
-        MeshData meshData = new MeshData(true);
-
-        LoopThroughTheBlocks(chunkData, (x, y, z) => meshData = BlockHelper.GetMeshData(chunkData, x, y, z, meshData, chunkData.blocks[GetIndexFromPosition(chunkData, x, y, z)]));
-
-
-        return meshData;
-    }
-
-    internal static Vector3Int ChunkPositionFromBlockCoords(World world, int x, int y, int z) {
-        Vector3Int pos = new Vector3Int {
-            x = Mathf.FloorToInt(x / (float)world.chunkSize) * world.chunkSize,
-            y = Mathf.FloorToInt(y / (float)world.chunkHeight) * world.chunkHeight,
-            z = Mathf.FloorToInt(z / (float)world.chunkSize) * world.chunkSize
-        };
-        return pos;
-    }
-
-    internal static List<ChunkData> GetEdgeNeighbourChunk(ChunkData chunkData, Vector3Int worldPosition) {
-        Vector3Int chunkPosition = GetBlockInChunkCoordinates(chunkData, worldPosition);
-        List<ChunkData> neighboursToUpdate = new List<ChunkData>();
-        if (chunkPosition.x == 0) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.right));
-        }
-        if (chunkPosition.x == chunkData.chunkSize - 1) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.right));
-        }
-        if (chunkPosition.y == 0) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.up));
-        }
-        if (chunkPosition.y == chunkData.chunkHeight - 1) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.up));
-        }
-        if (chunkPosition.z == 0) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition - Vector3Int.forward));
-        }
-        if (chunkPosition.z == chunkData.chunkSize - 1) {
-            neighboursToUpdate.Add(WorldDataHelper.GetChunkData(chunkData.WorldReference, worldPosition + Vector3Int.forward));
-        }
-        return neighboursToUpdate;
-    }
-
-    internal static bool IsOnEdge(ChunkData chunkData, Vector3Int worldPosition) {
-        Vector3Int chunkPosition = GetBlockInChunkCoordinates(chunkData, worldPosition);
-        if (
-            chunkPosition.x == 0 || chunkPosition.x == chunkData.chunkSize - 1 ||
-            chunkPosition.y == 0 || chunkPosition.y == chunkData.chunkHeight - 1 ||
-            chunkPosition.z == 0 || chunkPosition.z == chunkData.chunkSize - 1
-            )
-            return true;
-        return false;
-    }
-}
-
-*/
