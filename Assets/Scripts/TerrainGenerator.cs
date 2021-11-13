@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 13/11/21
 // Brief: Generating the terrain using noise settings and data
 //////////////////////////////////////////////////////////// 
 
@@ -111,99 +111,101 @@ public class TerrainGenerator : MonoBehaviour
 
     }
 
-    // select biome
+    // select biome using index
     private BiomeGenerator SelectBiome(int index) {
 
-        //
+        // float for temperature = biome noise array of index
         float temp = biomeNoise[index];
 
-        //
+        // for each data in biome generator data
         foreach (var data in biomeGeneratorsData) {
 
-            //
+            // if temperature is more than or equal to the temperature start threshold and is less than the end threshold
             if (temp >= data.temperatureStartThreshold && temp < data.temperatureEndThreshold)
 
-                //
+                // return the data for the biome terrain generator
                 return data.biomeTerrainGenerator;
 
         }
 
-        //
+        // return the biome generators data with an index of [0] to the biome terrain generator
         return biomeGeneratorsData[0].biomeTerrainGenerator;
 
     }
 
 
-    //
+    // list of biome selection helpers
     private List<BiomeSelectionHelper> GetBiomeGeneratorSelectionHelpers(Vector3Int position) {
 
-        //
+        // set the y position to 0
         position.y = 0;
 
-        //
+        // return the closest biome index position
         return GetClosestBiomeIndex(position);
 
     }
 
-    //
+    // list of biome selection helpers to get the closest biome index
     private List<BiomeSelectionHelper> GetClosestBiomeIndex(Vector3Int position) {
 
-        //
+        // return a new biome center passing in the center and index = new biome selection helper
         return biomeCenters.Select((center, index) => new BiomeSelectionHelper {
 
-            //
+            // set Index to index
             Index = index,
 
-            //
+            // distance = distance passing in the center and position
             Distance = Vector3.Distance(center, position)
 
+            // order by the distance between helpers and take in 4 ints to a list
         }).OrderBy(helper => helper.Distance).Take(4).ToList();
 
     }
 
-    //
+    // struct biome selection helper
     private struct BiomeSelectionHelper
     {
-        //
+        // int for index
         public int Index;
 
-        //
+        // float for distance
         public float Distance;
 
     }
 
-    //
+    // generate the biome points passing in the starting position, draw range, map size and mapSeedOffset
     public void GenerateBiomePoints(Vector3 startingPosition, int drawRange, int mapSize, Vector2Int mapSeedOffset) {
 
-        //
+        // biome centers = a new list of vector 3 ints
         biomeCenters = new List<Vector3Int>();
 
-        //
+        // biome centers = calculate biome centers passing in the starting position, draw range and map size
         biomeCenters = BiomeCenterFinder.CalculateBiomeCenters(startingPosition, drawRange, mapSize);
 
+        // for i = 0, i less than biome centers count, i++
         for (int i = 0; i < biomeCenters.Count; i++) {
 
-            //
+            // vector 2 int for domain warping offset, generate domain offset passing in the biome centers[i].x and .y
             Vector2Int domainWarpingOffset = biomeDomainWarping.GenerateDomainOffsetInt(biomeCenters[i].x, biomeCenters[i].y);
 
-            //
+            // biome centers with the array of i + and = new vector 3(domain warping.x (X), 0 (Y), domain warping.y (Z)
             biomeCenters[i] += new Vector3Int(domainWarpingOffset.x, 0, domainWarpingOffset.y);
 
 
         }
 
-        //
+        // biome noise = biome noise passing in the biome centers and mapSeedOffset
         biomeNoise = CalculateBiomeNoise(biomeCenters, mapSeedOffset);
 
     }
 
-    //
+    // List of floats called calculateBiomeNoise passing in list of vector3ints called biome centers and vector2int for mapSeedOffset
     private List<float> CalculateBiomeNoise(List<Vector3Int> biomeCenters, Vector2Int mapSeedOffset) {
 
-        //
+        // biomeNoiseSettings.worldOffset = mapSeedOffset
         biomeNoiseSettings.worldOffset = mapSeedOffset;
 
-        //
+        // return the biome centers list of center => my noise (Perlin Noise) (center.x (X), center.y (Y), biomeNoiseSettings (Z)
         return biomeCenters.Select(center => MyNoise.OctavePerlin(center.x, center.y, biomeNoiseSettings)).ToList();
 
     }
@@ -211,13 +213,13 @@ public class TerrainGenerator : MonoBehaviour
     // Debug for seeing the center points using gizmos at runtime
     private void OnDrawGizmos() {
 
-        //
+        // gizmo colour blue
         Gizmos.color = Color.blue;
 
-        //
+        // for each biome center point in biome centers
         foreach (var biomeCenterPoint in biomeCenters) {
 
-            //
+            // draw a line from the biome center point up by 255
             Gizmos.DrawLine(biomeCenterPoint, biomeCenterPoint + Vector3.up * 255);
 
         }
@@ -226,39 +228,39 @@ public class TerrainGenerator : MonoBehaviour
 
 }
 
-//
+// struct for the biome data
 [Serializable]
 public struct BiomeData
 {
 
-    //
+    // temperature start and end threshold 0-1
     [Range(0f, 1f)]
     public float temperatureStartThreshold, temperatureEndThreshold;
 
-    //
+    // reference to the biome terrain generator
     public BiomeGenerator biomeTerrainGenerator;
 
 
 }
 
-//
+// biome generator selection
 public class BiomeGeneratorSelection
 {
 
-    //
+    // set the biome generator to null
     public BiomeGenerator biomeGenerator = null;
 
-    //
+    // terrain surface noise int = null
     public int? terrainSurfaceNoise = null;
 
 
-    //
+    // biome generator selection passes in the biome generator and terrain surface noise
     public BiomeGeneratorSelection(BiomeGenerator biomeGenerator, int? terrainSurfaceNoise = null) {
 
-        //
+        // this biome generator = biome generator
         this.biomeGenerator = biomeGenerator;
 
-        //
+        // this terrain surface noise = terrain surface noise
         this.terrainSurfaceNoise = terrainSurfaceNoise;
 
     }
