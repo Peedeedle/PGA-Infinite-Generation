@@ -7,7 +7,6 @@
 // Brief: world script for the variables to generate the world
 //////////////////////////////////////////////////////////// 
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +16,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
-using Random = UnityEngine.Random;
 
 public class World : MonoBehaviour
 {
@@ -55,8 +53,6 @@ public class World : MonoBehaviour
     // public bool for isWorldCreated
     public bool isWorldCreated { get; private set; }
 
-    public int randomX;
-    public int randomZ;
 
     // on Awake
     private void Awake() {
@@ -76,7 +72,7 @@ public class World : MonoBehaviour
             // new chunk dictionary of vector3ints and chunk renderer
             chunkDictionary = new Dictionary<Vector3Int, ChunkRenderer>()
 
-            
+
 
         };
 
@@ -86,29 +82,13 @@ public class World : MonoBehaviour
     // Generate the World / Meshes
     public async void GenerateWorld() {
 
-        //worldRenderer.Clear(worldData);
-
         // await the generate world at zero position
         await GenerateWorld(Vector3Int.zero);
-
-        randomX = Random.Range(-1000, 1000);
-
-        randomZ = Random.Range(-1000, 1000);
-
-        //mapSeedOffset = new Vector2Int. (randomX, randomZ);
-
-        mapSeedOffset.x = randomX;
-
-        mapSeedOffset.y = randomZ;
-
-        Debug.Log("RX = " + randomX + "   RZ " + randomZ);
 
     }
 
     // private task to generate world on a vector3int position
     private async Task GenerateWorld(Vector3Int position) {
-
-        
 
         // generate biome points passing in the position, chunkDrawRange, chunk size and mapSeedOffset
         terrainGenerator.GenerateBiomePoints(position, chunkDrawingRange, chunkSize, mapSeedOffset);
@@ -117,7 +97,7 @@ public class World : MonoBehaviour
         WorldGenerationData worldGenerationData = await Task.Run(() => GetPositionFromStart(position), taskTokenSource.Token);
 
         // for each vector3Int position in the worldGenerationData chunkPositionsToRemove
-        foreach(Vector3Int pos in worldGenerationData.chunkPositionsToRemove) {
+        foreach (Vector3Int pos in worldGenerationData.chunkPositionsToRemove) {
 
             // remove this chunk at position
             WorldDataHelper.RemoveChunk(this, pos);
@@ -155,7 +135,7 @@ public class World : MonoBehaviour
 
 
         // foreach calculated data in dataDictionary
-        foreach(var calculatedData in dataDictionary) {
+        foreach (var calculatedData in dataDictionary) {
 
             // add calculated data key and calculated data value to the chunk data dictionary
             worldData.chunkDataDictionary.Add(calculatedData.Key, calculatedData.Value);
@@ -200,9 +180,6 @@ public class World : MonoBehaviour
         StartCoroutine(ChunkCreationCoroutine(meshDataDictionary));
 
     }
-
-
-
 
 
     // add tree leaves passing in the chunk data
@@ -298,7 +275,7 @@ public class World : MonoBehaviour
     IEnumerator ChunkCreationCoroutine(ConcurrentDictionary<Vector3Int, MeshData> meshDataDictionary) {
 
         // for each item in mesh data dictionary
-        foreach(var item in meshDataDictionary) {
+        foreach (var item in meshDataDictionary) {
 
             // create the chunk passing in the world data, item.key and item value
             CreateChunk(worldData, item.Key, item.Value);
@@ -429,12 +406,12 @@ public class World : MonoBehaviour
 
         // list of the chunk positions to create = select positions to create passing in the world data, all the chunk positions
         // needed and the starting position
-        List<Vector3Int> chunkPositionsToCreate = WorldDataHelper.SelectPositionsToCreate(worldData, allChunkPositionsNeeded, 
+        List<Vector3Int> chunkPositionsToCreate = WorldDataHelper.SelectPositionsToCreate(worldData, allChunkPositionsNeeded,
             startingPosition);
 
         // list of the chunk data positions to create = select data positions to create passing in the world data,
         // all the chunk positions needed and the starting position
-        List<Vector3Int> chunkDataPositionsToCreate = WorldDataHelper.SelectDataPositionsToCreate(worldData, 
+        List<Vector3Int> chunkDataPositionsToCreate = WorldDataHelper.SelectDataPositionsToCreate(worldData,
             allChunkDataPositionsNeeded, startingPosition);
 
 
