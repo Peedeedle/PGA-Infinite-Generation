@@ -17,6 +17,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class World : MonoBehaviour
 {
@@ -54,6 +55,8 @@ public class World : MonoBehaviour
     // public bool for isWorldCreated
     public bool isWorldCreated { get; private set; }
 
+    public int randomX;
+    public int randomZ;
 
     // on Awake
     private void Awake() {
@@ -83,13 +86,29 @@ public class World : MonoBehaviour
     // Generate the World / Meshes
     public async void GenerateWorld() {
 
+        //worldRenderer.Clear(worldData);
+
         // await the generate world at zero position
         await GenerateWorld(Vector3Int.zero);
+
+        randomX = Random.Range(-1000, 1000);
+
+        randomZ = Random.Range(-1000, 1000);
+
+        //mapSeedOffset = new Vector2Int. (randomX, randomZ);
+
+        mapSeedOffset.x = randomX;
+
+        mapSeedOffset.y = randomZ;
+
+        Debug.Log("RX = " + randomX + "   RZ " + randomZ);
 
     }
 
     // private task to generate world on a vector3int position
     private async Task GenerateWorld(Vector3Int position) {
+
+        
 
         // generate biome points passing in the position, chunkDrawRange, chunk size and mapSeedOffset
         terrainGenerator.GenerateBiomePoints(position, chunkDrawingRange, chunkSize, mapSeedOffset);
@@ -181,6 +200,9 @@ public class World : MonoBehaviour
         StartCoroutine(ChunkCreationCoroutine(meshDataDictionary));
 
     }
+
+
+
 
 
     // add tree leaves passing in the chunk data

@@ -114,17 +114,22 @@ public class TerrainGenerator : MonoBehaviour
     // select biome using index
     private BiomeGenerator SelectBiome(int index) {
 
+        
+
         // float for temperature = biome noise array of index
         float temp = biomeNoise[index];
 
         // for each data in biome generator data
         foreach (var data in biomeGeneratorsData) {
 
+
             // if temperature is more than or equal to the temperature start threshold and is less than the end threshold
             if (temp >= data.temperatureStartThreshold && temp < data.temperatureEndThreshold)
 
                 // return the data for the biome terrain generator
                 return data.biomeTerrainGenerator;
+
+
 
         }
 
@@ -226,6 +231,7 @@ public class TerrainGenerator : MonoBehaviour
 
     }
 
+
 }
 
 // struct for the biome data
@@ -267,3 +273,16 @@ public class BiomeGeneratorSelection
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
