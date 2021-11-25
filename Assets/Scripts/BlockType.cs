@@ -23,7 +23,8 @@ public enum BlockType
     Water,
     Sand,
     TreeLog,
-    TreeLeavesSolid
+    TreeLeavesSolid,
+    Cactus
 
 
 }

@@ -891,6 +891,7 @@ MonoBehaviour:
   useDomainWarping: 1
   startLayerHandler: {fileID: 1557547812}
   treeGenerator: {fileID: 1219438275}
+  cactusGenerator: {fileID: 1574998436}
   additionalLayerHandlers:
   - {fileID: 1221505229}
   - {fileID: 1332322779}
@@ -1346,10 +1347,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1574998434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9151f6ab78f3c3d4a9556f212f5ebf4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fa70a8c01fe4004ba6ebdab24e1e264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeNoiseSettings: {fileID: 11400000, guid: 8c0b0054e4b63e54cb085099c245ff82, type: 2}
+  cactusNoiseSettings: {fileID: 11400000, guid: 1c90c109113bf764fa8fa2553b718881, type: 2}
   domainWarping: {fileID: 1574998437}
 --- !u!114 &1574998437
 MonoBehaviour:
@@ -1379,12 +1380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f52f430e99cb4141a13c6614055e76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterThreshold: 0
+  waterThreshold: 4
   biomeNoiseSettings: {fileID: 11400000, guid: 0f66064339a10fe4d8e1bcbcfd84b482, type: 2}
   domainWarping: {fileID: 1574998437}
   useDomainWarping: 1
   startLayerHandler: {fileID: 1038698572}
-  treeGenerator: {fileID: 1574998436}
+  treeGenerator: {fileID: 1219438275}
+  cactusGenerator: {fileID: 1574998436}
   additionalLayerHandlers:
   - {fileID: 1955143700}
 --- !u!1 &1663511783
@@ -1515,7 +1517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1955143698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0d82728231e6e4c8f9f0957a03e808, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e6151dbbfb27a84faebcda6c6ee8ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Next: {fileID: 0}

@@ -37,6 +37,9 @@ public class ChunkData
     // reference to the tree data
     public TreeData treeData;
 
+    //
+    public CactusData cactusData;
+
 
     // Contructor for the chunk data
     public ChunkData (int chunkSize, int chunkHeight, World world, Vector3Int worldPosition) {
