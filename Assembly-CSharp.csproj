@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\BlockLayers\AirLayerHandler.cs" />
     <Compile Include="Assets\Scripts\MyNoise.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\BlockLayers\SandWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Direction.cs" />
     <Compile Include="Assets\Scripts\MeshData.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeLayerHandler.cs" />
@@ -83,17 +84,16 @@
     <Compile Include="Assets\Scripts\Trees\DataProccessing.cs" />
     <Compile Include="Assets\Scripts\DomainWarping.cs" />
     <Compile Include="Assets\Scripts\WorldRenderer.cs" />
+    <Compile Include="Assets\Scripts\Cactuses\CactusDataProccessing.cs" />
     <Compile Include="Assets\Scripts\ChunkData.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\UndergroundLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\Cactuses\CactusLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeData.cs" />
     <Compile Include="Assets\Scripts\BiomeCenterFinder.cs" />
-    <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
-    <Compile Include="Assets\Scripts\Cactuses\CactusDataProccessing.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusData.cs" />
+    <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
-    <Compile Include="Assets\Scripts\Cactuses\CactusLayerHandler.cs" />
-    <Compile Include="Assets\Scripts\BlockLayers\SandWaterLayerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityAssets\Cliffs,Rocks, Trees\LowPolyTreePack\README.txt" />

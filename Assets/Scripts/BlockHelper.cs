@@ -90,7 +90,7 @@ public static class BlockHelper
 
 
 
-
+                /*
                 // if the rednered block type is water
                 if (blockType == BlockType.SandWater) {
 
@@ -103,14 +103,14 @@ public static class BlockHelper
                     }
 
 
-
+                
                 } else {
 
                     // generate face using GetFaceDataIn as a new meshData, 
                     meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
 
                 }
-
+                */
 
 
 

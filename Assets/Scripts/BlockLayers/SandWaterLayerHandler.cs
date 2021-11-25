@@ -27,7 +27,7 @@ public class SandWaterLayerHandler : BlockLayerHandler
             Vector3Int pos = new Vector3Int(x, y, z);
 
             // set the block to be water
-            Chunk.SetBlock(chunkData, pos, BlockType.SandWater);
+            Chunk.SetBlock(chunkData, pos, BlockType.Water);
 
             // if water is one block above the surface
             if (y == surfaceHeightNoise + 1) {
@@ -37,7 +37,7 @@ public class SandWaterLayerHandler : BlockLayerHandler
 
                 // Could set the block to dirt so cactus won't generate
                 // set the block to be sand
-                Chunk.SetBlock(chunkData, pos, BlockType.Sand);
+                Chunk.SetBlock(chunkData, pos, BlockType.Dirt);
 
 
             }
