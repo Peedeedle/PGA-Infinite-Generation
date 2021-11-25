@@ -39,6 +39,7 @@ public class ChunkRenderer : MonoBehaviour
     // our mesh object 
     Mesh mesh;
 
+
     // bool to show size of chunk
     public bool showGizmos = false;
 
@@ -81,6 +82,7 @@ public class ChunkRenderer : MonoBehaviour
         // Get the mesh from the mesh filter mesh
         mesh = meshFilter.mesh;
 
+
     }
 
     // initialize chunk using void as can't us contructor as it is monobehaviour
@@ -92,28 +94,44 @@ public class ChunkRenderer : MonoBehaviour
     }
 
     // Render the mesh
-    private void RenderMesh (MeshData meshData) {
+    private void RenderMeshNormal (MeshData meshData) {
 
         // Clear the current mesh
         mesh.Clear();
 
 
         // Different material for each submesh (good for water)
-        mesh.subMeshCount = 2;
+        mesh.subMeshCount = 3;
+
 
         // set vertices = vertices in mesh data, add the vertices from water mesh and the mesh data (Concatenate)
         mesh.vertices = meshData.lVertices.Concat(meshData.waterMesh.lVertices).ToArray();
+
+        // set vertices = vertices in mesh data, add the vertices from water mesh and the mesh data (Concatenate)
+        mesh.vertices = meshData.lVertices.Concat(meshData.sandWaterMesh.lVertices).ToArray();
 
 
         // Each submesh needs it's own triangles set seperately, set the mesh data (index of 0) triangles 
         mesh.SetTriangles(meshData.iTriangles.ToArray(), 0);
 
+        // Each submesh needs it's own triangles set seperately, set the mesh data (index of 0) triangles 
+        //mesh.SetTriangles(meshData.iTriangles.ToArray(), 1);
+
+
+
         // set the water mesh triangles, set the value to the mesh data vertices count to array, with a index of 1
         mesh.SetTriangles(meshData.waterMesh.iTriangles.Select(val => val + meshData.lVertices.Count).ToArray(), 1);
+
+        // set the water mesh triangles, set the value to the mesh data vertices count to array, with a index of 1
+        mesh.SetTriangles(meshData.sandWaterMesh.iTriangles.Select(val => val + meshData.lVertices.Count).ToArray(), 1);
 
 
         // get the mesh data from the uv and the water mesh uv data and convert them to an array
         mesh.uv = meshData.uv.Concat(meshData.waterMesh.uv).ToArray();
+
+        // get the mesh data from the uv and the water mesh uv data and convert them to an array
+        mesh.uv = meshData.uv.Concat(meshData.sandWaterMesh.uv).ToArray();
+
 
         // to have correct calculation of light on mesh, recalculate normals
         mesh.RecalculateNormals();
@@ -141,11 +159,79 @@ public class ChunkRenderer : MonoBehaviour
 
     }
 
+    /*
+    // Render the mesh
+    private void RenderMeshSand(MeshData meshData) {
+
+        // Clear the current mesh
+        mesh.Clear();
+
+
+        // Different material for each submesh (good for water)
+        mesh.subMeshCount = 3;
+
+
+        // set vertices = vertices in mesh data, add the vertices from water mesh and the mesh data (Concatenate)
+        //mesh.vertices = meshData.lVertices.Concat(meshData.waterMesh.lVertices).ToArray();
+
+        // set vertices = vertices in mesh data, add the vertices from water mesh and the mesh data (Concatenate)
+        mesh.vertices = meshData.lVertices.Concat(meshData.sandWaterMesh.lVertices).ToArray();
+
+
+        // Each submesh needs it's own triangles set seperately, set the mesh data (index of 0) triangles 
+        mesh.SetTriangles(meshData.iTriangles.ToArray(), 0);
+
+
+        // set the water mesh triangles, set the value to the mesh data vertices count to array, with a index of 1
+        //mesh.SetTriangles(meshData.waterMesh.iTriangles.Select(val => val + meshData.lVertices.Count).ToArray(), 1);
+
+        // set the water mesh triangles, set the value to the mesh data vertices count to array, with a index of 1
+        mesh.SetTriangles(meshData.sandWaterMesh.iTriangles.Select(val => val + meshData.lVertices.Count).ToArray(), 1);
+
+
+        // get the mesh data from the uv and the water mesh uv data and convert them to an array
+        //mesh.uv = meshData.uv.Concat(meshData.waterMesh.uv).ToArray();
+
+        // get the mesh data from the uv and the water mesh uv data and convert them to an array
+        mesh.uv = meshData.uv.Concat(meshData.sandWaterMesh.uv).ToArray();
+
+
+        // to have correct calculation of light on mesh, recalculate normals
+        mesh.RecalculateNormals();
+
+
+        // Create collider
+        // set the mesh colliders to not shared
+        meshCollider.sharedMesh = null;
+
+        // new collision mesh
+        Mesh collisionMesh = new Mesh();
+
+        // set the collision mesh vertices and set to collider vertices (lColliderVertices are creating the collider)
+        collisionMesh.vertices = meshData.lColliderVertices.ToArray();
+
+        // set the collision mesh triangles and set to collider triangles
+        // (lColliderTriangles are creating the collider(no water here because water will not be a collider))
+        collisionMesh.triangles = meshData.iColliderTriangles.ToArray();
+
+        // Recalculate collision mesh normals
+        collisionMesh.RecalculateNormals();
+
+        // Mesh collider = collision mesh generated in line 116
+        meshCollider.sharedMesh = collisionMesh;
+
+    }
+    */
+
+
     // Update chunk
     public void UpdateChunk() {
 
         // get the chunk mesh data and render the mesh
-        RenderMesh(Chunk.GetChunkMeshData(ChunkData));
+        RenderMeshNormal(Chunk.GetChunkMeshData(ChunkData));
+
+        // get the chunk mesh data and render the mesh
+        //RenderMeshSand(Chunk.GetChunkMeshData(ChunkData));
 
     }
 
@@ -153,7 +239,10 @@ public class ChunkRenderer : MonoBehaviour
     public void UpdateChunk(MeshData data) {
         
         // render mesh using data
-        RenderMesh(data);
+        RenderMeshNormal(data);
+
+        // render mesh using data
+        //RenderMeshSand(data);
 
     }
 

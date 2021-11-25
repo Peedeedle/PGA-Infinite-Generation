@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Cactuses\CactusData.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\BlockLayers\SandWaterLayerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityAssets\Cliffs,Rocks, Trees\LowPolyTreePack\README.txt" />

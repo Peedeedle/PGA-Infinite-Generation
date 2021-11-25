@@ -88,6 +88,33 @@ public static class BlockHelper
 
                 }
 
+
+
+
+                // if the rednered block type is water
+                if (blockType == BlockType.SandWater) {
+
+                    // if the water is a neighbout of the air
+                    if (neighbourBlockType == BlockType.Air) {
+
+                        // generate face on the water mesh
+                        meshData.sandWaterMesh = GetFaceDataIn(direction, chunk, x, y, z, meshData.sandWaterMesh, blockType);
+
+                    }
+
+
+
+                } else {
+
+                    // generate face using GetFaceDataIn as a new meshData, 
+                    meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
+
+                }
+
+
+
+
+
             }
 
         }
