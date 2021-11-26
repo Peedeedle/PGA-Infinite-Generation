@@ -332,6 +332,7 @@
 "Assets/Scripts/BlockLayers/UndergroundLayerHandler.cs"
 "Assets/Scripts/BlockLayers/WaterLayerHandler.cs"
 "Assets/Scripts/BlockType.cs"
+"Assets/Scripts/ButtonManager.cs"
 "Assets/Scripts/Cactuses/CactusData.cs"
 "Assets/Scripts/Cactuses/CactusDataProccessing.cs"
 "Assets/Scripts/Cactuses/CactusGenerator.cs"
