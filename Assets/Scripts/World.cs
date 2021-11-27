@@ -48,6 +48,9 @@ public class World : MonoBehaviour
     // unity event for onWorldCreate and OnNewChunksGenerated
     public UnityEvent OnWorldCreated, OnNewChunksGenerated;
 
+    //
+    public ButtonManager buttonManager;
+
     // public world data called world data
     public WorldData worldData { get; private set; }
 
@@ -82,6 +85,9 @@ public class World : MonoBehaviour
 
     // Generate the World / Meshes
     public async void GenerateWorld() {
+
+        //
+        buttonManager.ChangeToGameCanvas();
 
         // await the generate world at zero position
         await GenerateWorld(Vector3Int.zero);
