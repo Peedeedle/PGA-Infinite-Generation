@@ -1081,19 +1081,31 @@ MonoBehaviour:
   Go_SandBiome: {fileID: 1574998434}
   firstValue: 0
   secondValue: 1
+  biomeData:
+    temperatureStartThreshold: 0
+    temperatureEndThreshold: 0
+    biomeTerrainGenerator: {fileID: 1219438272}
   biomeGenerator: {fileID: 1219438272}
   biomeCenters: []
   biomeNoiseSettings: {fileID: 11400000, guid: 556a6671ca9ea084aa6842cb123dbe52, type: 2}
   biomeDomainWarping: {fileID: 1018964520}
   biomeGeneratorsData:
   - temperatureStartThreshold: 0
+    temperatureEndThreshold: 0
+    biomeTerrainGenerator: {fileID: 0}
+  - temperatureStartThreshold: 0
+    temperatureEndThreshold: 0
+    biomeTerrainGenerator: {fileID: 0}
+  normalBiomeData:
+  - temperatureStartThreshold: 0
     temperatureEndThreshold: 0.5
     biomeTerrainGenerator: {fileID: 1219438272}
   - temperatureStartThreshold: 0.5
     temperatureEndThreshold: 1
     biomeTerrainGenerator: {fileID: 1219438272}
-  - temperatureStartThreshold: 0.5
-    temperatureEndThreshold: 1
+  sandBiomeData:
+  - temperatureStartThreshold: 0
+    temperatureEndThreshold: 0.5
     biomeTerrainGenerator: {fileID: 1574998438}
   - temperatureStartThreshold: 0.5
     temperatureEndThreshold: 1

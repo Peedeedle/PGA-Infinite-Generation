@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\BlockType.cs" />
     <Compile Include="Assets\Scripts\DirectionExtensions.cs" />
     <Compile Include="Assets\Scripts\Trees\DataProccessing.cs" />
+    <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\DomainWarping.cs" />
     <Compile Include="Assets\Scripts\WorldRenderer.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusDataProccessing.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\Scripts\Cactuses\CactusData.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
-    <Compile Include="Assets\Scripts\ButtonManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityAssets\Cliffs,Rocks, Trees\LowPolyTreePack\README.txt" />

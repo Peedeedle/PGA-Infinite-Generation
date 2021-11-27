@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 13/11/21
+// Date Last Edited: 27/11/21
 // Brief: Generating the terrain using noise settings and data
 //////////////////////////////////////////////////////////// 
 
@@ -16,20 +16,14 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
 
-    //
+    // reference to the normal biome game object
     public GameObject Go_NormalBiome;
 
-    //
+    // reference to the sand biome game object
     public GameObject Go_SandBiome;
 
-    [SerializeField]
-    public int firstValue;
-
-    [SerializeField]
-    public int secondValue;
-
-    //
-    //public BiomeData biomeDataRef;
+    // reference to a biome data
+    public BiomeData biomeData;
 
     // Reference to the BiomeGenerator
     public BiomeGenerator biomeGenerator;
@@ -52,6 +46,30 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     private List<BiomeData> biomeGeneratorsData = new List<BiomeData>();
 
+    // list of normal biome data called normalBiomeData
+    [SerializeField]
+    [Header("NORMALDATA")]
+    private List<BiomeData> normalBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("SANDDATA")]
+    private List<BiomeData> sandBiomeData = new List<BiomeData>();
+
+    // when button pressed in ButtonManager change to normal biome
+    public void ChangeToNormalBiome() {
+
+        biomeGeneratorsData = normalBiomeData;
+
+    }
+
+    // when button pressed in ButtonManager change to sand biome
+    public void ChangeToSandBiome() {
+
+        biomeGeneratorsData = sandBiomeData;
+
+    }
+    
 
     // Generate the chunk data using the data and a vector 2 for the mapSeedOffset
     public ChunkData GenerateChunkData(ChunkData data, Vector2Int mapSeedOffset) {
@@ -102,29 +120,20 @@ public class TerrainGenerator : MonoBehaviour
 
         }
 
-
         //list of biome selection helpers called biome selection helpers passing in the world position
         List<BiomeSelectionHelper> biomeSelectionHelpers = GetBiomeGeneratorSelectionHelpers(worldPosition);
 
-
         // biome generator 1 = biome generator with an index of 0 (Assign in the inspector)
-        BiomeGenerator generator_1 = SelectBiome(biomeSelectionHelpers[firstValue].Index);
+        BiomeGenerator generator_1 = SelectBiome(biomeSelectionHelpers[0].Index);
 
         // biome generator 2 = biome generator with an index of 1 (Assign in the inspector)
-        BiomeGenerator generator_2 = SelectBiome(biomeSelectionHelpers[secondValue].Index);
-
-        // biome generator 3 = biome generator with an index of 1 (Assign in the inspector)
-        BiomeGenerator generator_3 = SelectBiome(biomeSelectionHelpers[2].Index);
-
-        // biome generator 4 = biome generator with an index of 1 (Assign in the inspector)
-        BiomeGenerator generator_4 = SelectBiome(biomeSelectionHelpers[3].Index);
-
+        BiomeGenerator generator_2 = SelectBiome(biomeSelectionHelpers[1].Index);
 
         // distance = vector 3 distance passing in the biome generators
-        float distance = Vector3.Distance(biomeCenters[biomeSelectionHelpers[firstValue].Index], biomeCenters[biomeSelectionHelpers[secondValue].Index]);
+        float distance = Vector3.Distance(biomeCenters[biomeSelectionHelpers[0].Index], biomeCenters[biomeSelectionHelpers[1].Index]);
 
         // float for the weight 0 = biome [0] distance / distance
-        float weight_0 = biomeSelectionHelpers[firstValue].Distance / distance;
+        float weight_0 = biomeSelectionHelpers[0].Distance / distance;
 
         // float weight = 1 - weight 0
         float weight_1 = 1 - weight_0;
@@ -138,68 +147,6 @@ public class TerrainGenerator : MonoBehaviour
 
         // return new biome selection of the generator 1, with the height and weight of the other biomes
         return new BiomeGeneratorSelection(generator_1, Mathf.RoundToInt(terrainHeightNoise_0 * weight_0 + terrainHeightNoise_1 * weight_1));
-
-
-        /*
-            //list of biome selection helpers called biome selection helpers passing in the world position
-            //List<BiomeSelectionHelper> biomeSelectionHelpers = GetBiomeGeneratorSelectionHelpers(worldPosition);
-
-            // biome generator 1 = biome generator with an index of 0 (Assign in the inspector)
-            BiomeGenerator generator_1 = SelectBiome(biomeSelectionHelpers[0].Index);
-
-            // biome generator 2 = biome generator with an index of 1 (Assign in the inspector)
-            BiomeGenerator generator_2 = SelectBiome(biomeSelectionHelpers[1].Index);
-
-            // distance = vector 3 distance passing in the biome generators
-            float distance = Vector3.Distance(biomeCenters[biomeSelectionHelpers[0].Index], biomeCenters[biomeSelectionHelpers[1].Index]);
-
-            // float for the weight 0 = biome [0] distance / distance
-            float weight_0 = biomeSelectionHelpers[0].Distance / distance;
-
-            // float weight = 1 - weight 0
-            float weight_1 = 1 - weight_0;
-
-            // terrain height noise for the first biome 
-            int terrainHeightNoise_0 = generator_1.GetSurfaceHeightNoise(worldPosition.x, worldPosition.z, data.chunkHeight);
-
-            // terrain height noise for the second biome 
-            int terrainHeightNoise_1 = generator_2.GetSurfaceHeightNoise(worldPosition.x, worldPosition.z, data.chunkHeight);
-
-
-            
-
-            //list of biome selection helpers called biome selection helpers passing in the world position
-            //List<BiomeSelectionHelper> biomeSelectionHelpers = GetBiomeGeneratorSelectionHelpers(worldPosition);
-
-            // biome generator 1 = biome generator with an index of 0 (Assign in the inspector)
-            BiomeGenerator generator_3 = SelectBiome(biomeSelectionHelpers[2].Index);
-
-            // biome generator 2 = biome generator with an index of 1 (Assign in the inspector)
-            BiomeGenerator generator_4 = SelectBiome(biomeSelectionHelpers[3].Index);
-
-            // distance = vector 3 distance passing in the biome generators
-            float distance2 = Vector3.Distance(biomeCenters[biomeSelectionHelpers[2].Index], biomeCenters[biomeSelectionHelpers[3].Index]);
-
-            // float for the weight 0 = biome [0] distance / distance
-            float weight_2 = biomeSelectionHelpers[2].Distance / distance2;
-
-            // float weight = 1 - weight 0
-            float weight_3 = 1 - weight_2;
-
-            // terrain height noise for the first biome 
-            int terrainHeightNoise_2 = generator_3.GetSurfaceHeightNoise(worldPosition.x, worldPosition.z, data.chunkHeight);
-
-            // terrain height noise for the second biome 
-            int terrainHeightNoise_3 = generator_4.GetSurfaceHeightNoise(worldPosition.x, worldPosition.z, data.chunkHeight);
-
-        // return new biome selection of the generator 1, with the height and weight of the other biomes
-        return new BiomeGeneratorSelection(generator_1, Mathf.RoundToInt(terrainHeightNoise_0 * weight_0 + terrainHeightNoise_1 * weight_1)); 
-
-        // return new biome selection of the generator 1, with the height and weight of the other biomes
-        return new BiomeGeneratorSelection(generator_3, Mathf.RoundToInt(terrainHeightNoise_2 * weight_2 + terrainHeightNoise_3 * weight_3));
-        */
-
-
 
 
 
@@ -224,7 +171,9 @@ public class TerrainGenerator : MonoBehaviour
         }
 
         // return the biome generators data with an index of [0] to the biome terrain generator
-        return biomeGeneratorsData[firstValue].biomeTerrainGenerator;
+        return biomeGeneratorsData[0].biomeTerrainGenerator;
+
+
 
 
     }
@@ -323,10 +272,6 @@ public class TerrainGenerator : MonoBehaviour
     }
 
 
-    
-
-
-
 }
 
 // struct for the biome data
@@ -339,7 +284,9 @@ public class BiomeData
     public float temperatureStartThreshold, temperatureEndThreshold;
 
     // reference to the biome terrain generator
+    [SerializeField]
     public BiomeGenerator biomeTerrainGenerator;
+
 
 }
 

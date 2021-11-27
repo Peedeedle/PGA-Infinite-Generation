@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 26/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 26/11/21
+// Date Last Edited: 27/11/21
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
@@ -14,28 +14,25 @@ using UnityEngine;
 public class ButtonManager : MonoBehaviour
 {
 
-    //
+    // reference to the terrain generator
     public TerrainGenerator terrainGenerator;
 
     
-    //
+    // Button to generate the normal biome in the TerrainGenerator
     public void GenerateNormalBiome() {
 
-        //
-        terrainGenerator.firstValue = 0;
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_NormalBiome.GetComponent<BiomeGenerator>();
 
-        terrainGenerator.secondValue = 1;
-
+        terrainGenerator.ChangeToNormalBiome();
 
     }
 
-    //
+    // Button to generate the sand biome in the TerrainGenerator
     public void GenerateSandBiome() {
 
-        //
-        terrainGenerator.firstValue = 2;
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_SandBiome.GetComponent<BiomeGenerator>();
 
-        terrainGenerator.secondValue = 3;
+        terrainGenerator.ChangeToSandBiome();
 
     }
 
