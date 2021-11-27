@@ -1,0 +1,756 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.12f1 (afcadd793de6) revision 11520733'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1348; Version 2009; 64bit' Language: 'en' Physical Memory: 32439 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\UNITY\2021.1.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/jackl/Documents/GitHub/PGA_Infinite_Generation
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63451
+Successfully changed project path to: C:/Users/jackl/Documents/GitHub/PGA_Infinite_Generation
+C:/Users/jackl/Documents/GitHub/PGA_Infinite_Generation
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 83.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.12f1 (afcadd793de6)
+[Subsystems] Discovering subsystems at path C:/Program Files/UNITY/2021.1.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jackl/Documents/GitHub/PGA_Infinite_Generation/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
+    Vendor:   NVIDIA
+    VRAM:     10078 MB
+    Driver:   30.0.14.9613
+Initialize mono
+Mono path[0] = 'C:/Program Files/UNITY/2021.1.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/UNITY/2021.1.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/UNITY/2021.1.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/UNITY/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001590 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 89.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.261 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1261ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (508ms)
+			LoadAssemblies (47ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (158ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (235ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (105ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004512 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jackl\Documents\GitHub\PGA_Infinite_Generation\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jackl\Documents\GitHub\PGA_Infinite_Generation\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.163 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (928ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (312ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (354ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (267ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2977 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.5 MB.
+System memory in use after: 109.7 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3423.
+Total: 3.665100 ms (FindLiveObjects: 0.503600 ms CreateObjectMapping: 0.359300 ms MarkObjects: 2.703600 ms  DeleteObjects: 0.096600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Terrain Spritesheet V5.png
+  artifactKey: Guid(51644bcf49c7b344892b97c85bfbe15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain Spritesheet V5.png using Guid(51644bcf49c7b344892b97c85bfbe15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3873626f67d168e2d5a1856241dcaf6e') in 0.173783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Water V2 (Purple).png
+  artifactKey: Guid(aaeeb9117842e344089bda9c7a98e471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Water V2 (Purple).png using Guid(aaeeb9117842e344089bda9c7a98e471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f575d9ad3235565afc6d713e014143a0') in 0.040182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/SandWater.mat
+  artifactKey: Guid(c72f4cc50bb03e74da988324e1df226d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SandWater.mat using Guid(c72f4cc50bb03e74da988324e1df226d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485c7913550905895afde68c801e269c') in 0.088066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Water.mat
+  artifactKey: Guid(417333ad5759b014fbda7210b0edc72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Water.mat using Guid(417333ad5759b014fbda7210b0edc72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a72b0c37d6ec9b3947a70adb9b8511') in 0.021512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/MM.mat
+  artifactKey: Guid(abcf8ca9a85f79f4aaa27aebe1768b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MM.mat using Guid(abcf8ca9a85f79f4aaa27aebe1768b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2cc1fbf216fcdafc9e4bc0c130fe24e') in 0.029921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Water V1.png
+  artifactKey: Guid(549bd33313fe3554eb808f6ff6285fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Water V1.png using Guid(549bd33313fe3554eb808f6ff6285fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb871a0c992bbb00b1e01ee75a1cc60e') in 0.011442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Water V2 (Red).png
+  artifactKey: Guid(233eefe705bbfe249bf7fecb9ec305f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Water V2 (Red).png using Guid(233eefe705bbfe249bf7fecb9ec305f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1825f75ef259ad940f3d7d1fcbaaa3') in 0.014661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Water V2.png
+  artifactKey: Guid(620e529fe60aa794a95f54f9efa72d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Water V2.png using Guid(620e529fe60aa794a95f54f9efa72d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a0e05edc15cd09e6f5ca0f93ba9bd2') in 0.013535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 167.986089 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo
+  artifactKey: Guid(5d141430ace3cc0408e31b23e56e08ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo using Guid(5d141430ace3cc0408e31b23e56e08ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27aea82280a6de43a92f0c4e91502dc') in 0.008057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.097200 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/New Terrain.asset
+  artifactKey: Guid(a4503dc03081cd84aa03d1a3fb0dc910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/New Terrain.asset using Guid(a4503dc03081cd84aa03d1a3fb0dc910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c1bb9d9e5426c5f22af6df65130838') in 0.178229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/TerrainData_c5dafd93-705c-4d64-84cb-678ba7246350.asset
+  artifactKey: Guid(f4c146b62c0ea9b47bd95b1a8167a82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/TerrainData_c5dafd93-705c-4d64-84cb-678ba7246350.asset using Guid(f4c146b62c0ea9b47bd95b1a8167a82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a21a1d936c2d11cb36c73cbaff7c33') in 0.022906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.662610 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials
+  artifactKey: Guid(83f13a6693876d44dace90001e20ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials using Guid(83f13a6693876d44dace90001e20ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fce56c22e13a871dd762216caf632d7') in 0.006223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.067578 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_clay.mat
+  artifactKey: Guid(068d39ad2a610284589321a74477fca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_clay.mat using Guid(068d39ad2a610284589321a74477fca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f507044edc58bdc2b3bc24673b0a2a5') in 0.036302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_overcorrupted.mat
+  artifactKey: Guid(ba17272ce492ff74a934b37c50250d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_overcorrupted.mat using Guid(ba17272ce492ff74a934b37c50250d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82c9a3e100b28cd2f46047f7640480c4') in 0.033287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_corrupted_light.mat
+  artifactKey: Guid(0d421966b9024684ab5e3bfeb9a5bea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_corrupted_light.mat using Guid(0d421966b9024684ab5e3bfeb9a5bea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a5d18a6a98f2cf769da920c4ccb402') in 0.020780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_overdesatured.mat
+  artifactKey: Guid(8f8b2fe75ba6c4c44822b99bb77ec990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_overdesatured.mat using Guid(8f8b2fe75ba6c4c44822b99bb77ec990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '097c669e0b8e895cab6e0d1b1b9eb91c') in 0.025967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_lighted.mat
+  artifactKey: Guid(b720916f84c05c445a1e56e7d5ac7c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_lighted.mat using Guid(b720916f84c05c445a1e56e7d5ac7c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '230de4117ac80fec0b46e20867c50678') in 0.034599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_corrupted.mat
+  artifactKey: Guid(33eef089624823f4f9b1d6531235b3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_corrupted.mat using Guid(33eef089624823f4f9b1d6531235b3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdb5ef2ed934b9b5f733166e7f0ff218') in 0.034203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_darked.mat
+  artifactKey: Guid(49ca5b6b9bc21464081bc5be2701aca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_darked.mat using Guid(49ca5b6b9bc21464081bc5be2701aca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fecdfe04c922823ed7b73d48b34a3860') in 0.032029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_normal.mat
+  artifactKey: Guid(daec66f5c75ce4b499f65904759695a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_normal.mat using Guid(daec66f5c75ce4b499f65904759695a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb5bbc64fb25aec1c10408516008806') in 0.035235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_desatured.mat
+  artifactKey: Guid(7734f1945cbbb954888ae7a4c9b08726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_desatured.mat using Guid(7734f1945cbbb954888ae7a4c9b08726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5baeddfe7400399022d65b895ca7f93e') in 0.037050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000434 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_normal.mat
+  artifactKey: Guid(7aa8c8d1ffd54e94895834366fb18bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_normal.mat using Guid(7aa8c8d1ffd54e94895834366fb18bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e028a1c9efc861a5156e2c9a62dfcf') in 0.036964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_desatured_rocks.mat
+  artifactKey: Guid(9ae1d73fdebd4f04f971f7144044b8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_desatured_rocks.mat using Guid(9ae1d73fdebd4f04f971f7144044b8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b2b29ec01b45227b505161c93d0045') in 0.038472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_over_corrupted.mat
+  artifactKey: Guid(9bdcce6dec6d8e44e81a490c3e0ffb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_over_corrupted.mat using Guid(9bdcce6dec6d8e44e81a490c3e0ffb4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bfd2bd654f25d97d633172931a061ab') in 0.038557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_claydarked.mat
+  artifactKey: Guid(d4cf2f02954e1954b9864379996e4e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_claydarked.mat using Guid(d4cf2f02954e1954b9864379996e4e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '467ea34cc8922969acdcfc2a9220cd0a') in 0.039961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_corrupted.mat
+  artifactKey: Guid(9298c1f97ff67a843b2911d91b906966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/material_dirt_corrupted.mat using Guid(9298c1f97ff67a843b2911d91b906966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2324627c9b935495fc87e3457601c607') in 0.036474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_bluetint.mat
+  artifactKey: Guid(335b8ffb8cc63c14fa0668a162a152cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_bluetint.mat using Guid(335b8ffb8cc63c14fa0668a162a152cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd00ecb40cedd260af97a8827a408f62') in 0.036611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_desatured.mat
+  artifactKey: Guid(40cc89b9c27c19c459d15b79d4211bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_Grass_desatured.mat using Guid(40cc89b9c27c19c459d15b79d4211bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '631307bb21d33967fbbd0232b4fcd645') in 0.030537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_lighted_rocks.mat
+  artifactKey: Guid(ba828f98c36e04b45aed6d9bbb51a599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/Materials/Material_dirt_lighted_rocks.mat using Guid(ba828f98c36e04b45aed6d9bbb51a599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b509ee0f9adee7334385169634149c0c') in 0.033686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.068946 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers
+  artifactKey: Guid(fd194f911707f554c9daa1f2de48c620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers using Guid(fd194f911707f554c9daa1f2de48c620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156442598dc2995189bde6d168844544') in 0.007444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.068864 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_down.terrainlayer
+  artifactKey: Guid(4c4035b4429296047a447dd96db29248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_down.terrainlayer using Guid(4c4035b4429296047a447dd96db29248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21343a30f3cf3c4cdcaef11c6be0227d') in 0.054450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_left.terrainlayer
+  artifactKey: Guid(0f4c7a21d9678e542a477fd5229167fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_left.terrainlayer using Guid(0f4c7a21d9678e542a477fd5229167fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba33534e91e13f9a39422e207bfea5ba') in 0.018943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_right.terrainlayer
+  artifactKey: Guid(6de2cb754be81fe4da45a5d5149551c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_right.terrainlayer using Guid(6de2cb754be81fe4da45a5d5149551c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cf9498de7c3969d8189ece66203f511') in 0.022022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_down.terrainlayer
+  artifactKey: Guid(3d4206861a951f648b37ee22d964bf26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_down.terrainlayer using Guid(3d4206861a951f648b37ee22d964bf26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c674f65eb3048860ec27fa11f2987b') in 0.016180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_right.terrainlayer
+  artifactKey: Guid(85999f731165c8a458b1795d7bfb2f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_right.terrainlayer using Guid(85999f731165c8a458b1795d7bfb2f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f8c2bae29b105276c91f6d483712cf') in 0.025963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_down.terrainlayer
+  artifactKey: Guid(9d3c14d093c5efa488e582f9a1b2f663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_down.terrainlayer using Guid(9d3c14d093c5efa488e582f9a1b2f663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a346b154a96dcb37dad77ce16d9803') in 0.032710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_down.terrainlayer
+  artifactKey: Guid(89258d896d872294bb3a0cefacbc3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_down.terrainlayer using Guid(89258d896d872294bb3a0cefacbc3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42eafbe36c966065181bf44a6baead9') in 0.023527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_down.terrainlayer
+  artifactKey: Guid(a35f94c7d8dea164fa79fe7e62a3c4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_down.terrainlayer using Guid(a35f94c7d8dea164fa79fe7e62a3c4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61b0c1ba857ec7a4b954b9800527d8a') in 0.025738 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_right.terrainlayer
+  artifactKey: Guid(93048c3e21ad4ea48a891e7dfba702ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_right.terrainlayer using Guid(93048c3e21ad4ea48a891e7dfba702ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82112ea2ffc10a375bdb6ac5cc1d26f0') in 0.027884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_down.terrainlayer
+  artifactKey: Guid(d5d5a56e581314b45bc87cf717f146a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_down.terrainlayer using Guid(d5d5a56e581314b45bc87cf717f146a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1b0e1ad2f811f70da96fd249c5ac6aa') in 0.018874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_right.terrainlayer
+  artifactKey: Guid(81ae3aa24351ac3468c21be8f174a9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_right.terrainlayer using Guid(81ae3aa24351ac3468c21be8f174a9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865407fe619a6fd0695bdbff8fa54cdc') in 0.028664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_down.terrainlayer
+  artifactKey: Guid(af09d6fd4ebc81e448c4a90956dfb789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_down.terrainlayer using Guid(af09d6fd4ebc81e448c4a90956dfb789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa4d38385d3dbea6718dab5d288e893d') in 0.023969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_up.terrainlayer
+  artifactKey: Guid(799b17a5976350a4699e3fe5773d8e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_up.terrainlayer using Guid(799b17a5976350a4699e3fe5773d8e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a15890abb375b4ea79a2d80c079532ef') in 0.027301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_up.terrainlayer
+  artifactKey: Guid(ed58adfb5ac840849b177a27f87a058a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_up.terrainlayer using Guid(ed58adfb5ac840849b177a27f87a058a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534ece84c0bcec7f5c313a9562e3ada1') in 0.029047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_right.terrainlayer
+  artifactKey: Guid(5a8233d884b35ae4581f8f254c1995be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_right.terrainlayer using Guid(5a8233d884b35ae4581f8f254c1995be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d4197984ead76bbc17bf0c220319ce') in 0.034826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_down.terrainlayer
+  artifactKey: Guid(6cc09a088a350a64fa9c4fdadce1ce3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_down.terrainlayer using Guid(6cc09a088a350a64fa9c4fdadce1ce3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0605479675de11bbb7b1becd02d19bf8') in 0.029033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_left.terrainlayer
+  artifactKey: Guid(8266026e5ca9bc247a41d77e26bb8052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_left.terrainlayer using Guid(8266026e5ca9bc247a41d77e26bb8052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9cf67dae498fcd221223b352da1984f') in 0.030809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_down.terrainlayer
+  artifactKey: Guid(54892ecdba355f54f996d94cfcff41a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_down.terrainlayer using Guid(54892ecdba355f54f996d94cfcff41a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87030f5a4b6dd2907867874297d4e3f4') in 0.027461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_up.terrainlayer
+  artifactKey: Guid(8d1901c5994c2e845b5026dcbc721c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_up.terrainlayer using Guid(8d1901c5994c2e845b5026dcbc721c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf555d9dc8b0ec3d7e30bee3f879a19') in 0.030995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_down.terrainlayer
+  artifactKey: Guid(bd09f0681f28b484fb0610ef52f7254c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_down.terrainlayer using Guid(bd09f0681f28b484fb0610ef52f7254c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed304ced141c4bb733a7d25441b6294') in 0.015106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_up.terrainlayer
+  artifactKey: Guid(205fdae2c6b4e4345831e9b662268942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_up.terrainlayer using Guid(205fdae2c6b4e4345831e9b662268942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d3327a5de11982af09a5c5c73582232') in 0.029226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_right.terrainlayer
+  artifactKey: Guid(3275dd885f90676448381cc2a20d87ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overdesatured_right.terrainlayer using Guid(3275dd885f90676448381cc2a20d87ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3eaf77c346e4b999cfd3ffc7bd73b1') in 0.028204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_right.terrainlayer
+  artifactKey: Guid(e788cd2c1fd684744ba303b8cb656bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_right.terrainlayer using Guid(e788cd2c1fd684744ba303b8cb656bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96250358ae1696b40cfbd934293f3c54') in 0.032828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_up.terrainlayer
+  artifactKey: Guid(3e876ba4c3fbcb44892786b86e12a40d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_up.terrainlayer using Guid(3e876ba4c3fbcb44892786b86e12a40d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5bac99283944086df94f61529b5bf7e') in 0.038189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_right.terrainlayer
+  artifactKey: Guid(b26240796d8c5d94091db1d62cab2744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_right.terrainlayer using Guid(b26240796d8c5d94091db1d62cab2744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a7ffcf91d65985ac7ebb7a30bd65b4') in 0.032309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_left.terrainlayer
+  artifactKey: Guid(69aae8f389094174fa2ca70f9268a251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_left.terrainlayer using Guid(69aae8f389094174fa2ca70f9268a251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05b29b13a920af3021294f9e82506b91') in 0.028948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_up.terrainlayer
+  artifactKey: Guid(8539624c71e7a51479eced781f91d967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_up.terrainlayer using Guid(8539624c71e7a51479eced781f91d967) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72652c38bbfe463fb7e738eefee1c017') in 0.028239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_left.terrainlayer
+  artifactKey: Guid(33706b97a412a2b4bb4ec1ef3b9eeb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_desatured_left.terrainlayer using Guid(33706b97a412a2b4bb4ec1ef3b9eeb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab91da92568f2ba1b799f779ff8ff1f') in 0.029947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_down.terrainlayer
+  artifactKey: Guid(a2067e44dd8d50144b0a359c7513a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_down.terrainlayer using Guid(a2067e44dd8d50144b0a359c7513a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b610f81c10624fe4be0eea1a682288f') in 0.021809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_left.terrainlayer
+  artifactKey: Guid(13710ded8a4abf1429f52beb35020a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_left.terrainlayer using Guid(13710ded8a4abf1429f52beb35020a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e41e1e65728362b5dfdc18e49ffec2') in 0.030157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_up.terrainlayer
+  artifactKey: Guid(f8179b5fdea36d14484ce6531cdf7e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_up.terrainlayer using Guid(f8179b5fdea36d14484ce6531cdf7e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549c064478df08ed280bfd4de26eeccb') in 0.026486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_right.terrainlayer
+  artifactKey: Guid(79459100015b83e448ec508ceae4fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_right.terrainlayer using Guid(79459100015b83e448ec508ceae4fc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413c3f1a4e33bc0bc8ea3adc90fb123a') in 0.033657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_down.terrainlayer
+  artifactKey: Guid(ca37d638073554c449cb7c9dd313f5cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_down.terrainlayer using Guid(ca37d638073554c449cb7c9dd313f5cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '620925c879e9b55686975ce35ba7ec80') in 0.017413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_up.terrainlayer
+  artifactKey: Guid(a597e1737097f994a9beacb7152ea611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_up.terrainlayer using Guid(a597e1737097f994a9beacb7152ea611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85491735e274f5441dd1c2be5c161448') in 0.018888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_up.terrainlayer
+  artifactKey: Guid(1144b24d6a50b464ea2e952561a6f7e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_up.terrainlayer using Guid(1144b24d6a50b464ea2e952561a6f7e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f8ec299d5693189dec4aa857aea868') in 0.020188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_left.terrainlayer
+  artifactKey: Guid(2af4e57ff8bc78e4a88241418c051a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_left.terrainlayer using Guid(2af4e57ff8bc78e4a88241418c051a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eadaa5ef8872d80a4925b1c2d62b132') in 0.025888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_down.terrainlayer
+  artifactKey: Guid(acddab07f8ac8c84aa7852a315806c4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_down.terrainlayer using Guid(acddab07f8ac8c84aa7852a315806c4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12d6ae9d87b00e957b4c82bdd30971fe') in 0.023163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_down.terrainlayer
+  artifactKey: Guid(2b319025aaf66334aa785399b8ac33ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_down.terrainlayer using Guid(2b319025aaf66334aa785399b8ac33ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8adfd787547e370cfca60ecb89d133de') in 0.022468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_up.terrainlayer
+  artifactKey: Guid(ba4dd0b5a1d820f45946c6f4e6c4ae24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_up.terrainlayer using Guid(ba4dd0b5a1d820f45946c6f4e6c4ae24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf66a35eacf6888f8544c2caafdd9e55') in 0.035990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_left.terrainlayer
+  artifactKey: Guid(f090ea60b20d02c4ba801580101c5465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_left.terrainlayer using Guid(f090ea60b20d02c4ba801580101c5465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '648bdca09a73a22134e47994a06c4c4d') in 0.032161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_left.terrainlayer
+  artifactKey: Guid(732b43abd374c374d978d756f1c4a5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_left.terrainlayer using Guid(732b43abd374c374d978d756f1c4a5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97efac1b3d7ebb1b34f4d30e0f95e5fe') in 0.029366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_right.terrainlayer
+  artifactKey: Guid(4ac37b12803ab694983dffea6db7bf14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_lighted_right.terrainlayer using Guid(4ac37b12803ab694983dffea6db7bf14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17559c616b6e50f2d18e962186b02f43') in 0.030033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_up.terrainlayer
+  artifactKey: Guid(174f1f8e3d6d9f541bcafd1c4823cd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_up.terrainlayer using Guid(174f1f8e3d6d9f541bcafd1c4823cd5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac154385f71358d6eecad32137faee95') in 0.028750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_left.terrainlayer
+  artifactKey: Guid(1c493d6bb8797ef4f9f71200033d5fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_rocks_left.terrainlayer using Guid(1c493d6bb8797ef4f9f71200033d5fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21c48390048acec87f8100cee587686f') in 0.029981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_right.terrainlayer
+  artifactKey: Guid(d05b6b35cf7b1484bb2f64c0a74476dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_right.terrainlayer using Guid(d05b6b35cf7b1484bb2f64c0a74476dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a8f16d00ca8a639e709a2ecd4bdc22') in 0.035015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_right.terrainlayer
+  artifactKey: Guid(230d99471a8ceec4e91c4455a1f70044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_right.terrainlayer using Guid(230d99471a8ceec4e91c4455a1f70044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1870bf32da8d10ce47b4d4ed94a9e47c') in 0.038717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_overcorrupted_down.terrainlayer
+  artifactKey: Guid(082119606917ad0458b90f16cebed0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_overcorrupted_down.terrainlayer using Guid(082119606917ad0458b90f16cebed0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76835b22007ab0e2b1f7a5cb2b2a154') in 0.022409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_right.terrainlayer
+  artifactKey: Guid(1b91aa2ac8fa2b04b972e4af2dfa295b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_right.terrainlayer using Guid(1b91aa2ac8fa2b04b972e4af2dfa295b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd163c74082c314d549f871f36c57dce3') in 0.036195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_left.terrainlayer
+  artifactKey: Guid(d59394a29b2bc2b429127e902d2bb590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_left.terrainlayer using Guid(d59394a29b2bc2b429127e902d2bb590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4352a8dd5c2e63a47ed25808a780509b') in 0.031184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_down.terrainlayer
+  artifactKey: Guid(421ead4c2a1387945a283cc08d0ad7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_claydarked_down.terrainlayer using Guid(421ead4c2a1387945a283cc08d0ad7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f473b6ebf58a5ea0d5ceef1a1cfc9371') in 0.023250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_left.terrainlayer
+  artifactKey: Guid(630526f594c11b34196947e39addf186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_left.terrainlayer using Guid(630526f594c11b34196947e39addf186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18c8668e62f2d662ce9f737ef9006a9d') in 0.031674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_left.terrainlayer
+  artifactKey: Guid(9d4c363caf962fc4db3f057f27debd78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_left.terrainlayer using Guid(9d4c363caf962fc4db3f057f27debd78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97884e0df29f7aea95e25e9eca727851') in 0.032576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_left.terrainlayer
+  artifactKey: Guid(c713baf133ac7f840b6e5f2a7e1fcdc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_clay_left.terrainlayer using Guid(c713baf133ac7f840b6e5f2a7e1fcdc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5dc4cbcea49e8d06c3e1424bd639cfa') in 0.025196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_left.terrainlayer
+  artifactKey: Guid(4f578fafc038b3e47889d8591aeabb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_bluetint_left.terrainlayer using Guid(4f578fafc038b3e47889d8591aeabb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb74fe457a4df76334b02b82e3f7539') in 0.033318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_right.terrainlayer
+  artifactKey: Guid(94bd4356f0397844b86cc42bed9f66c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_overcorrupted_right.terrainlayer using Guid(94bd4356f0397844b86cc42bed9f66c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44361bc73999b905178bdeb5a41c847e') in 0.025710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_left.terrainlayer
+  artifactKey: Guid(01fdb5ede7bc71744bebfca6e00634c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_left.terrainlayer using Guid(01fdb5ede7bc71744bebfca6e00634c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699199f30be82ad847907e400d51fdbc') in 0.029792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_up.terrainlayer
+  artifactKey: Guid(bcb6b5f0b45e65f41a03dfd1c55f60d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_up.terrainlayer using Guid(bcb6b5f0b45e65f41a03dfd1c55f60d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40e3a9bd4a504b5a881cb1b0c415651') in 0.027358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_up.terrainlayer
+  artifactKey: Guid(d89b6494d9fbc994182207fed5df47a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_up.terrainlayer using Guid(d89b6494d9fbc994182207fed5df47a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3595d0d5c7a320b63226de89d29b4787') in 0.032407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_right.terrainlayer
+  artifactKey: Guid(d01c7e7a2af3ed249929094afc30abe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_normal_right.terrainlayer using Guid(d01c7e7a2af3ed249929094afc30abe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddcac685076cd853a32b44f4bba96115') in 0.032265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_right.terrainlayer
+  artifactKey: Guid(0cc50b69c88e8434eab1b49d54585984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_right.terrainlayer using Guid(0cc50b69c88e8434eab1b49d54585984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb2ef031ec80bd93cbcb6e1dd8b3d8d') in 0.031351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_up.terrainlayer
+  artifactKey: Guid(4a7af20f1c12eed44b51c5f085942c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_up.terrainlayer using Guid(4a7af20f1c12eed44b51c5f085942c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7945e47091dd081d1bce757b130b8f3c') in 0.029277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_up.terrainlayer
+  artifactKey: Guid(1f75228414d5254428e95e86edd17bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_up.terrainlayer using Guid(1f75228414d5254428e95e86edd17bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05f2ff2d4b9ff1e3630c7ffabc9570af') in 0.026036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_up.terrainlayer
+  artifactKey: Guid(466d1d3acac3ca2408920fe63d4cb054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_lighted_up.terrainlayer using Guid(466d1d3acac3ca2408920fe63d4cb054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '112c9e65fcd3a1dfe19747f3183b155c') in 0.022233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_up.terrainlayer
+  artifactKey: Guid(299e03f60c444014eb427319d96ae48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_corrupted_up.terrainlayer using Guid(299e03f60c444014eb427319d96ae48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d167aab4e6e33c540e732ee8f9603a6') in 0.022903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_left.terrainlayer
+  artifactKey: Guid(8868eb00d1fb1564881e9adbc06e83c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_lighted_left.terrainlayer using Guid(8868eb00d1fb1564881e9adbc06e83c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64297e67381ec356b0328ba8d68bb35') in 0.024551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_down.terrainlayer
+  artifactKey: Guid(68e602da48e73564e9f8e9125f0b8998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_normal_down.terrainlayer using Guid(68e602da48e73564e9f8e9125f0b8998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1dfbb5da32fe5162b42fbc80bd2f557') in 0.015181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_down.terrainlayer
+  artifactKey: Guid(8f32cc9883b377b4ebc3538ba838bff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_darked_down.terrainlayer using Guid(8f32cc9883b377b4ebc3538ba838bff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b86c5b51bdca60719de223f11804f57') in 0.014172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_right.terrainlayer
+  artifactKey: Guid(623b445a6e0248847a90129992558440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/dirt_desatured_rocks_right.terrainlayer using Guid(623b445a6e0248847a90129992558440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c6de4b092e664fd0c8e31808c85fb01') in 0.017465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_left.terrainlayer
+  artifactKey: Guid(1969c3a09bbfb164f9683bf61b1f0cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Demo/terrain_layers/Grass_corrupted_left.terrainlayer using Guid(1969c3a09bbfb164f9683bf61b1f0cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d6c9f3e6c4a63dab032fecaa5fe5d66') in 0.022121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.608365 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint
+  artifactKey: Guid(26958714fec28b64db5ebbaae1aee86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint using Guid(26958714fec28b64db5ebbaae1aee86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d129937089fc7a880b93691748c2aa4') in 0.007043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.080159 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_down.png
+  artifactKey: Guid(5ec0f071b81b63241967c85ddfc73ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_down.png using Guid(5ec0f071b81b63241967c85ddfc73ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dbd813569a1d08faf394f8bf9fbc373') in 0.033121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000461 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_up.png
+  artifactKey: Guid(87faeff29765dd54d93f5ba0cdabfa58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_up.png using Guid(87faeff29765dd54d93f5ba0cdabfa58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '755b4942e91f1e448eeeae4dc66cef3f') in 0.017983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_right.png
+  artifactKey: Guid(d211bc1342827ac44b6b1bd93cf8f969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_right.png using Guid(d211bc1342827ac44b6b1bd93cf8f969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123e34736e21be56efd1a7622dde2492') in 0.012646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_left.png
+  artifactKey: Guid(4b13c3aa7713124418fd1f17e83a5be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Handpainted_Grass_and_Ground_Textures/Textures/Grass/Grass_bluetint/Grass_bluetint_left.png using Guid(4b13c3aa7713124418fd1f17e83a5be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b392cbbeb71043b0d7d5f75479a387ad') in 0.020931 seconds 

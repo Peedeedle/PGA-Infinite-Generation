@@ -97,9 +97,6 @@
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\UnityAssets\Cliffs,Rocks, Trees\LowPolyTreePack\README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\UNITY\2021.1.12f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
