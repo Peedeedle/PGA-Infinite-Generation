@@ -35,9 +35,6 @@ public class MeshData
     // Represent water mesh, different shader and material
     public MeshData waterMesh;
 
-    // Represent water mesh, different shader and material
-    //public MeshData sandWaterMesh;
-
     // if the main mesh is true
     private bool bIsMainMesh = true;
 
@@ -50,9 +47,6 @@ public class MeshData
 
             // water mesh = new mesh data that isn't the main mesh
             waterMesh = new MeshData(false);
-
-            // water mesh = new mesh data that isn't the main mesh
-            //sandWaterMesh = new MeshData(false);
 
         }
 

@@ -43,6 +43,9 @@ public class ChunkData
     //
     public SnowTreeData snowTreeData;
 
+    //
+    public PresentsData presentsData;
+
 
     // Contructor for the chunk data
     public ChunkData (int chunkSize, int chunkHeight, World world, Vector3Int worldPosition) {

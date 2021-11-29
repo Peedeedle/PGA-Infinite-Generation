@@ -40,6 +40,9 @@ public class BiomeGenerator : MonoBehaviour
     //
     public SnowTreeGenerator snowTreeGenerator;
 
+    //
+    public PresentsGenerator presentsGenerator;
+
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
 
@@ -68,17 +71,31 @@ public class BiomeGenerator : MonoBehaviour
 
     }
 
-    // Get the cactus data
+    // 
     internal SnowTreeData GetSnowTreeData(ChunkData data, Vector2Int mapSeedOffset) {
 
-        // if cactus generator = null (Don't generate cactuses)
+        // 
         if (snowTreeGenerator == null)
 
-            // return cactus data values which are 0
+            // 
             return new SnowTreeData();
 
-        // return generate cactus with data and map seed offset for positions
+        // 
         return snowTreeGenerator.GenerateSnowTreeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal PresentsData GetPresentsData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (presentsGenerator == null)
+
+            // 
+            return new PresentsData();
+
+        // 
+        return presentsGenerator.GeneratePresentsData(data, mapSeedOffset);
 
     }
 

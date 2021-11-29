@@ -62,9 +62,11 @@
     <Compile Include="Assets\Scripts\BlockLayers\BlockLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BiomeGenerator.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\Additional Layers\StoneLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeGenerator.cs" />
     <Compile Include="Assets\Scripts\BlockHelper.cs" />
     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\BlockDataSO.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeDataProccessing.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\WaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BlockDataManager.cs" />
     <Compile Include="Assets\Scripts\ChunkRenderer.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\BlockLayers\SurfaceLayerHandler.cs" />
     <Compile Include="Assets\Scripts\NoiseSettings.cs" />
     <Compile Include="Assets\Scripts\BlockType.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeLayerHandler.cs" />
     <Compile Include="Assets\Scripts\DirectionExtensions.cs" />
     <Compile Include="Assets\Scripts\Trees\DataProccessing.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
@@ -91,15 +94,16 @@
     <Compile Include="Assets\Scripts\BlockLayers\UndergroundLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeData.cs" />
+    <Compile Include="Assets\Scripts\BlockLayers\IceWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BiomeCenterFinder.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusData.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
-    <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
-    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeDataProccessing.cs" />
     <Compile Include="Assets\Scripts\SnowTrees\SnowTreeData.cs" />
-    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeGenerator.cs" />
-    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeLayerHandler.cs" />
-    <Compile Include="Assets\Scripts\BlockLayers\IceWaterLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsData.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsDataProccessing.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsGenerator.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsLayerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

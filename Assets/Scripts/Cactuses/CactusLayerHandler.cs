@@ -108,18 +108,6 @@ public class CactusLayerHandler : BlockLayerHandler
 
                 }
 
-                /*
-                // for each vector 3 int in leaf position in the tree static layout
-                foreach (Vector3Int cactusPosition in treeLeavesStaticLayout) {
-
-                    // add the tree leaves solid to the vector 3 ints (X, Y and Z), surface height noise + 5 = i loop on line 106
-                    chunkData.treeData.treeLeavesSolid.Add(new Vector3Int(x + leafPosition.x, surfaceHeightNoise + 5 
-                        + leafPosition.y, z + leafPosition.z));
-
-                }
-
-                */
-
             }
 
 

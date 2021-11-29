@@ -36,7 +36,7 @@ public class IceWaterLayerHandler : BlockLayerHandler
                 pos.y = surfaceHeightNoise;
 
                 // set the block to be sand
-                Chunk.SetBlock(chunkData, pos, BlockType.Snow);
+                Chunk.SetBlock(chunkData, pos, BlockType.Dirt);
 
 
             }

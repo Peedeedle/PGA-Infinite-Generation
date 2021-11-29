@@ -109,11 +109,11 @@ public class SnowTreeLayerHandler : BlockLayerHandler
                 }
 
                 // for each vector 3 int in leaf position in the tree static layout
-                foreach (Vector3Int leafPosition in snowTreeLeaves) {
+                foreach (Vector3Int snowLeafPosition in snowTreeLeaves) {
 
                     // add the tree leaves solid to the vector 3 ints (X, Y and Z), surface height noise + 5 = i loop on line 106
-                    chunkData.snowTreeData.snowTreeLeaves.Add(new Vector3Int(x + leafPosition.x, surfaceHeightNoise + 5 
-                        + leafPosition.y, z + leafPosition.z));
+                    chunkData.snowTreeData.snowTreeLeaves.Add(new Vector3Int(x + snowLeafPosition.x, surfaceHeightNoise + 5 
+                        + snowLeafPosition.y, z + snowLeafPosition.z));
 
                 }
 

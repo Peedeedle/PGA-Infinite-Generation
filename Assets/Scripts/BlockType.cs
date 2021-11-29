@@ -30,7 +30,8 @@ public enum BlockType
     SnowLeaves,
     Ice,
     SnowTreeLog,
-    IceWater
+    IceWater,
+    Present
 
 
 }
