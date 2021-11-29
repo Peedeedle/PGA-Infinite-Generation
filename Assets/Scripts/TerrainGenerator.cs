@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 27/11/21
+// Date Last Edited: 29/11/21
 // Brief: Generating the terrain using noise settings and data
 //////////////////////////////////////////////////////////// 
 
@@ -16,11 +16,55 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
 
+    //
+    #region Water Materials
+    [Header("WaterMaterials")]
+
+    //
+    public Texture normalWater, sandWater, iceWater;
+
+    //
+    public Material Water;
+
+    #endregion
+
+    #region Biome Generator GameObjects
+
+    [Header("Biome References")]
+
     // reference to the normal biome game object
     public GameObject Go_NormalBiome;
 
     // reference to the sand biome game object
     public GameObject Go_SandBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_IceBiome;
+
+    #endregion
+
+    #region Biome Data Lists
+
+    // list of biome data called biomeGeneratorsData
+    [SerializeField]
+    private List<BiomeData> biomeGeneratorsData = new List<BiomeData>();
+
+    // list of normal biome data called normalBiomeData
+    [SerializeField]
+    [Header("NORMALDATA")]
+    private List<BiomeData> normalBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("SANDDATA")]
+    private List<BiomeData> sandBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("IceDATA")]
+    private List<BiomeData> iceBiomeData = new List<BiomeData>();
+
+    #endregion
 
     // reference to a biome data
     public BiomeData biomeData;
@@ -42,40 +86,78 @@ public class TerrainGenerator : MonoBehaviour
     // reference to the domain warping
     public DomainWarping biomeDomainWarping;
 
-    // list of biome data called biomeGeneratorsData
-    [SerializeField]
-    private List<BiomeData> biomeGeneratorsData = new List<BiomeData>();
+    // on start
+    public void Start() {
 
-    // list of normal biome data called normalBiomeData
-    [SerializeField]
-    [Header("NORMALDATA")]
-    private List<BiomeData> normalBiomeData = new List<BiomeData>();
+        // reference to the water materials normal map
+        Water.EnableKeyword("_NORMALMAP");
 
-    // list of sand biome data called sandBiomeData
-    [SerializeField]
-    [Header("SANDDATA")]
-    private List<BiomeData> sandBiomeData = new List<BiomeData>();
+        // reference to the water materials Albedo
+        Water.EnableKeyword("_ALBEDO");
+
+        // Set the Albedo for the material to the normal water
+        Water.SetTexture("_MainTex", normalWater);
+
+        // Set the Normal Map of the material to normal water
+        Water.SetTexture("_BumpMap", normalWater);
+
+    }
+
+    #region Change To Biomes
 
     // when button pressed in ButtonManager change to normal biome
     public void ChangeToNormalBiome() {
 
+        // set the list of biome data to the normal biome data
         biomeGeneratorsData = normalBiomeData;
+
+        // Set the Albedo for the material to the normal water
+        Water.SetTexture("_MainTex", normalWater);
+
+        // Set the Normal Map of the material to normal water
+        Water.SetTexture("_BumpMap", normalWater);
 
     }
 
     // when button pressed in ButtonManager change to sand biome
     public void ChangeToSandBiome() {
 
+        // set the list of biome data to the sand biome data
         biomeGeneratorsData = sandBiomeData;
 
+        // Set the Albedo for the material to the sand water
+        Water.SetTexture("_MainTex", sandWater);
+
+        // Set the Normal Map of the material to sand water
+        Water.SetTexture("_BumpMap", sandWater);
+
     }
-    
+
+    // when button pressed in ButtonManager change to sand biome
+    public void ChangeToIceBiome() {
+
+        // set the list of biome data to the sand biome data
+        biomeGeneratorsData = iceBiomeData;
+
+        // Set the Albedo for the material to the ice water
+        Water.SetTexture("_MainTex", iceWater);
+
+        // Set the Normal Map of the material to ice water
+        Water.SetTexture("_BumpMap", iceWater);
+    }
+
+    #endregion
+
+
+
 
     // Generate the chunk data using the data and a vector 2 for the mapSeedOffset
     public ChunkData GenerateChunkData(ChunkData data, Vector2Int mapSeedOffset) {
 
         // biome selection = select biome generator passing in the world position, data and false bool
         BiomeGeneratorSelection biomeSelection = SelectBiomeGenerator(data.worldPosition, data, false);
+
+
 
         // include data from the tree data
         // (Include data before world is rendered)
@@ -84,6 +166,12 @@ public class TerrainGenerator : MonoBehaviour
         // include data from the cactus data
         // (Include data before world is rendered)
         data.cactusData = biomeSelection.biomeGenerator.GetCactusData(data, mapSeedOffset);
+
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.snowTreeData = biomeSelection.biomeGenerator.GetSnowTreeData(data, mapSeedOffset);
+
+
 
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {
@@ -172,9 +260,6 @@ public class TerrainGenerator : MonoBehaviour
 
         // return the biome generators data with an index of [0] to the biome terrain generator
         return biomeGeneratorsData[0].biomeTerrainGenerator;
-
-
-
 
     }
 

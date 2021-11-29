@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 13/11/21
+// Date Last Edited: 28/11/21
 // Brief: world script for the variables to generate the world
 //////////////////////////////////////////////////////////// 
 
@@ -86,7 +86,7 @@ public class World : MonoBehaviour
     // Generate the World / Meshes
     public async void GenerateWorld() {
 
-        //
+        // change the UI canvas to the game canvas
         buttonManager.ChangeToGameCanvas();
 
         // await the generate world at zero position
@@ -155,9 +155,6 @@ public class World : MonoBehaviour
             // add the tree leaves using the chunk data
             AddTreeLeaves(chunkData);
 
-            //
-            //AddCactuses(chunkData);
-
         }
 
         // concurrent dictionary of vector3ints and meshData called meshDataDictionary = new concurrent dictionary
@@ -204,20 +201,7 @@ public class World : MonoBehaviour
         }
 
     }
-    /*
-    // add tree leaves passing in the chunk data
-    private void AddCactuses(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
-        foreach (var cactuses in chunkData.cactusData.treeLeavesSolid) {
-
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
-            Chunk.SetBlock(chunkData, treeLeaves, BlockType.TreeLeavesSolid);
-
-        }
-
-    }
-    */
     // concurrent dictionary of vector3ints and mesh data called CreateMeshDataAsync of data to render
     private Task<ConcurrentDictionary<Vector3Int, MeshData>> CreateMeshDataAsync(List<ChunkData> dataToRender) {
 

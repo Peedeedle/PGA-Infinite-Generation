@@ -25,7 +25,12 @@ public enum BlockType
     Sand,
     TreeLog,
     TreeLeavesSolid,
-    Cactus
+    Cactus,
+    Snow,
+    SnowLeaves,
+    Ice,
+    SnowTreeLog,
+    IceWater
 
 
 }

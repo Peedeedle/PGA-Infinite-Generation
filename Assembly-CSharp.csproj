@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlockLayers\BlockLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BiomeGenerator.cs" />
-    <Compile Include="Assets\Scripts\BlockLayers\StoneLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\BlockLayers\Additional Layers\StoneLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BlockHelper.cs" />
     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\BlockDataSO.cs" />
@@ -95,6 +95,11 @@
     <Compile Include="Assets\Scripts\Cactuses\CactusData.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeDataProccessing.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeData.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeGenerator.cs" />
+    <Compile Include="Assets\Scripts\SnowTrees\SnowTreeLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\BlockLayers\IceWaterLayerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
