@@ -61,8 +61,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlockLayers\BlockLayerHandler.cs" />
     <Compile Include="Assets\Scripts\BiomeGenerator.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsDataProccessing.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\Additional Layers\StoneLayerHandler.cs" />
     <Compile Include="Assets\Scripts\SnowTrees\SnowTreeGenerator.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsData.cs" />
     <Compile Include="Assets\Scripts\BlockHelper.cs" />
     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\BlockDataSO.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Assets\Scripts\ChunkRenderer.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\AirLayerHandler.cs" />
     <Compile Include="Assets\Scripts\MyNoise.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsLayerHandler.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\SandWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Direction.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Assets\Scripts\ChunkData.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\UndergroundLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\Presents\PresentsGenerator.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusLayerHandler.cs" />
     <Compile Include="Assets\Scripts\Trees\TreeData.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\IceWaterLayerHandler.cs" />
@@ -100,10 +104,6 @@
     <Compile Include="Assets\Scripts\Trees\TreeGenerator.cs" />
     <Compile Include="Assets\Scripts\SnowTrees\SnowTreeData.cs" />
     <Compile Include="Assets\Scripts\Cactuses\CactusGenerator.cs" />
-    <Compile Include="Assets\Scripts\Presents\PresentsData.cs" />
-    <Compile Include="Assets\Scripts\Presents\PresentsDataProccessing.cs" />
-    <Compile Include="Assets\Scripts\Presents\PresentsGenerator.cs" />
-    <Compile Include="Assets\Scripts\Presents\PresentsLayerHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

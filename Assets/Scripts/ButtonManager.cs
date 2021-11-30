@@ -60,6 +60,10 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+
+
+
+
     // Button to generate the normal biome in the TerrainGenerator
     public void GenerateNormalBiome() {
 
@@ -119,6 +123,30 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
     }
+
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateLavaBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_LavaBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToLavaBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
+
+
+
 
     // change to game canvas method
     public void ChangeToGameCanvas() {

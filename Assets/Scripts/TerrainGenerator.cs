@@ -21,7 +21,7 @@ public class TerrainGenerator : MonoBehaviour
     [Header("WaterMaterials")]
 
     //
-    public Texture normalWater, sandWater, iceWater;
+    public Texture normalWater, sandWater, iceWater, lavaWater;
 
     //
     public Material Water;
@@ -40,6 +40,9 @@ public class TerrainGenerator : MonoBehaviour
 
     // reference to the sand biome game object
     public GameObject Go_IceBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_LavaBiome;
 
     #endregion
 
@@ -63,6 +66,11 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     [Header("IceDATA")]
     private List<BiomeData> iceBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("IceDATA")]
+    private List<BiomeData> lavaBiomeData = new List<BiomeData>();
 
     #endregion
 
@@ -146,6 +154,19 @@ public class TerrainGenerator : MonoBehaviour
         Water.SetTexture("_BumpMap", iceWater);
     }
 
+    // when button pressed in ButtonManager change to sand biome
+    public void ChangeToLavaBiome() {
+
+        // set the list of biome data to the sand biome data
+        biomeGeneratorsData = lavaBiomeData;
+
+        // Set the Albedo for the material to the ice water
+        Water.SetTexture("_MainTex", lavaWater);
+
+        // Set the Normal Map of the material to ice water
+        Water.SetTexture("_BumpMap", lavaWater);
+    }
+
     #endregion
 
 
@@ -171,6 +192,9 @@ public class TerrainGenerator : MonoBehaviour
         // (Include data before world is rendered)
         data.snowTreeData = biomeSelection.biomeGenerator.GetSnowTreeData(data, mapSeedOffset);
 
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.presentsData = biomeSelection.biomeGenerator.GetPresentsData(data, mapSeedOffset);
 
 
         // look for each x local coordinate from 0 - chunksize (loop)

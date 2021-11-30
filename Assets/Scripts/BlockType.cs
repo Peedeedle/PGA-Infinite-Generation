@@ -31,7 +31,9 @@ public enum BlockType
     Ice,
     SnowTreeLog,
     IceWater,
-    Present
+    Present,
+    LavaGround
+    
 
 
 }

@@ -17,6 +17,7 @@ public class PresentsLayerHandler : BlockLayerHandler
     // set a height limit for the terrain
     public float terrainHeightLimit = 25;
 
+    /*
     // COULD BE DELETED?????
     // public static list of the tree leaves layout
     public static List<Vector3Int> presents = new List<Vector3Int>() {
@@ -68,7 +69,7 @@ public class PresentsLayerHandler : BlockLayerHandler
         new Vector3Int(0, 2, 0),
 
     };
-
+    */
 
     // Try handling method
     protected override bool TryHandling(ChunkData chunkData, int x, int y, int z, int surfaceHeightNoise, Vector2Int mapSeedOffset) {
@@ -96,25 +97,16 @@ public class PresentsLayerHandler : BlockLayerHandler
             if (type == BlockType.Snow) {
 
                 // set the block of the local position to dirt
-                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Dirt);
+                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Snow);
 
                 // for i is less than 5
-                for (int i = 1; i < 5; i++) {
+                for (int i = 1; i < 2; i++) {
 
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
                     // create a tree log
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Present);
-
-                }
-
-                // for each vector 3 int in leaf position in the tree static layout
-                foreach (Vector3Int presentsPosition in presents) {
-
-                    // add the tree leaves solid to the vector 3 ints (X, Y and Z), surface height noise + 5 = i loop on line 106
-                    chunkData.snowTreeData.snowTreeLeaves.Add(new Vector3Int(x + presentsPosition.x, surfaceHeightNoise + 5 
-                        + presentsPosition.y, z + presentsPosition.z));
 
                 }
 
