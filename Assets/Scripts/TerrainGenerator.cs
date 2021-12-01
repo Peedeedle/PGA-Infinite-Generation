@@ -21,7 +21,7 @@ public class TerrainGenerator : MonoBehaviour
     [Header("WaterMaterials")]
 
     //
-    public Texture normalWater, sandWater, iceWater, lavaWater;
+    public Texture normalWater, sandWater, iceWater, lavaWater, jungleWater, cursedWater, MushroomWater;
 
     //
     public Material Water;
@@ -43,6 +43,21 @@ public class TerrainGenerator : MonoBehaviour
 
     // reference to the sand biome game object
     public GameObject Go_LavaBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_JungleBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_CursedBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_MushroomBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_UnderwaterBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_FarmBiome;
 
     #endregion
 
@@ -69,8 +84,33 @@ public class TerrainGenerator : MonoBehaviour
 
     // list of sand biome data called sandBiomeData
     [SerializeField]
-    [Header("IceDATA")]
+    [Header("LavaDATA")]
     private List<BiomeData> lavaBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("JungleDATA")]
+    private List<BiomeData> jungleBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("CursedDATA")]
+    private List<BiomeData> cursedBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("MushroomDATA")]
+    private List<BiomeData> mushroomBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("UnderwaterDATA")]
+    private List<BiomeData> underwaterBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("FarmDATA")]
+    private List<BiomeData> farmBiomeData = new List<BiomeData>();
 
     #endregion
 
@@ -141,30 +181,95 @@ public class TerrainGenerator : MonoBehaviour
 
     }
 
-    // when button pressed in ButtonManager change to sand biome
+    // 
     public void ChangeToIceBiome() {
 
-        // set the list of biome data to the sand biome data
+        // 
         biomeGeneratorsData = iceBiomeData;
 
-        // Set the Albedo for the material to the ice water
+        // 
         Water.SetTexture("_MainTex", iceWater);
 
-        // Set the Normal Map of the material to ice water
+        // 
         Water.SetTexture("_BumpMap", iceWater);
     }
 
-    // when button pressed in ButtonManager change to sand biome
+    // 
     public void ChangeToLavaBiome() {
 
-        // set the list of biome data to the sand biome data
+        // 
         biomeGeneratorsData = lavaBiomeData;
 
-        // Set the Albedo for the material to the ice water
+        // 
         Water.SetTexture("_MainTex", lavaWater);
 
-        // Set the Normal Map of the material to ice water
+        // 
         Water.SetTexture("_BumpMap", lavaWater);
+    }
+
+    // 
+    public void ChangeToJungleBiome() {
+
+        // 
+        biomeGeneratorsData = jungleBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", jungleWater);
+
+        // 
+        Water.SetTexture("_BumpMap", jungleWater);
+    }
+
+    // 
+    public void ChangeToCursedBiome() {
+
+        // 
+        biomeGeneratorsData = cursedBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", cursedWater);
+
+        // 
+        Water.SetTexture("_BumpMap", cursedWater);
+    }
+
+    // 
+    public void ChangeToMushroomBiome() {
+
+        // 
+        biomeGeneratorsData = mushroomBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", normalWater);
+
+        // 
+        Water.SetTexture("_BumpMap", normalWater);
+    }
+
+    // 
+    public void ChangeToUnderwaterBiome() {
+
+        // 
+        biomeGeneratorsData = underwaterBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", normalWater);
+
+        // 
+        Water.SetTexture("_BumpMap", normalWater);
+    }
+
+    // 
+    public void ChangeToFarmBiome() {
+
+        // 
+        biomeGeneratorsData = farmBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", normalWater);
+
+        // 
+        Water.SetTexture("_BumpMap", normalWater);
     }
 
     #endregion

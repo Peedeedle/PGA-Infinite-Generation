@@ -144,6 +144,106 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateJungleBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_JungleBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToJungleBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateCursedBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_CursedBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToCursedBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateMushroomBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_MushroomBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToMushroomBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateUnderwaterBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_UnderwaterBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToUnderwaterBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateFarmBiome() {
+
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_FarmBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToFarmBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+    }
+
 
 
 

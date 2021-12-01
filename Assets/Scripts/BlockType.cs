@@ -32,7 +32,11 @@ public enum BlockType
     SnowTreeLog,
     IceWater,
     Present,
-    LavaGround
+    LavaGround,
+    JungleGrass,
+    CursedGrass,
+    MushroomGrass,
+    TilledSoil
     
 
 
