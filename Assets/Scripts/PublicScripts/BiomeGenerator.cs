@@ -43,6 +43,15 @@ public class BiomeGenerator : MonoBehaviour
     //
     public PresentsGenerator presentsGenerator;
 
+    //
+    public JungleTreeGenerator jungleTreeGenerator;
+
+    //
+    public LilyPadGenerator lilyPadGenerator;
+
+    //
+    public SugarCaneGenerator sugarCaneGenerator;
+
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
 
@@ -96,6 +105,48 @@ public class BiomeGenerator : MonoBehaviour
 
         // 
         return presentsGenerator.GeneratePresentsData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal JungleTreeData GetJungleTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (jungleTreeGenerator == null)
+
+            // 
+            return new JungleTreeData();
+
+        // 
+        return jungleTreeGenerator.GenerateJungleTreeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal LilyPadData GetLilyPadData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (lilyPadGenerator == null)
+
+            // 
+            return new LilyPadData();
+
+        // 
+        return lilyPadGenerator.GenerateLilyPadData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal SugarCaneData GetSugarCaneData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (sugarCaneGenerator == null)
+
+            // 
+            return new SugarCaneData();
+
+        // 
+        return sugarCaneGenerator.GenerateSugarCaneData(data, mapSeedOffset);
 
     }
 

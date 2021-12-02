@@ -197,6 +197,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers: []
 --- !u!1 &34158849
 GameObject:
@@ -433,6 +436,9 @@ GameObject:
   - component: {fileID: 52156024}
   - component: {fileID: 52156027}
   - component: {fileID: 52156025}
+  - component: {fileID: 52156026}
+  - component: {fileID: 52156029}
+  - component: {fileID: 52156028}
   m_Layer: 0
   m_Name: JungleGenerator
   m_TagString: NormalBiome
@@ -475,6 +481,20 @@ MonoBehaviour:
   noiseDomainY: {fileID: 11400000, guid: 5a5699e3dfeb0a242b805253b1963b4c, type: 2}
   amplitudeX: 40
   amplitudeY: 40
+--- !u!114 &52156026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52156023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95111af535f19e48a26686b58b43243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jungleTreeNoiseSettings: {fileID: 11400000, guid: 57fa01f9d288a4f41bd93efa71629ab0, type: 2}
+  domainWarping: {fileID: 52156025}
 --- !u!114 &52156027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +516,41 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
-  additionalLayerHandlers: []
+  jungleTreeGenerator: {fileID: 52156026}
+  lilyPadGenerator: {fileID: 52156029}
+  sugarCaneGenerator: {fileID: 52156028}
+  additionalLayerHandlers:
+  - {fileID: 1577557668}
+  - {fileID: 1361239919}
+  - {fileID: 2087097519}
+--- !u!114 &52156028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52156023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6a023425ea8a2429346340677448c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sugarCaneNoiseSettings: {fileID: 11400000, guid: 385ded694565f6645bed6760e5e29a25, type: 2}
+  domainWarping: {fileID: 52156025}
+--- !u!114 &52156029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52156023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad6e8008a9f031f4bb07a4c687430927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lilyPadNoiseSettings: {fileID: 11400000, guid: c35517ff855733a4d9991180de323385, type: 2}
+  domainWarping: {fileID: 52156025}
 --- !u!1 &72161659
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +669,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers: []
 --- !u!1 &132189205
 GameObject:
@@ -991,6 +1048,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers:
   - {fileID: 1753135062}
 --- !u!1 &243023090
@@ -2110,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Next: {fileID: 1868255538}
-  waterLevel: 3
+  waterLevel: 1
 --- !u!1 &767467741
 GameObject:
   m_ObjectHideFlags: 0
@@ -3916,6 +3976,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 1173625400}
   presentsGenerator: {fileID: 1173625402}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers:
   - {fileID: 1463686069}
   - {fileID: 321494806}
@@ -4049,6 +4112,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers:
   - {fileID: 1221505229}
   - {fileID: 1332322779}
@@ -4504,6 +4570,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Next: {fileID: 0}
   terrainHeightLimit: 25
+--- !u!1 &1361239917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361239918}
+  - component: {fileID: 1361239919}
+  m_Layer: 0
+  m_Name: LilyPadLayerHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361239918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361239917}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964137366}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361239919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361239917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae48d66536f89a498f2534cae091f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Next: {fileID: 0}
+  terrainHeightLimit: 25
 --- !u!1 &1365273135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,6 +4857,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers: []
 --- !u!1 &1463686067
 GameObject:
@@ -5294,8 +5408,56 @@ MonoBehaviour:
   cactusGenerator: {fileID: 1574998436}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers:
   - {fileID: 1955143700}
+--- !u!1 &1577557667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577557669}
+  - component: {fileID: 1577557668}
+  m_Layer: 0
+  m_Name: JungleTreeLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1577557668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577557667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7216c005050c9844cb39c03d59285c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Next: {fileID: 0}
+  terrainHeightLimit: 25
+--- !u!4 &1577557669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577557667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964137366}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578537432
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,6 +6171,9 @@ MonoBehaviour:
   cactusGenerator: {fileID: 0}
   snowTreeGenerator: {fileID: 0}
   presentsGenerator: {fileID: 0}
+  jungleTreeGenerator: {fileID: 0}
+  lilyPadGenerator: {fileID: 0}
+  sugarCaneGenerator: {fileID: 0}
   additionalLayerHandlers: []
 --- !u!1 &1827019418
 GameObject:
@@ -6423,7 +6588,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1577557669}
+  - {fileID: 1361239918}
+  - {fileID: 2087097518}
   m_Father: {fileID: 52156024}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6811,6 +6979,51 @@ Transform:
   m_Father: {fileID: 3911969}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2087097517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087097518}
+  - component: {fileID: 2087097519}
+  m_Layer: 0
+  m_Name: SugarCaneLayerHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087097518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087097517}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1964137366}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087097519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087097517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d2b79de37b1164f85b8aadd8ba3102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Next: {fileID: 0}
+  terrainHeightLimit: 25
 --- !u!1 &2130428345
 GameObject:
   m_ObjectHideFlags: 0

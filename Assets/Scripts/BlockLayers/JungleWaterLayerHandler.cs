@@ -36,7 +36,7 @@ public class JungleWaterLayerHandler : BlockLayerHandler
                 pos.y = surfaceHeightNoise;
 
                 // set the block to be sand
-                Chunk.SetBlock(chunkData, pos, BlockType.Dirt);
+                Chunk.SetBlock(chunkData, pos, BlockType.Sand);
 
 
             }

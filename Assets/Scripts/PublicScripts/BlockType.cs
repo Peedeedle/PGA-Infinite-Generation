@@ -36,7 +36,11 @@ public enum BlockType
     JungleGrass,
     CursedGrass,
     MushroomGrass,
-    TilledSoil
+    TilledSoil,
+    SugarCane,
+    LilyPad,
+    JungleTree,
+    JungleTreeLeaves
     
 
 

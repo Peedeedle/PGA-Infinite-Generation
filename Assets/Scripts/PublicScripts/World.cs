@@ -158,6 +158,8 @@ public class World : MonoBehaviour
             // add the tree leaves using the chunk data
             AddSnowTreeLeaves(chunkData);
 
+            AddJungleTreeLeaves(chunkData);
+
         }
 
         // concurrent dictionary of vector3ints and meshData called meshDataDictionary = new concurrent dictionary
@@ -213,6 +215,19 @@ public class World : MonoBehaviour
 
             // set block passing chunkData, tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, snowTreeLeaves, BlockType.SnowLeaves);
+
+        }
+
+    }
+
+    // add tree leaves passing in the chunk data
+    private void AddJungleTreeLeaves(ChunkData chunkData) {
+
+        // for each tree leaves in the tree data tree leaves solid
+        foreach (var jungleTreeLeaves in chunkData.jungleTreeData.jungleTreeLeavesSolid) {
+
+            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            Chunk.SetBlock(chunkData, jungleTreeLeaves, BlockType.JungleTreeLeaves);
 
         }
 

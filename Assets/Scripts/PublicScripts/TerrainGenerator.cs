@@ -301,6 +301,18 @@ public class TerrainGenerator : MonoBehaviour
         // (Include data before world is rendered)
         data.presentsData = biomeSelection.biomeGenerator.GetPresentsData(data, mapSeedOffset);
 
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.jungleTreeData = biomeSelection.biomeGenerator.GetJungleTreeData(data, mapSeedOffset);
+
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.lilyPadData = biomeSelection.biomeGenerator.GetLilyPadData(data, mapSeedOffset);
+
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.sugarCaneData = biomeSelection.biomeGenerator.GetSugarCaneData(data, mapSeedOffset);
+
 
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {
