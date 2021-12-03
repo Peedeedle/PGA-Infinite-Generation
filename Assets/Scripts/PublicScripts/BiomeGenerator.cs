@@ -52,6 +52,9 @@ public class BiomeGenerator : MonoBehaviour
     //
     public SugarCaneGenerator sugarCaneGenerator;
 
+    //
+    public CursedTreeGenerator cursedTreeGenerator;
+
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
 
@@ -147,6 +150,20 @@ public class BiomeGenerator : MonoBehaviour
 
         // 
         return sugarCaneGenerator.GenerateSugarCaneData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal CursedTreeData GetCursedTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (cursedTreeGenerator == null)
+
+            // 
+            return new CursedTreeData();
+
+        // 
+        return cursedTreeGenerator.GenerateCursedTreeData(data, mapSeedOffset);
 
     }
 

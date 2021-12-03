@@ -40,7 +40,10 @@ public enum BlockType
     SugarCane,
     LilyPad,
     JungleTree,
-    JungleTreeLeaves
+    JungleTreeLeaves,
+    CursedTreeLog,
+    CursedTreeLeaves,
+    CursedStone
     
 
 

@@ -313,6 +313,10 @@ public class TerrainGenerator : MonoBehaviour
         // (Include data before world is rendered)
         data.sugarCaneData = biomeSelection.biomeGenerator.GetSugarCaneData(data, mapSeedOffset);
 
+        // include data from the cactus data
+        // (Include data before world is rendered)
+        data.cursedTreeData = biomeSelection.biomeGenerator.GetCursedTreeData(data, mapSeedOffset);
+
 
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {

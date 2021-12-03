@@ -158,7 +158,11 @@ public class World : MonoBehaviour
             // add the tree leaves using the chunk data
             AddSnowTreeLeaves(chunkData);
 
+            //
             AddJungleTreeLeaves(chunkData);
+
+            //
+            AddCursedTreeLeaves(chunkData);
 
         }
 
@@ -228,6 +232,19 @@ public class World : MonoBehaviour
 
             // set block passing chunkData, tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, jungleTreeLeaves, BlockType.JungleTreeLeaves);
+
+        }
+
+    }
+
+    // add tree leaves passing in the chunk data
+    private void AddCursedTreeLeaves(ChunkData chunkData) {
+
+        // for each tree leaves in the tree data tree leaves solid
+        foreach (var cursedTreeLeaves in chunkData.cursedTreeData.cursedTreeLeavesSolid) {
+
+            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            Chunk.SetBlock(chunkData, cursedTreeLeaves, BlockType.CursedTreeLeaves);
 
         }
 

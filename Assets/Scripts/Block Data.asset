@@ -165,3 +165,21 @@ MonoBehaviour:
     side: {x: 5, y: 7}
     isSolid: 1
     generatesCollider: 1
+  - blockType: 26
+    up: {x: 4, y: 9}
+    down: {x: 4, y: 9}
+    side: {x: 4, y: 7}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 27
+    up: {x: 3, y: 7}
+    down: {x: 3, y: 7}
+    side: {x: 3, y: 7}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 28
+    up: {x: 1, y: 7}
+    down: {x: 1, y: 7}
+    side: {x: 1, y: 7}
+    isSolid: 1
+    generatesCollider: 1
