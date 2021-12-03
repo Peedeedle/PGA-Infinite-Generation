@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlockLayers\BlockLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeGenerator.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\BiomeGenerator.cs" />
     <Compile Include="Assets\Scripts\IceBiome\Presents\PresentsDataProccessing.cs" />
     <Compile Include="Assets\Scripts\NormalBiome\StoneLayerHandler.cs" />
@@ -83,8 +84,10 @@
     <Compile Include="Assets\Scripts\BlockLayers\SandWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\Direction.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\MushroomWaterLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeLayerHandler.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\MeshData.cs" />
     <Compile Include="Assets\Scripts\NormalBiome\Trees\TreeLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeData.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\FarmWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\JungleBiome\LilyPads\LilyPadGenerator.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\World.cs" />
@@ -100,6 +103,7 @@
     <Compile Include="Assets\Scripts\JungleBiome\JungleTrees\JungleTreeGenerator.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\DomainWarping.cs" />
+    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeDataProccessing.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\WorldRenderer.cs" />
     <Compile Include="Assets\Scripts\SandBiome\Cactuses\CactusDataProccessing.cs" />
     <Compile Include="Assets\Scripts\JungleBiome\SugarCane\SugarCaneLayerHandler.cs" />
@@ -114,17 +118,14 @@
     <Compile Include="Assets\Scripts\NormalBiome\Trees\TreeData.cs" />
     <Compile Include="Assets\Scripts\BlockLayers\IceWaterLayerHandler.cs" />
     <Compile Include="Assets\Scripts\JungleBiome\LilyPads\LilyPadDataProccessing.cs" />
+    <Compile Include="Assets\Scripts\CursedBiome\CursedStoneLayerHandler.cs" />
     <Compile Include="Assets\Scripts\PublicScripts\BiomeCenterFinder.cs" />
     <Compile Include="Assets\Scripts\SandBiome\Cactuses\CactusData.cs" />
     <Compile Include="Assets\Scripts\NormalBiome\Trees\TreeGenerator.cs" />
     <Compile Include="Assets\Scripts\IceBiome\SnowTrees\SnowTreeData.cs" />
     <Compile Include="Assets\Scripts\SandBiome\Cactuses\CactusGenerator.cs" />
     <Compile Include="Assets\Scripts\JungleBiome\SugarCane\SugarCaneGenerator.cs" />
-    <Compile Include="Assets\Scripts\CursedBiome\CursedStoneLayerHandler.cs" />
-    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeDataProccessing.cs" />
-    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeData.cs" />
-    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeGenerator.cs" />
-    <Compile Include="Assets\Scripts\CursedBiome\CursedTrees\CursedTreeLayerHandler.cs" />
+    <Compile Include="Assets\Scripts\RandomNoiseSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

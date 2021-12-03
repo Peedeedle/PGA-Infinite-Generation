@@ -16,6 +16,7 @@ using UnityEngine;
 public class NoiseSettings : ScriptableObject
 {
 
+
     // float to zoom in or out of the perlin noise function to see more or less hills in the output
     public float noiseZoom;
 

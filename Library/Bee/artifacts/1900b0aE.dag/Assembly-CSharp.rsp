@@ -381,6 +381,7 @@
 "Assets/Scripts/PublicScripts/World.cs"
 "Assets/Scripts/PublicScripts/WorldDataHelper.cs"
 "Assets/Scripts/PublicScripts/WorldRenderer.cs"
+"Assets/Scripts/RandomNoiseSettings.cs"
 "Assets/Scripts/SandBiome/Cactuses/CactusData.cs"
 "Assets/Scripts/SandBiome/Cactuses/CactusDataProccessing.cs"
 "Assets/Scripts/SandBiome/Cactuses/CactusGenerator.cs"
