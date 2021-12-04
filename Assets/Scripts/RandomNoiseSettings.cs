@@ -22,9 +22,16 @@ public class RandomNoiseSettings : MonoBehaviour
     //
     public int randomY;
 
+    //
+    public float randomPersistence;
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+        //
+        randomPersistence = Random.Range(0.4f, 0.7f);
 
         //
         randomX = Random.Range(-4000, 0);
@@ -37,6 +44,8 @@ public class RandomNoiseSettings : MonoBehaviour
 
         //
         noiseSettings.offset.y = randomY;
+
+        noiseSettings.persistence = randomPersistence;
 
     }
 
