@@ -43,7 +43,8 @@ public enum BlockType
     JungleTreeLeaves,
     CursedTreeLog,
     CursedTreeLeaves,
-    CursedStone
+    CursedStone,
+    Kelp
     
 
 

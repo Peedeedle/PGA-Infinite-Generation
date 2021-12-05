@@ -21,7 +21,7 @@ public class JungleTreeLayerHandler : BlockLayerHandler
     public static List<Vector3Int> jungleTreeLeavesStaticLayout = new List<Vector3Int>() {
 
         // all of the vector 3 int positions for each of the leaves on the trees which are generated
-        // (Create more refined wayt to set these and different variations)
+        // (Create more refined way to set these and different variations)
         new Vector3Int(-2, 4, -2),
         new Vector3Int(-2, 4, -1),
         new Vector3Int(-2, 4, 0),
@@ -67,6 +67,7 @@ public class JungleTreeLayerHandler : BlockLayerHandler
         new Vector3Int(0, 6, 0),
 
     };
+
 
 
     // Try handling method
@@ -116,6 +117,7 @@ public class JungleTreeLayerHandler : BlockLayerHandler
                         + leafPosition.y, z + leafPosition.z));
 
                 }
+
 
             }
 

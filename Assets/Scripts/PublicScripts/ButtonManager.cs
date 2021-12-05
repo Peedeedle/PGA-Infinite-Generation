@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 26/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 29/11/21
+// Date Last Edited: 05/12/21
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
@@ -36,6 +36,9 @@ public class ButtonManager : MonoBehaviour
     // gameobject for the game load scene button
     public GameObject GameBackButton;
 
+    //
+    public GameObject[] biomeParticleSystems;
+
     // on start
     private void Start() {
 
@@ -57,7 +60,7 @@ public class ButtonManager : MonoBehaviour
         // set the game back button to true
         GameBackButton.SetActive(true);
 
-
+        
     }
 
 
@@ -82,6 +85,9 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
+        //
+        biomeParticleSystems[0].SetActive(true);
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -101,6 +107,9 @@ public class ButtonManager : MonoBehaviour
 
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
+
+        //
+        biomeParticleSystems[1].SetActive(true);
 
     }
 
@@ -122,6 +131,9 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
+        //
+        biomeParticleSystems[2].SetActive(true);
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -141,6 +153,9 @@ public class ButtonManager : MonoBehaviour
 
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
+
+        //
+        biomeParticleSystems[3].SetActive(true);
 
     }
 
@@ -162,6 +177,9 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
+        //
+        biomeParticleSystems[4].SetActive(true);
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -181,6 +199,9 @@ public class ButtonManager : MonoBehaviour
 
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
+
+        //
+        biomeParticleSystems[5].SetActive(true);
 
     }
 
@@ -202,27 +223,14 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-    }
+        //
+        biomeParticleSystems[6].SetActive(true);
 
-    // Button to generate the sand biome in the TerrainGenerator
-    public void GenerateUnderwaterBiome() {
-
-        // set the biome generator in the terrain generator to the sand biomes biome generator component
-        terrainGenerator.biomeGenerator = terrainGenerator.Go_UnderwaterBiome.GetComponent<BiomeGenerator>();
-
-        // call change to sand biome method
-        terrainGenerator.ChangeToUnderwaterBiome();
-
-        // set the select biome panel to false
-        SelectBiomePanel.SetActive(false);
-
-        // set the generate biome panel to true
-        GenerateBiomePanel.SetActive(true);
-
-        // set the generate biome button to true
-        GenerateBiomeButton.SetActive(true);
+        //
+        biomeParticleSystems[7].SetActive(true);
 
     }
+
 
     // Button to generate the sand biome in the TerrainGenerator
     public void GenerateFarmBiome() {
@@ -241,6 +249,9 @@ public class ButtonManager : MonoBehaviour
 
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
+
+        //
+        biomeParticleSystems[9].SetActive(true);
 
     }
 

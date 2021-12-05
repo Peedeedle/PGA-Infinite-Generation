@@ -55,6 +55,7 @@ public class BiomeGenerator : MonoBehaviour
     //
     public CursedTreeGenerator cursedTreeGenerator;
 
+
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
 
@@ -166,6 +167,7 @@ public class BiomeGenerator : MonoBehaviour
         return cursedTreeGenerator.GenerateCursedTreeData(data, mapSeedOffset);
 
     }
+
 
     // list of the blocklayerhandlers called additionLayerHandlers
     public List<BlockLayerHandler> additionalLayerHandlers;

@@ -54,9 +54,6 @@ public class TerrainGenerator : MonoBehaviour
     public GameObject Go_MushroomBiome;
 
     // reference to the sand biome game object
-    public GameObject Go_UnderwaterBiome;
-
-    // reference to the sand biome game object
     public GameObject Go_FarmBiome;
 
     #endregion
@@ -101,11 +98,6 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     [Header("MushroomDATA")]
     private List<BiomeData> mushroomBiomeData = new List<BiomeData>();
-
-    // list of sand biome data called sandBiomeData
-    [SerializeField]
-    [Header("UnderwaterDATA")]
-    private List<BiomeData> underwaterBiomeData = new List<BiomeData>();
 
     // list of sand biome data called sandBiomeData
     [SerializeField]
@@ -247,19 +239,6 @@ public class TerrainGenerator : MonoBehaviour
     }
 
     // 
-    public void ChangeToUnderwaterBiome() {
-
-        // 
-        biomeGeneratorsData = underwaterBiomeData;
-
-        // 
-        Water.SetTexture("_MainTex", normalWater);
-
-        // 
-        Water.SetTexture("_BumpMap", normalWater);
-    }
-
-    // 
     public void ChangeToFarmBiome() {
 
         // 
@@ -293,29 +272,24 @@ public class TerrainGenerator : MonoBehaviour
         // (Include data before world is rendered)
         data.cactusData = biomeSelection.biomeGenerator.GetCactusData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.snowTreeData = biomeSelection.biomeGenerator.GetSnowTreeData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.presentsData = biomeSelection.biomeGenerator.GetPresentsData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.jungleTreeData = biomeSelection.biomeGenerator.GetJungleTreeData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.lilyPadData = biomeSelection.biomeGenerator.GetLilyPadData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.sugarCaneData = biomeSelection.biomeGenerator.GetSugarCaneData(data, mapSeedOffset);
 
-        // include data from the cactus data
-        // (Include data before world is rendered)
+        // 
         data.cursedTreeData = biomeSelection.biomeGenerator.GetCursedTreeData(data, mapSeedOffset);
+
 
 
         // look for each x local coordinate from 0 - chunksize (loop)

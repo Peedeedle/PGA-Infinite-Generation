@@ -17,57 +17,6 @@ public class CactusLayerHandler : BlockLayerHandler
     // set a height limit for the terrain
     public float terrainHeightLimit = 25;
 
-    // public static list of the tree leaves layout
-    public static List<Vector3Int> cactusStaticLayout = new List<Vector3Int>() {
-
-        // all of the vector 3 int positions for each of the leaves on the trees which are generated
-        // (Create more refined wayt to set these and different variations)
-        new Vector3Int(-2, 0, -2),
-        new Vector3Int(-2, 0, -1),
-        new Vector3Int(-2, 0, 0),
-        new Vector3Int(-2, 0, 1),
-        new Vector3Int(-2, 0, 2),
-
-        new Vector3Int(-1, 0, -2),
-        new Vector3Int(-1, 0, -1),
-        new Vector3Int(-1, 0, 0),
-        new Vector3Int(-1, 0, 1),
-        new Vector3Int(-1, 0, 2),
-
-        new Vector3Int(0, 0, -2),
-        new Vector3Int(0, 0, -1),
-        new Vector3Int(0, 0, 0),
-        new Vector3Int(0, 0, 1),
-        new Vector3Int(0, 0, 2),
-
-        new Vector3Int(1, 0, -2),
-        new Vector3Int(1, 0, -1),
-        new Vector3Int(1, 0, 0),
-        new Vector3Int(1, 0, 1),
-        new Vector3Int(1, 0, 2),
-
-        new Vector3Int(2, 0, -2),
-        new Vector3Int(2, 0, -1),
-        new Vector3Int(2, 0, 0),
-        new Vector3Int(2, 0, 1),
-        new Vector3Int(2, 0, 2),
-
-        new Vector3Int(-1, 1, -1),
-        new Vector3Int(-1, 1, 0),
-        new Vector3Int(-1, 1, 1),
-
-        new Vector3Int(0, 1, -1),
-        new Vector3Int(0, 1, 0),
-        new Vector3Int(0, 1, 1),
-
-        new Vector3Int(1, 1, -1),
-        new Vector3Int(1, 1, 0),
-        new Vector3Int(1, 1, 1),
-
-        new Vector3Int(0, 2, 0),
-
-    };
-
 
     // Try handling method
     protected override bool TryHandling(ChunkData chunkData, int x, int y, int z, int surfaceHeightNoise, Vector2Int mapSeedOffset) {
