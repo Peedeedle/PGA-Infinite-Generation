@@ -44,7 +44,14 @@ public enum BlockType
     CursedTreeLog,
     CursedTreeLeaves,
     CursedStone,
-    Kelp
+    Pumpkin,
+    Tomato,
+    SandUnderground,
+    RMushroomTree,
+    RMushroomTreeLeaves,
+    WMushroomTree,
+    WMushroomTreeLeaves,
+    FarmDirt
     
 
 

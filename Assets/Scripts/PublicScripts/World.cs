@@ -164,6 +164,12 @@ public class World : MonoBehaviour
             //
             AddCursedTreeLeaves(chunkData);
 
+            //
+            AddRMushroomTreeLeaves(chunkData);
+
+            //
+            AddWMushroomTreeLeaves(chunkData);
+
         }
 
         // concurrent dictionary of vector3ints and meshData called meshDataDictionary = new concurrent dictionary
@@ -246,6 +252,32 @@ public class World : MonoBehaviour
 
             // set block passing chunkData, tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, cursedTreeLeaves, BlockType.CursedTreeLeaves);
+
+        }
+
+    }
+
+    // add tree leaves passing in the chunk data
+    private void AddRMushroomTreeLeaves(ChunkData chunkData) {
+
+        // for each tree leaves in the tree data tree leaves solid
+        foreach (var rMushroomTreeLeaves in chunkData.rMushroomTreeData.rMushroomTreeLeavesSolid) {
+
+            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            Chunk.SetBlock(chunkData, rMushroomTreeLeaves, BlockType.RMushroomTreeLeaves);
+
+        }
+
+    }
+
+    // add tree leaves passing in the chunk data
+    private void AddWMushroomTreeLeaves(ChunkData chunkData) {
+
+        // for each tree leaves in the tree data tree leaves solid
+        foreach (var wMushroomTreeLeaves in chunkData.wMushroomTreeData.wMushroomTreeLeavesSolid) {
+
+            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            Chunk.SetBlock(chunkData, wMushroomTreeLeaves, BlockType.WMushroomTreeLeaves);
 
         }
 

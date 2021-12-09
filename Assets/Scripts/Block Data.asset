@@ -34,14 +34,14 @@ MonoBehaviour:
     isSolid: 1
     generatesCollider: 1
   - blockType: 3
-    up: {x: 0, y: 9}
-    down: {x: 0, y: 0}
-    side: {x: 0, y: 9}
+    up: {x: 0, y: 6}
+    down: {x: 0, y: 6}
+    side: {x: 0, y: 6}
     isSolid: 1
     generatesCollider: 1
   - blockType: 4
     up: {x: 2, y: 9}
-    down: {x: 0, y: 0}
+    down: {x: 2, y: 9}
     side: {x: 2, y: 9}
     isSolid: 1
     generatesCollider: 1
@@ -77,7 +77,7 @@ MonoBehaviour:
     generatesCollider: 1
   - blockType: 10
     up: {x: 8, y: 9}
-    down: {x: 7, y: 9}
+    down: {x: 8, y: 9}
     side: {x: 7, y: 9}
     isSolid: 1
     generatesCollider: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
     generatesCollider: 1
   - blockType: 12
     up: {x: 1, y: 8}
-    down: {x: 5, y: 9}
+    down: {x: 5, y: 8}
     side: {x: 5, y: 8}
     isSolid: 1
     generatesCollider: 1
@@ -107,12 +107,12 @@ MonoBehaviour:
     generatesCollider: 0
   - blockType: 16
     up: {x: 9, y: 8}
-    down: {x: 9, y: 9}
+    down: {x: 9, y: 8}
     side: {x: 9, y: 9}
     isSolid: 1
     generatesCollider: 1
   - blockType: 17
-    up: {x: 2, y: 8}
+    up: {x: 2, y: 7}
     down: {x: 2, y: 7}
     side: {x: 2, y: 7}
     isSolid: 1
@@ -131,14 +131,14 @@ MonoBehaviour:
     generatesCollider: 1
   - blockType: 20
     up: {x: 7, y: 8}
-    down: {x: 0, y: 9}
-    side: {x: 0, y: 9}
+    down: {x: 1, y: 7}
+    side: {x: 1, y: 7}
     isSolid: 1
     generatesCollider: 1
   - blockType: 21
     up: {x: 8, y: 8}
-    down: {x: 0, y: 9}
-    side: {x: 0, y: 9}
+    down: {x: 8, y: 8}
+    side: {x: 7, y: 7}
     isSolid: 1
     generatesCollider: 1
   - blockType: 22
@@ -149,13 +149,13 @@ MonoBehaviour:
     generatesCollider: 1
   - blockType: 23
     up: {x: 9, y: 7}
-    down: {x: 7, y: 0}
-    side: {x: 7, y: 0}
+    down: {x: 7, y: 1}
+    side: {x: 7, y: 1}
     isSolid: 1
     generatesCollider: 1
   - blockType: 24
     up: {x: 4, y: 9}
-    down: {x: 6, y: 7}
+    down: {x: 4, y: 9}
     side: {x: 6, y: 7}
     isSolid: 1
     generatesCollider: 1
@@ -178,8 +178,56 @@ MonoBehaviour:
     isSolid: 1
     generatesCollider: 1
   - blockType: 28
-    up: {x: 1, y: 7}
-    down: {x: 1, y: 7}
-    side: {x: 1, y: 7}
+    up: {x: 2, y: 8}
+    down: {x: 2, y: 8}
+    side: {x: 2, y: 8}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 29
+    up: {x: 5, y: 6}
+    down: {x: 4, y: 6}
+    side: {x: 4, y: 6}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 30
+    up: {x: 3, y: 6}
+    down: {x: 2, y: 6}
+    side: {x: 2, y: 6}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 31
+    up: {x: 2, y: 5}
+    down: {x: 2, y: 5}
+    side: {x: 2, y: 5}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 32
+    up: {x: 8, y: 5}
+    down: {x: 8, y: 5}
+    side: {x: 8, y: 5}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 33
+    up: {x: 9, y: 5}
+    down: {x: 9, y: 5}
+    side: {x: 9, y: 5}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 34
+    up: {x: 8, y: 7}
+    down: {x: 8, y: 7}
+    side: {x: 8, y: 7}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 35
+    up: {x: 9, y: 6}
+    down: {x: 9, y: 6}
+    side: {x: 9, y: 6}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 36
+    up: {x: 1, y: 5}
+    down: {x: 1, y: 5}
+    side: {x: 1, y: 5}
     isSolid: 1
     generatesCollider: 1

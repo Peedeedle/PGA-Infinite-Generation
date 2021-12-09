@@ -290,6 +290,17 @@ public class TerrainGenerator : MonoBehaviour
         // 
         data.cursedTreeData = biomeSelection.biomeGenerator.GetCursedTreeData(data, mapSeedOffset);
 
+        //
+        data.pumpkinData = biomeSelection.biomeGenerator.GetPumpkinData(data, mapSeedOffset);
+
+        //
+        data.tomatoData = biomeSelection.biomeGenerator.GetTomatoData(data, mapSeedOffset);
+
+        //
+        data.rMushroomTreeData = biomeSelection.biomeGenerator.GetRMushroomTreeData(data, mapSeedOffset);
+
+        //
+        data.wMushroomTreeData = biomeSelection.biomeGenerator.GetWMushroomTreeData(data, mapSeedOffset);
 
 
         // look for each x local coordinate from 0 - chunksize (loop)

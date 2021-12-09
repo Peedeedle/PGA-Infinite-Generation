@@ -58,6 +58,18 @@ public class ChunkData
     //
     public CursedTreeData cursedTreeData;
 
+    //
+    public PumpkinData pumpkinData;
+
+    //
+    public TomatoData tomatoData;
+
+    //
+    public RMushroomTreeData rMushroomTreeData;
+
+    //
+    public WMushroomTreeData wMushroomTreeData;
+
 
     // Contructor for the chunk data
     public ChunkData (int chunkSize, int chunkHeight, World world, Vector3Int worldPosition) {

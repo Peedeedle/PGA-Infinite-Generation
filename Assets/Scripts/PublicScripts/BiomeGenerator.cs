@@ -55,6 +55,18 @@ public class BiomeGenerator : MonoBehaviour
     //
     public CursedTreeGenerator cursedTreeGenerator;
 
+    //
+    public PumpkinGenerator pumpkinGenerator;
+
+    //
+    public TomatoGenerator tomatoGenerator;
+
+    //
+    public RMushroomTreeGenerator rMushroomTreeGenerator;
+
+    //
+    public WMushroomTreeGenerator wMushroomTreeGenerator;
+
 
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
@@ -168,6 +180,61 @@ public class BiomeGenerator : MonoBehaviour
 
     }
 
+    // 
+    internal PumpkinData GetPumpkinData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (pumpkinGenerator == null)
+
+            // 
+            return new PumpkinData();
+
+        // 
+        return pumpkinGenerator.GeneratePumpkinData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal TomatoData GetTomatoData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (tomatoGenerator == null)
+
+            // 
+            return new TomatoData();
+
+        // 
+        return tomatoGenerator.GenerateTomatoData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal RMushroomTreeData GetRMushroomTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (rMushroomTreeGenerator == null)
+
+            // 
+            return new RMushroomTreeData();
+
+        // 
+        return rMushroomTreeGenerator.GenerateRMushroomTreeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal WMushroomTreeData GetWMushroomTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (wMushroomTreeGenerator == null)
+
+            // 
+            return new WMushroomTreeData();
+
+        // 
+        return wMushroomTreeGenerator.GenerateWMushroomTreeData(data, mapSeedOffset);
+
+    }
 
     // list of the blocklayerhandlers called additionLayerHandlers
     public List<BlockLayerHandler> additionalLayerHandlers;

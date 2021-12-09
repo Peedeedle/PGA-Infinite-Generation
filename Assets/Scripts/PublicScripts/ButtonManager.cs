@@ -88,6 +88,31 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[0].SetActive(true);
 
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
+
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -109,7 +134,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
         biomeParticleSystems[1].SetActive(true);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -132,7 +181,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
         biomeParticleSystems[2].SetActive(true);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -155,7 +228,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
         biomeParticleSystems[3].SetActive(true);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -178,7 +275,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
         biomeParticleSystems[4].SetActive(true);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -201,7 +322,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
         biomeParticleSystems[5].SetActive(true);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -224,10 +369,31 @@ public class ButtonManager : MonoBehaviour
         GenerateBiomeButton.SetActive(true);
 
         //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
         biomeParticleSystems[6].SetActive(true);
 
         //
         biomeParticleSystems[7].SetActive(true);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
 
     }
 
@@ -250,8 +416,34 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
+
+
         //
-        biomeParticleSystems[9].SetActive(true);
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(true);
 
     }
 
