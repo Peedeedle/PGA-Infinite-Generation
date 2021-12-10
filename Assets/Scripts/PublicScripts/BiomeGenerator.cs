@@ -67,6 +67,27 @@ public class BiomeGenerator : MonoBehaviour
     //
     public WMushroomTreeGenerator wMushroomTreeGenerator;
 
+    //
+    public BlueBushGenerator blueBushGenerator;
+
+    //
+    public GreenBushGenerator greenBushGenerator;
+
+    //
+    public LightBlueBushGenerator lightBlueBushGenerator;
+
+    //
+    public PurpleBushGenerator purpleBushGenerator;
+
+    //
+    public RedBushGenerator redBushGenerator;
+
+    //
+    public YellowBushGenerator yellowBushGenerator;
+
+    //
+    public MelonGenerator melonGenerator;
+
 
     // Get the tree data
     internal TreeData GetTreeData(ChunkData data, Vector2Int mapSeedOffset) {
@@ -233,6 +254,104 @@ public class BiomeGenerator : MonoBehaviour
 
         // 
         return wMushroomTreeGenerator.GenerateWMushroomTreeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal BlueBushData GetBlueBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (blueBushGenerator == null)
+
+            // 
+            return new BlueBushData();
+
+        // 
+        return blueBushGenerator.GenerateBlueBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal GreenBushData GetGreenBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (greenBushGenerator == null)
+
+            // 
+            return new GreenBushData();
+
+        // 
+        return greenBushGenerator.GenerateGreenBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal LightBlueBushData GetLightBlueBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (lightBlueBushGenerator == null)
+
+            // 
+            return new LightBlueBushData();
+
+        // 
+        return lightBlueBushGenerator.GenerateLightBlueBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal PurpleBushData GetPurpleBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (purpleBushGenerator == null)
+
+            // 
+            return new PurpleBushData();
+
+        // 
+        return purpleBushGenerator.GeneratePurpleBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal RedBushData GetRedBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (redBushGenerator == null)
+
+            // 
+            return new RedBushData();
+
+        // 
+        return redBushGenerator.GenerateRedBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal YellowBushData GetYellowBushData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (yellowBushGenerator == null)
+
+            // 
+            return new YellowBushData();
+
+        // 
+        return yellowBushGenerator.GenerateYellowBushData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal MelonData GetMelonData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (melonGenerator == null)
+
+            // 
+            return new MelonData();
+
+        // 
+        return melonGenerator.GenerateMelonData(data, mapSeedOffset);
 
     }
 

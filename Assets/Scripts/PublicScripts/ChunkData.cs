@@ -70,6 +70,27 @@ public class ChunkData
     //
     public WMushroomTreeData wMushroomTreeData;
 
+    //
+    public BlueBushData blueBushData;
+
+    //
+    public GreenBushData greenBushData;
+
+    //
+    public LightBlueBushData lightBlueBushData;
+
+    //
+    public PurpleBushData purpleBushData;
+
+    //
+    public RedBushData redBushData;
+
+    //
+    public YellowBushData yellowBushData;
+
+    //
+    public MelonData melonData;
+
 
     // Contructor for the chunk data
     public ChunkData (int chunkSize, int chunkHeight, World world, Vector3Int worldPosition) {

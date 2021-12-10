@@ -51,7 +51,14 @@ public enum BlockType
     RMushroomTreeLeaves,
     WMushroomTree,
     WMushroomTreeLeaves,
-    FarmDirt
+    FarmDirt,
+    BlueBush,
+    RedBush,
+    YellowBush,
+    GreenBush,
+    LightBlueBush,
+    PurpleBush,
+    Melon
     
 
 

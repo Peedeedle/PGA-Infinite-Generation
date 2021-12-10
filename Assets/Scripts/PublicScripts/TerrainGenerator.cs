@@ -302,6 +302,26 @@ public class TerrainGenerator : MonoBehaviour
         //
         data.wMushroomTreeData = biomeSelection.biomeGenerator.GetWMushroomTreeData(data, mapSeedOffset);
 
+        //
+        data.blueBushData = biomeSelection.biomeGenerator.GetBlueBushData(data, mapSeedOffset);
+
+        //
+        data.greenBushData = biomeSelection.biomeGenerator.GetGreenBushData(data, mapSeedOffset);
+
+        //
+        data.lightBlueBushData = biomeSelection.biomeGenerator.GetLightBlueBushData(data, mapSeedOffset);
+
+        //
+        data.purpleBushData = biomeSelection.biomeGenerator.GetPurpleBushData(data, mapSeedOffset);
+
+        //
+        data.redBushData = biomeSelection.biomeGenerator.GetRedBushData(data, mapSeedOffset);
+
+        //
+        data.yellowBushData = biomeSelection.biomeGenerator.GetYellowBushData(data, mapSeedOffset);
+
+        //
+        data.melonData = biomeSelection.biomeGenerator.GetMelonData(data, mapSeedOffset);
 
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {

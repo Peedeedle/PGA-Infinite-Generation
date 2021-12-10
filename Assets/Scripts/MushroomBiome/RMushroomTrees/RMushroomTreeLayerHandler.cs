@@ -139,7 +139,7 @@ public class RMushroomTreeLayerHandler : BlockLayerHandler
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
             // if the type of block is grass_Dirt
-            if (type == BlockType.MushroomGrass) {
+            if (type == BlockType.Dirt) {
 
                 // set the block of the local position to dirt
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Dirt);
