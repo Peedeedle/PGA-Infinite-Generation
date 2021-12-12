@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 29/11/21
+// Date Last Edited: 12/12/21
 // Brief: Generating the terrain using noise settings and data
 //////////////////////////////////////////////////////////// 
 
@@ -21,7 +21,7 @@ public class TerrainGenerator : MonoBehaviour
     [Header("WaterMaterials")]
 
     //
-    public Texture normalWater, sandWater, iceWater, lavaWater, jungleWater, cursedWater, MushroomWater;
+    public Texture normalWater, sandWater, iceWater, lavaWater, jungleWater, cursedWater, MushroomWater, chocolateWater;
 
     //
     public Material Water;
@@ -55,6 +55,9 @@ public class TerrainGenerator : MonoBehaviour
 
     // reference to the sand biome game object
     public GameObject Go_FarmBiome;
+
+    // reference to the sand biome game object
+    public GameObject Go_CandyBiome;
 
     #endregion
 
@@ -103,6 +106,11 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     [Header("FarmDATA")]
     private List<BiomeData> farmBiomeData = new List<BiomeData>();
+
+    // list of sand biome data called sandBiomeData
+    [SerializeField]
+    [Header("CandyDATA")]
+    private List<BiomeData> candyBiomeData = new List<BiomeData>();
 
     #endregion
 
@@ -251,6 +259,19 @@ public class TerrainGenerator : MonoBehaviour
         Water.SetTexture("_BumpMap", normalWater);
     }
 
+    // 
+    public void ChangeToCandyBiome() {
+
+        // 
+        biomeGeneratorsData = candyBiomeData;
+
+        // 
+        Water.SetTexture("_MainTex", chocolateWater);
+
+        // 
+        Water.SetTexture("_BumpMap", chocolateWater);
+    }
+
     #endregion
 
 
@@ -322,6 +343,30 @@ public class TerrainGenerator : MonoBehaviour
 
         //
         data.melonData = biomeSelection.biomeGenerator.GetMelonData(data, mapSeedOffset);
+
+        //
+        data.colaCubeData = biomeSelection.biomeGenerator.GetColaCubeData(data, mapSeedOffset);
+
+        //
+        data.grapeCubeData = biomeSelection.biomeGenerator.GetGrapeCubeData(data, mapSeedOffset);
+
+        //
+        data.orangeCubeData = biomeSelection.biomeGenerator.GetOrangeCubeData(data, mapSeedOffset);
+
+        //
+        data.pineappleCubeData = biomeSelection.biomeGenerator.GetPineappleCubeData(data, mapSeedOffset);
+
+        //
+        data.smoreData = biomeSelection.biomeGenerator.GetSmoreData(data, mapSeedOffset);
+
+        //
+        data.redCaneData = biomeSelection.biomeGenerator.GetRedCaneData(data, mapSeedOffset);
+
+        //
+        data.greenCaneData = biomeSelection.biomeGenerator.GetGreenCaneData(data, mapSeedOffset);
+
+        //
+        data.candyTreeData = biomeSelection.biomeGenerator.GetCandyTreeData(data, mapSeedOffset);
 
         // look for each x local coordinate from 0 - chunksize (loop)
         for (int x = 0; x < data.chunkSize; x++) {

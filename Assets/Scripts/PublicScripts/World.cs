@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 28/11/21
+// Date Last Edited: 12/12/21
 // Brief: world script for the variables to generate the world
 //////////////////////////////////////////////////////////// 
 
@@ -170,6 +170,9 @@ public class World : MonoBehaviour
             //
             AddWMushroomTreeLeaves(chunkData);
 
+            //
+            AddCandyTreeLeaves(chunkData);
+
         }
 
         // concurrent dictionary of vector3ints and meshData called meshDataDictionary = new concurrent dictionary
@@ -278,6 +281,19 @@ public class World : MonoBehaviour
 
             // set block passing chunkData, tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, wMushroomTreeLeaves, BlockType.WMushroomTreeLeaves);
+
+        }
+
+    }
+
+    // add tree leaves passing in the chunk data
+    private void AddCandyTreeLeaves(ChunkData chunkData) {
+
+        // for each tree leaves in the tree data tree leaves solid
+        foreach (var candyTreeLeaves in chunkData.candyTreeData.candyTreeLeavesSolid) {
+
+            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            Chunk.SetBlock(chunkData, candyTreeLeaves, BlockType.CandyLeaves);
 
         }
 

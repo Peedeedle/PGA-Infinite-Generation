@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 12/12/21
 // Brief: Block types to generate
 //////////////////////////////////////////////////////////// 
 
@@ -58,7 +58,19 @@ public enum BlockType
     GreenBush,
     LightBlueBush,
     PurpleBush,
-    Melon
+    Melon,
+    SnowDirt,
+    JungleDirt,
+    ColaCube,
+    GrapeCube,
+    OrangeCube,
+    PineappleCube,
+    Smore,
+    RedCane,
+    GreenCane,
+    CandyTree,
+    CandyLeaves,
+    CandyGrass
     
 
 

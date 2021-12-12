@@ -97,7 +97,7 @@ public class PresentsLayerHandler : BlockLayerHandler
             if (type == BlockType.Snow) {
 
                 // set the block of the local position to dirt
-                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Snow);
+                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.SnowDirt);
 
                 // for i is less than 5
                 for (int i = 1; i < 2; i++) {

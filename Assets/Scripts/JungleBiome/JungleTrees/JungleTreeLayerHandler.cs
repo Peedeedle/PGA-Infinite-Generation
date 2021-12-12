@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 02/12/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 02/12/21
+// Date Last Edited: 11/12/21
 // Brief: Script for handling the tree layers and data like where they are allowed to spawn
 //////////////////////////////////////////////////////////// 
 
@@ -96,7 +96,7 @@ public class JungleTreeLayerHandler : BlockLayerHandler
             if (type == BlockType.JungleGrass) {
 
                 // set the block of the local position to dirt
-                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Dirt);
+                Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.JungleDirt);
 
                 // for i is less than 5
                 for (int i = 1; i < 9; i++) {

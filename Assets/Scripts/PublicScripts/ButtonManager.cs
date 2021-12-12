@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 26/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 05/12/21
+// Date Last Edited: 11/12/21
 // Brief: 
 //////////////////////////////////////////////////////////// 
 
@@ -14,6 +14,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+
+    //
+    public AudioManager audioManager;
 
     // reference to the terrain generator
     public TerrainGenerator terrainGenerator;
@@ -35,6 +38,15 @@ public class ButtonManager : MonoBehaviour
 
     // gameobject for the game load scene button
     public GameObject GameBackButton;
+
+    //
+    public GameObject ShowControlsButton;
+
+    //
+    public GameObject HideControlsButton;
+
+    //
+    public GameObject ControlsPanel;
 
     //
     public GameObject[] biomeParticleSystems;
@@ -60,12 +72,53 @@ public class ButtonManager : MonoBehaviour
         // set the game back button to true
         GameBackButton.SetActive(true);
 
-        
+        //
+        ShowControlsButton.SetActive(false);
+
+        //
+        HideControlsButton.SetActive(true);
+
+        //
+        ControlsPanel.SetActive(true);
+
     }
 
 
+    //
+    public void ExitGame() {
 
+        //
+        Application.Quit();
 
+    }
+
+    //
+    public void HideControls() {
+
+        //
+        ControlsPanel.SetActive(false);
+
+        //
+        HideControlsButton.SetActive(false);
+
+        //
+        ShowControlsButton.SetActive(true);
+
+    }
+
+    //
+    public void ShowControls() {
+
+        //
+        ControlsPanel.SetActive(true);
+
+        //
+        HideControlsButton.SetActive(true);
+
+        //
+        ShowControlsButton.SetActive(false);
+
+    }
 
     // Button to generate the normal biome in the TerrainGenerator
     public void GenerateNormalBiome() {
@@ -112,6 +165,11 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(false);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayNormalSound();
 
     }
 
@@ -160,6 +218,12 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(false);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayDesertSound();
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -206,6 +270,12 @@ public class ButtonManager : MonoBehaviour
 
         //
         biomeParticleSystems[8].SetActive(false);
+
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayIceSound();
 
     }
 
@@ -254,6 +324,12 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(false);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayLavaSound();
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -300,6 +376,12 @@ public class ButtonManager : MonoBehaviour
 
         //
         biomeParticleSystems[8].SetActive(false);
+
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayJungleSound();
 
     }
 
@@ -348,6 +430,12 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(false);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayCursedSound();
+
     }
 
     // Button to generate the sand biome in the TerrainGenerator
@@ -395,6 +483,12 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(false);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayMushroomSound();
+
     }
 
 
@@ -415,8 +509,6 @@ public class ButtonManager : MonoBehaviour
 
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
-
-
 
         //
         biomeParticleSystems[0].SetActive(false);
@@ -445,9 +537,66 @@ public class ButtonManager : MonoBehaviour
         //
         biomeParticleSystems[8].SetActive(true);
 
+        //
+        biomeParticleSystems[9].SetActive(false);
+
+        //
+        audioManager.PlayFarmSound();
+
     }
 
+    // Button to generate the sand biome in the TerrainGenerator
+    public void GenerateCandyBiome() {
 
+        // set the biome generator in the terrain generator to the sand biomes biome generator component
+        terrainGenerator.biomeGenerator = terrainGenerator.Go_CandyBiome.GetComponent<BiomeGenerator>();
+
+        // call change to sand biome method
+        terrainGenerator.ChangeToCandyBiome();
+
+        // set the select biome panel to false
+        SelectBiomePanel.SetActive(false);
+
+        // set the generate biome panel to true
+        GenerateBiomePanel.SetActive(true);
+
+        // set the generate biome button to true
+        GenerateBiomeButton.SetActive(true);
+
+        //
+        biomeParticleSystems[0].SetActive(false);
+
+        //
+        biomeParticleSystems[1].SetActive(false);
+
+        //
+        biomeParticleSystems[2].SetActive(false);
+
+        //
+        biomeParticleSystems[3].SetActive(false);
+
+        //
+        biomeParticleSystems[4].SetActive(false);
+
+        //
+        biomeParticleSystems[5].SetActive(false);
+
+        //
+        biomeParticleSystems[6].SetActive(false);
+
+        //
+        biomeParticleSystems[7].SetActive(false);
+
+        //
+        biomeParticleSystems[8].SetActive(false);
+
+        //
+        biomeParticleSystems[9].SetActive(true);
+
+        //
+        audioManager.PlayCandySound();
+
+    }
 
 
 
@@ -467,6 +616,9 @@ public class ButtonManager : MonoBehaviour
 
         // load the first scene (Wipe Data)
         SceneManager.LoadScene(0);
+
+        //
+        audioManager.SetAudioToNone();
 
     }
 

@@ -149,8 +149,8 @@ MonoBehaviour:
     generatesCollider: 1
   - blockType: 23
     up: {x: 9, y: 7}
-    down: {x: 7, y: 1}
-    side: {x: 7, y: 1}
+    down: {x: 0, y: 0}
+    side: {x: 0, y: 0}
     isSolid: 1
     generatesCollider: 1
   - blockType: 24
@@ -228,7 +228,7 @@ MonoBehaviour:
   - blockType: 36
     up: {x: 1, y: 5}
     down: {x: 1, y: 5}
-    side: {x: 1, y: 5}
+    side: {x: 7, y: 7}
     isSolid: 1
     generatesCollider: 1
   - blockType: 37
@@ -271,5 +271,77 @@ MonoBehaviour:
     up: {x: 5, y: 5}
     down: {x: 4, y: 5}
     side: {x: 4, y: 5}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 44
+    up: {x: 1, y: 8}
+    down: {x: 1, y: 8}
+    side: {x: 0, y: 5}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 45
+    up: {x: 4, y: 8}
+    down: {x: 4, y: 8}
+    side: {x: 3, y: 8}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 46
+    up: {x: 0, y: 1}
+    down: {x: 0, y: 1}
+    side: {x: 0, y: 1}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 47
+    up: {x: 3, y: 1}
+    down: {x: 3, y: 1}
+    side: {x: 3, y: 1}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 48
+    up: {x: 3, y: 2}
+    down: {x: 3, y: 2}
+    side: {x: 3, y: 2}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 49
+    up: {x: 3, y: 3}
+    down: {x: 3, y: 3}
+    side: {x: 3, y: 3}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 50
+    up: {x: 2, y: 4}
+    down: {x: 2, y: 3}
+    side: {x: 2, y: 3}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 51
+    up: {x: 1, y: 3}
+    down: {x: 0, y: 3}
+    side: {x: 0, y: 3}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 52
+    up: {x: 2, y: 1}
+    down: {x: 2, y: 2}
+    side: {x: 2, y: 2}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 53
+    up: {x: 1, y: 2}
+    down: {x: 1, y: 2}
+    side: {x: 1, y: 2}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 54
+    up: {x: 4, y: 3}
+    down: {x: 4, y: 3}
+    side: {x: 4, y: 3}
+    isSolid: 1
+    generatesCollider: 1
+  - blockType: 55
+    up: {x: 1, y: 4}
+    down: {x: 0, y: 4}
+    side: {x: 0, y: 4}
     isSolid: 1
     generatesCollider: 1

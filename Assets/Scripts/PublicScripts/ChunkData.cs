@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 12/12/21
 // Brief: script to store the chunk data
 //////////////////////////////////////////////////////////// 
 
@@ -90,6 +90,30 @@ public class ChunkData
 
     //
     public MelonData melonData;
+
+    //
+    public ColaCubeData colaCubeData;
+
+    //
+    public GrapeCubeData grapeCubeData;
+
+    //
+    public OrangeCubeData orangeCubeData;
+
+    //
+    public PineappleCubeData pineappleCubeData;
+
+    //
+    public SmoreData smoreData;
+
+    //
+    public RedCaneData redCaneData;
+
+    //
+    public GreenCaneData greenCaneData;
+
+    //
+    public CandyTreeData candyTreeData;
 
 
     // Contructor for the chunk data

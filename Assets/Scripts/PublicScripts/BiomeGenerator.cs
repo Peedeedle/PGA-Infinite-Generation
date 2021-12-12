@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 12/12/21
 // Brief: Generate the biomes
 //////////////////////////////////////////////////////////// 
 
@@ -87,6 +87,30 @@ public class BiomeGenerator : MonoBehaviour
 
     //
     public MelonGenerator melonGenerator;
+
+    //
+    public ColaCubeGenerator colaCubeGenerator;
+
+    //
+    public GrapeCubeGenerator grapeCubeGenerator;
+
+    //
+    public OrangeCubeGenerator orangeCubeGenerator;
+
+    //
+    public PineappleCubeGenerator pineappleCubeGenerator;
+
+    //
+    public SmoreGenerator smoreGenerator;
+
+    //
+    public RedCaneGenerator redCaneGenerator;
+
+    //
+    public GreenCaneGenerator greenCaneGenerator;
+
+    //
+    public CandyTreeGenerator candyTreeGenerator;
 
 
     // Get the tree data
@@ -352,6 +376,118 @@ public class BiomeGenerator : MonoBehaviour
 
         // 
         return melonGenerator.GenerateMelonData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal ColaCubeData GetColaCubeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (colaCubeGenerator == null)
+
+            // 
+            return new ColaCubeData();
+
+        // 
+        return colaCubeGenerator.GenerateColaCubeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal GrapeCubeData GetGrapeCubeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (grapeCubeGenerator == null)
+
+            // 
+            return new GrapeCubeData();
+
+        // 
+        return grapeCubeGenerator.GenerateGrapeCubeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal OrangeCubeData GetOrangeCubeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (orangeCubeGenerator == null)
+
+            // 
+            return new OrangeCubeData();
+
+        // 
+        return orangeCubeGenerator.GenerateOrangeCubeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal PineappleCubeData GetPineappleCubeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (pineappleCubeGenerator == null)
+
+            // 
+            return new PineappleCubeData();
+
+        // 
+        return pineappleCubeGenerator.GeneratePineappleCubeData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal SmoreData GetSmoreData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (smoreGenerator == null)
+
+            // 
+            return new SmoreData();
+
+        // 
+        return smoreGenerator.GenerateSmoreData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal RedCaneData GetRedCaneData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (redCaneGenerator == null)
+
+            // 
+            return new RedCaneData();
+
+        // 
+        return redCaneGenerator.GenerateRedCaneData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal GreenCaneData GetGreenCaneData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (greenCaneGenerator == null)
+
+            // 
+            return new GreenCaneData();
+
+        // 
+        return greenCaneGenerator.GenerateGreenCaneData(data, mapSeedOffset);
+
+    }
+
+    // 
+    internal CandyTreeData GetCandyTreeData(ChunkData data, Vector2Int mapSeedOffset) {
+
+        // 
+        if (candyTreeGenerator == null)
+
+            // 
+            return new CandyTreeData();
+
+        // 
+        return candyTreeGenerator.GenerateCandyTreeData(data, mapSeedOffset);
 
     }
 
