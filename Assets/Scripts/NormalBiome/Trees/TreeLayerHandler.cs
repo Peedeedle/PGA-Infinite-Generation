@@ -21,7 +21,7 @@ public class TreeLayerHandler : BlockLayerHandler
     public static List<Vector3Int> treeLeavesStaticLayout = new List<Vector3Int>() {
 
         // all of the vector 3 int positions for each of the leaves on the trees which are generated
-        // (Create more refined wayt to set these and different variations)
+        // (Create more refined ways to set these and different variations)
         new Vector3Int(-2, 0, -2),
         new Vector3Int(-2, 0, -1),
         new Vector3Int(-2, 0, 0),

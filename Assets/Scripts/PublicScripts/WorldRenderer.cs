@@ -14,6 +14,7 @@ using UnityEngine;
 
 public class WorldRenderer : MonoBehaviour
 {
+
     // chunkPrefab gameobject reference
     public GameObject chunkPrefab;
 

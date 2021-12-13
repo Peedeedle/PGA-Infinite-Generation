@@ -7,8 +7,6 @@
 // Brief: render the chunks, verts etc, also show gizmos of chunks and biomes
 //////////////////////////////////////////////////////////// 
 
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,8 +63,6 @@ public class ChunkRenderer : MonoBehaviour
         }
 
     }
-
-    
 
     // On awake
     private void Awake() {

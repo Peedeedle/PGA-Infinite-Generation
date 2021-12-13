@@ -138,10 +138,10 @@ public class RMushroomTreeLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is mushroom grass
             if (type == BlockType.Dirt) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to mushroom grass
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Dirt);
 
                 // for i is less than 5
@@ -150,7 +150,7 @@ public class RMushroomTreeLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a mushroom log
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.RMushroomTree);
 
                 }

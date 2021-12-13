@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/12/21
+// Date Last Edited: 13/12/21
 // Brief: Generating the terrain using noise settings and data
 //////////////////////////////////////////////////////////// 
 
@@ -16,20 +16,20 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
 
-    //
+    // Water materials for the water layer
     #region Water Materials
     [Header("WaterMaterials")]
 
-    //
+    // list of the textures used for the water
     public Texture normalWater, sandWater, iceWater, lavaWater, jungleWater, cursedWater, MushroomWater, chocolateWater;
 
-    //
+    // the water material
     public Material Water;
 
     #endregion
 
     #region Biome Generator GameObjects
-
+    // Header, reference to all of the biome generators
     [Header("Biome References")]
 
     // reference to the normal biome game object
@@ -77,37 +77,37 @@ public class TerrainGenerator : MonoBehaviour
     [Header("SANDDATA")]
     private List<BiomeData> sandBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called iceBiomeData
     [SerializeField]
     [Header("IceDATA")]
     private List<BiomeData> iceBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called lavaBiomeData
     [SerializeField]
     [Header("LavaDATA")]
     private List<BiomeData> lavaBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called jungleBiomeData
     [SerializeField]
     [Header("JungleDATA")]
     private List<BiomeData> jungleBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called cursedBiomeData
     [SerializeField]
     [Header("CursedDATA")]
     private List<BiomeData> cursedBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called mushroomBiomeData
     [SerializeField]
     [Header("MushroomDATA")]
     private List<BiomeData> mushroomBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called farmBiomeData
     [SerializeField]
     [Header("FarmDATA")]
     private List<BiomeData> farmBiomeData = new List<BiomeData>();
 
-    // list of sand biome data called sandBiomeData
+    // list of sand biome data called candyBiomeData
     [SerializeField]
     [Header("CandyDATA")]
     private List<BiomeData> candyBiomeData = new List<BiomeData>();
@@ -181,94 +181,94 @@ public class TerrainGenerator : MonoBehaviour
 
     }
 
-    // 
+    // when button pressed in ButtonManager change to ice biome
     public void ChangeToIceBiome() {
 
-        // 
+        // set the list of biome data to the ice biome data
         biomeGeneratorsData = iceBiomeData;
 
-        // 
+        // Set the Albedo for the material to the ice water
         Water.SetTexture("_MainTex", iceWater);
 
-        // 
+        // Set the Normal Map of the material to ice water
         Water.SetTexture("_BumpMap", iceWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to lava biome 
     public void ChangeToLavaBiome() {
 
-        // 
+        // set the list of biome data to the lava biome data
         biomeGeneratorsData = lavaBiomeData;
 
-        // 
+        // Set the Albedo for the material to the lava water
         Water.SetTexture("_MainTex", lavaWater);
 
-        // 
+        // Set the Normal Map of the material to lava water
         Water.SetTexture("_BumpMap", lavaWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to jungle biome
     public void ChangeToJungleBiome() {
 
-        // 
+        // set the list of biome data to the jungle biome data
         biomeGeneratorsData = jungleBiomeData;
 
-        // 
+        // Set the Albedo for the material to the jungle water
         Water.SetTexture("_MainTex", jungleWater);
 
-        // 
+        // Set the Normal Map of the material to jungle water
         Water.SetTexture("_BumpMap", jungleWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to cursed biome 
     public void ChangeToCursedBiome() {
 
-        // 
+        // set the list of biome data to the cursed biome data
         biomeGeneratorsData = cursedBiomeData;
 
-        // 
+        // Set the Albedo for the material to the cursed water
         Water.SetTexture("_MainTex", cursedWater);
 
-        // 
+        // Set the Normal Map of the material to cursed water
         Water.SetTexture("_BumpMap", cursedWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to mushroom biome 
     public void ChangeToMushroomBiome() {
 
-        // 
+        // set the list of biome data to the mushroom biome data
         biomeGeneratorsData = mushroomBiomeData;
 
-        // 
+        // Set the Albedo for the material to the mushroom water
         Water.SetTexture("_MainTex", normalWater);
 
-        // 
+        // Set the Normal Map of the material to mushroom water
         Water.SetTexture("_BumpMap", normalWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to farm biome 
     public void ChangeToFarmBiome() {
 
-        // 
+        // set the list of biome data to the farm biome data
         biomeGeneratorsData = farmBiomeData;
 
-        // 
+        // Set the Albedo for the material to the farm water
         Water.SetTexture("_MainTex", normalWater);
 
-        // 
+        // Set the Normal Map of the material to farm water
         Water.SetTexture("_BumpMap", normalWater);
     }
 
-    // 
+    // when button pressed in ButtonManager change to candy biome 
     public void ChangeToCandyBiome() {
 
-        // 
+        // set the list of biome data to the candy biome data
         biomeGeneratorsData = candyBiomeData;
 
-        // 
+        // Set the Albedo for the material to the candy water
         Water.SetTexture("_MainTex", chocolateWater);
 
-        // 
+        // Set the Normal Map of the material to candy water
         Water.SetTexture("_BumpMap", chocolateWater);
     }
 
@@ -283,8 +283,6 @@ public class TerrainGenerator : MonoBehaviour
         // biome selection = select biome generator passing in the world position, data and false bool
         BiomeGeneratorSelection biomeSelection = SelectBiomeGenerator(data.worldPosition, data, false);
 
-
-
         // include data from the tree data
         // (Include data before world is rendered)
         data.treeData = biomeSelection.biomeGenerator.GetTreeData(data, mapSeedOffset);
@@ -293,79 +291,104 @@ public class TerrainGenerator : MonoBehaviour
         // (Include data before world is rendered)
         data.cactusData = biomeSelection.biomeGenerator.GetCactusData(data, mapSeedOffset);
 
-        // 
+        // include data from the snow data
+        // (Include data before world is rendered)
         data.snowTreeData = biomeSelection.biomeGenerator.GetSnowTreeData(data, mapSeedOffset);
 
-        // 
+        // include data from the presents data
+        // (Include data before world is rendered)
         data.presentsData = biomeSelection.biomeGenerator.GetPresentsData(data, mapSeedOffset);
 
-        // 
+        // include data from the jungle data
+        // (Include data before world is rendered) 
         data.jungleTreeData = biomeSelection.biomeGenerator.GetJungleTreeData(data, mapSeedOffset);
 
-        // 
+        // include data from the lillypad data
+        // (Include data before world is rendered)
         data.lilyPadData = biomeSelection.biomeGenerator.GetLilyPadData(data, mapSeedOffset);
 
-        // 
+        // include data from the sugarcane data
+        // (Include data before world is rendered)
         data.sugarCaneData = biomeSelection.biomeGenerator.GetSugarCaneData(data, mapSeedOffset);
 
-        // 
+        // include data from the cursed data
+        // (Include data before world is rendered)
         data.cursedTreeData = biomeSelection.biomeGenerator.GetCursedTreeData(data, mapSeedOffset);
 
-        //
+        // include data from the pumpkin data
+        // (Include data before world is rendered)
         data.pumpkinData = biomeSelection.biomeGenerator.GetPumpkinData(data, mapSeedOffset);
 
-        //
+        // include data from the tomato data
+        // (Include data before world is rendered)
         data.tomatoData = biomeSelection.biomeGenerator.GetTomatoData(data, mapSeedOffset);
 
-        //
+        // include data from the red mushroom data
+        // (Include data before world is rendered)
         data.rMushroomTreeData = biomeSelection.biomeGenerator.GetRMushroomTreeData(data, mapSeedOffset);
 
-        //
+        // include data from the white mushroom data
+        // (Include data before world is rendered)
         data.wMushroomTreeData = biomeSelection.biomeGenerator.GetWMushroomTreeData(data, mapSeedOffset);
 
-        //
+        // include data from the blue bush data
+        // (Include data before world is rendered)
         data.blueBushData = biomeSelection.biomeGenerator.GetBlueBushData(data, mapSeedOffset);
 
-        //
+        // include data from the green bush data
+        // (Include data before world is rendered)
         data.greenBushData = biomeSelection.biomeGenerator.GetGreenBushData(data, mapSeedOffset);
 
-        //
+        // include data from the light blue bush data
+        // (Include data before world is rendered)
         data.lightBlueBushData = biomeSelection.biomeGenerator.GetLightBlueBushData(data, mapSeedOffset);
 
-        //
+        // include data from the purple bush data
+        // (Include data before world is rendered)
         data.purpleBushData = biomeSelection.biomeGenerator.GetPurpleBushData(data, mapSeedOffset);
 
-        //
+        // include data from the red bush data
+        // (Include data before world is rendered)
         data.redBushData = biomeSelection.biomeGenerator.GetRedBushData(data, mapSeedOffset);
 
-        //
+        // include data from the yellow bush data
+        // (Include data before world is rendered)
         data.yellowBushData = biomeSelection.biomeGenerator.GetYellowBushData(data, mapSeedOffset);
 
-        //
+        // include data from the melon data
+        // (Include data before world is rendered)
         data.melonData = biomeSelection.biomeGenerator.GetMelonData(data, mapSeedOffset);
 
-        //
+        // include data from the cola cube data
+        // (Include data before world is rendered)
         data.colaCubeData = biomeSelection.biomeGenerator.GetColaCubeData(data, mapSeedOffset);
 
-        //
+        // include data from the grape cube data
+        // (Include data before world is rendered)
         data.grapeCubeData = biomeSelection.biomeGenerator.GetGrapeCubeData(data, mapSeedOffset);
 
-        //
+        // include data from the orange cube data
+        // (Include data before world is rendered)
         data.orangeCubeData = biomeSelection.biomeGenerator.GetOrangeCubeData(data, mapSeedOffset);
 
-        //
+        // include data from the pineapple cube data
+        // (Include data before world is rendered)
         data.pineappleCubeData = biomeSelection.biomeGenerator.GetPineappleCubeData(data, mapSeedOffset);
 
-        //
+        // include data from the smore data
+        // (Include data before world is rendered)
         data.smoreData = biomeSelection.biomeGenerator.GetSmoreData(data, mapSeedOffset);
 
-        //
+        // include data from the red cane data
+        // (Include data before world is rendered)
         data.redCaneData = biomeSelection.biomeGenerator.GetRedCaneData(data, mapSeedOffset);
 
-        //
+        // include data from the green cane data
+        // (Include data before world is rendered)
         data.greenCaneData = biomeSelection.biomeGenerator.GetGreenCaneData(data, mapSeedOffset);
 
-        //
+        // include data from the candy tree data
+        // (Include data before world is rendered)
         data.candyTreeData = biomeSelection.biomeGenerator.GetCandyTreeData(data, mapSeedOffset);
 
         // look for each x local coordinate from 0 - chunksize (loop)
@@ -430,8 +453,6 @@ public class TerrainGenerator : MonoBehaviour
 
         // return new biome selection of the generator 1, with the height and weight of the other biomes
         return new BiomeGeneratorSelection(generator_1, Mathf.RoundToInt(terrainHeightNoise_0 * weight_0 + terrainHeightNoise_1 * weight_1));
-
-
 
     }
 

@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
-// Brief: return my noise values to impact the mesh
+// Date Last Edited: 13/12/21
+// Brief: return my noise values to impact the mesh and height value
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -13,7 +13,6 @@ using UnityEngine;
 
 public static class MyNoise
 {
-
 
     // public static float for Remapping the values, from the (minvalue) 0---1 (Max value), (OutputMin) 0---HeightOfChunk (OutputMax)
     public static float RemapValue(float value, float initialMin, float initialMax, float outputMin, float outputMax) {
@@ -71,7 +70,6 @@ public static class MyNoise
         // normalize value between 0-1
         float amplitudeSum = 0;
 
-        
         // for each number of octaves
         for (int i = 0; i < settings.octaves; i++) {
 
@@ -91,12 +89,9 @@ public static class MyNoise
 
         }
 
-
         // return value of the total value of the noise divided by the sum of the amplitude
         return total / amplitudeSum;
 
     }
-
-
 
 }

@@ -35,7 +35,7 @@ public class FarmWaterLayerHandler : BlockLayerHandler
                 // set the y position to the surface height
                 pos.y = surfaceHeightNoise;
 
-                // set the block to be sand
+                // set the block to be dirt
                 Chunk.SetBlock(chunkData, pos, BlockType.Dirt);
 
 

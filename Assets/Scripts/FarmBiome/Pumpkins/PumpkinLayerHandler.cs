@@ -39,10 +39,10 @@ public class PumpkinLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is tilled soil
             if (type == BlockType.TilledSoil) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to tilled soil
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.TilledSoil);
 
                 // for i is less than 5
@@ -51,7 +51,7 @@ public class PumpkinLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a pumpkin
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Pumpkin);
 
                 }

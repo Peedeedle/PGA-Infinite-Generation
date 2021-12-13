@@ -39,10 +39,10 @@ public class SmoreLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is candy grass
             if (type == BlockType.CandyGrass) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to candy grass
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.CandyGrass);
 
                 // for i is less than 5
@@ -51,7 +51,7 @@ public class SmoreLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a smore
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Smore);
 
                 }

@@ -91,10 +91,10 @@ public class SnowTreeLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is snow
             if (type == BlockType.Snow) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to snow dirt
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.SnowDirt);
 
                 // for i is less than 5
@@ -103,7 +103,7 @@ public class SnowTreeLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a snow tree log
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.SnowTreeLog);
 
                 }

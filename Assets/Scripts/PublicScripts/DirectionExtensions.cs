@@ -7,8 +7,6 @@
 // Brief: Direction extentions sets the directions to vector 3 ints
 //////////////////////////////////////////////////////////// 
 
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 13/12/21
 // Brief: Controls the mesh data (vertices, triangles, UV's)
 //////////////////////////////////////////////////////////// 
 
@@ -25,7 +25,6 @@ public class MeshData
     // list of vector 2's for UV, store co-ordinates for textures
     public List<Vector2> uv = new List<Vector2>();
 
-
     // list of vector 3 colliderVertices, to tell the mesh which verts are colliders
     public List<Vector3> lColliderVertices = new List<Vector3>();
 
@@ -37,7 +36,6 @@ public class MeshData
 
     // if the main mesh is true
     private bool bIsMainMesh = true;
-
 
     //public mesh data for is main mesh
     public MeshData(bool BIsMainMesh) {
@@ -51,7 +49,6 @@ public class MeshData
         }
 
     }
-
 
     // Add vertexes using vertecies list, position, bool vertexGeneratesCollider
     // (if block is air or water then don't generate collider)
@@ -68,7 +65,6 @@ public class MeshData
         }
 
     }
-
 
     // add triangles for the collider or not
     public void AddQuadTriangles(bool quadGeneratesCollider) {
@@ -156,6 +152,5 @@ public class MeshData
         }
 
     }
-
 
 }

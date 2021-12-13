@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 25/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
-// Brief: 
+// Date Last Edited: 13/12/21
+// Brief: Block helper to give the mesh directions for each block and chunk
 //////////////////////////////////////////////////////////// 
 
 
@@ -87,33 +87,6 @@ public static class BlockHelper
                     meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
 
                 }
-
-
-
-                /*
-                // if the rednered block type is water
-                if (blockType == BlockType.SandWater) {
-
-                    // if the water is a neighbout of the air
-                    if (neighbourBlockType == BlockType.Air) {
-
-                        // generate face on the water mesh
-                        meshData.sandWaterMesh = GetFaceDataIn(direction, chunk, x, y, z, meshData.sandWaterMesh, blockType);
-
-                    }
-
-
-                
-                } else {
-
-                    // generate face using GetFaceDataIn as a new meshData, 
-                    meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
-
-                }
-                */
-
-
-
 
             }
 

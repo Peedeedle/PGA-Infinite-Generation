@@ -35,8 +35,7 @@ public class SandWaterLayerHandler : BlockLayerHandler
                 // set the y position to the surface height
                 pos.y = surfaceHeightNoise;
 
-                // Could set the block to dirt so cactus won't generate
-                // set the block to be sand
+                // set the block to be dirt
                 Chunk.SetBlock(chunkData, pos, BlockType.Dirt);
 
 

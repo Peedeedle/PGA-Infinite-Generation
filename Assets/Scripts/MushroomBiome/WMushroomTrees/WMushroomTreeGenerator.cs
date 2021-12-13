@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 09/12/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 09/12/21
+// Date Last Edited: 13/12/21
 // Brief: Generating the trees
 //////////////////////////////////////////////////////////// 
 
@@ -14,7 +14,7 @@ using UnityEngine;
 public class WMushroomTreeGenerator : MonoBehaviour
 {
 
-    // tree noise settings
+    // mushroom noise settings
     public NoiseSettings wMushroomTreeNoiseSettings;
 
     // domain warping

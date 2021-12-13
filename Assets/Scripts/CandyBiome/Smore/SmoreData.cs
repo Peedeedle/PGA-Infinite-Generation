@@ -4,7 +4,7 @@
 // Date Created: 12/12/21
 // Last Edited By: Jack Peedle
 // Date Last Edited: 12/12/21
-// Brief: Tree data which handles the tree positions and trea leaves positions
+// Brief: Tree data which handles the tree positions
 //////////////////////////////////////////////////////////// 
 
 using System.Collections.Generic;

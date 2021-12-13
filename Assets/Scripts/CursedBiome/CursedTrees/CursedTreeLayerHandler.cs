@@ -134,10 +134,10 @@ public class CursedTreeLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is cursed grass
             if (type == BlockType.CursedGrass) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to cursed grass
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.CursedGrass);
 
                 // for i is less than 5
@@ -146,7 +146,7 @@ public class CursedTreeLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a cursed tree log
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.CursedTreeLog);
 
                 }

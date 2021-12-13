@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 26/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 11/12/21
-// Brief: 
+// Date Last Edited: 13/12/21
+// Brief: Manager for all of the generate biome buttons
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -15,7 +15,7 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
 
-    //
+    // reference to the audio manager
     public AudioManager audioManager;
 
     // reference to the terrain generator
@@ -39,16 +39,16 @@ public class ButtonManager : MonoBehaviour
     // gameobject for the game load scene button
     public GameObject GameBackButton;
 
-    //
+    // show controls button
     public GameObject ShowControlsButton;
 
-    //
+    // hide controls button
     public GameObject HideControlsButton;
 
-    //
+    // control panel button
     public GameObject ControlsPanel;
 
-    //
+    // array of gameobjects which are the particle systems
     public GameObject[] biomeParticleSystems;
 
     // on start
@@ -72,50 +72,50 @@ public class ButtonManager : MonoBehaviour
         // set the game back button to true
         GameBackButton.SetActive(true);
 
-        //
+        // set the show controls to false
         ShowControlsButton.SetActive(false);
 
-        //
+        // set the hide controls to true
         HideControlsButton.SetActive(true);
 
-        //
+        // set the controls panel to true
         ControlsPanel.SetActive(true);
 
     }
 
 
-    //
+    // exit the game
     public void ExitGame() {
 
-        //
+        // quit the application
         Application.Quit();
 
     }
 
-    //
+    // hide controls panel
     public void HideControls() {
 
-        //
+        // set the controls panel to false
         ControlsPanel.SetActive(false);
 
-        //
+        // hide controls button to false
         HideControlsButton.SetActive(false);
 
-        //
+        // show controls button to true
         ShowControlsButton.SetActive(true);
 
     }
 
-    //
+    // show controls panel
     public void ShowControls() {
 
-        //
+        // set the controls panel to true
         ControlsPanel.SetActive(true);
 
-        //
+        // hide controls button to true
         HideControlsButton.SetActive(true);
 
-        //
+        // show controls button to false
         ShowControlsButton.SetActive(false);
 
     }
@@ -138,37 +138,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(true);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the normal sound
         audioManager.PlayNormalSound();
 
     }
@@ -191,37 +194,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(true);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the desert sound
         audioManager.PlayDesertSound();
 
     }
@@ -244,37 +250,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(true);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the ice sound
         audioManager.PlayIceSound();
 
     }
@@ -297,37 +306,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(true);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the lava sound
         audioManager.PlayLavaSound();
 
     }
@@ -350,37 +362,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(true);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the jungle sound
         audioManager.PlayJungleSound();
 
     }
@@ -403,37 +418,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(true);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the cursed sound
         audioManager.PlayCursedSound();
 
     }
@@ -456,37 +474,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(true);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(true);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the mushroom sound
         audioManager.PlayMushroomSound();
 
     }
@@ -510,37 +531,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to true
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(true);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(false);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(false);
+
+        // play the farm sound
         audioManager.PlayFarmSound();
 
     }
@@ -563,37 +587,40 @@ public class ButtonManager : MonoBehaviour
         // set the generate biome button to true
         GenerateBiomeButton.SetActive(true);
 
-        //
+        // set the particle system (1) to false
         biomeParticleSystems[0].SetActive(false);
 
-        //
+        // set the particle system (2) to false
         biomeParticleSystems[1].SetActive(false);
 
-        //
+        // set the particle system (3) to false
         biomeParticleSystems[2].SetActive(false);
 
-        //
+        // set the particle system (4) to false
         biomeParticleSystems[3].SetActive(false);
 
-        //
+        // set the particle system (5) to false
         biomeParticleSystems[4].SetActive(false);
 
-        //
+        // set the particle system (6) to false
         biomeParticleSystems[5].SetActive(false);
 
-        //
+        // set the particle system (7) to false
         biomeParticleSystems[6].SetActive(false);
 
-        //
+        // set the particle system (8) to false
         biomeParticleSystems[7].SetActive(false);
 
-        //
+        // set the particle system (9) to false
         biomeParticleSystems[8].SetActive(false);
 
-        //
+        // set the particle system (10) to false
         biomeParticleSystems[9].SetActive(true);
 
-        //
+        // set the particle system (11) to false
+        biomeParticleSystems[10].SetActive(true);
+
+        // play the candy sound
         audioManager.PlayCandySound();
 
     }
@@ -617,7 +644,7 @@ public class ButtonManager : MonoBehaviour
         // load the first scene (Wipe Data)
         SceneManager.LoadScene(0);
 
-        //
+        // set the audio to none
         audioManager.SetAudioToNone();
 
     }

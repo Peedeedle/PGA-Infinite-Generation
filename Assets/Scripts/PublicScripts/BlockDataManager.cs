@@ -7,8 +7,6 @@
 // Brief: Data manager for the blocks and block types
 //////////////////////////////////////////////////////////// 
 
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

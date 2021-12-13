@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 25/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 25/11/21
-// Brief: Generating the trees
+// Date Last Edited: 13/12/21
+// Brief: Generating the cactus
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -20,27 +20,27 @@ public class CactusGenerator : MonoBehaviour
     // domain warping
     public DomainWarping domainWarping;
 
-    // Generate the tree data passing through the chunk data and a vector2int for the map offset
+    // Generate the cactus data passing through the chunk data and a vector2int for the map offset
     public CactusData GenerateCactusData(ChunkData chunkData, Vector2Int mapSeedOffset) {
 
-        // tree noise settings world offset = mapSeedOffset
+        // cactus noise settings world offset = mapSeedOffset
         cactusNoiseSettings.worldOffset = mapSeedOffset;
 
-        // treeData = new TreeData
+        // cactusData = new cactusData
         CactusData cactusData = new CactusData();
 
-        // float array noiseData = generateTreeNoise method passing in (chunkData, treeNoiseSettings)
+        // float array noiseData = generatecactusNoise method passing in (chunkData, cactusNoiseSettings)
         float[,] noiseData = GenerateCactusNoise(chunkData, cactusNoiseSettings);
 
-        // tree positions = Data Proccessing method.findlocalMaxima passing in noise data and the chunks x and z world positions
+        // cactus positions = Data Proccessing method.findlocalMaxima passing in noise data and the chunks x and z world positions
         cactusData.cactusPositions = CactusDataProccessing.FindLocalMaxima(noiseData, chunkData.worldPosition.x, chunkData.worldPosition.z);
 
-        // return the treeData
+        // return the cactusData
         return cactusData;
 
     }
 
-    // private float array for GenerateTreeNoise (for each position in chunk) passing in (chunkData, treeNoiseSettings)
+    // private float array for GeneratecactusNoise (for each position in chunk) passing in (chunkData, cactusNoiseSettings)
     private float[,] GenerateCactusNoise(ChunkData chunkData, NoiseSettings cactusNoiseSettings) {
 
         // 2D float array for the max noise
@@ -67,7 +67,7 @@ public class CactusGenerator : MonoBehaviour
             // for each Z
             for (int z = zMin; z < zMax; z++) {
 
-                // using the x and z Generate Domain Noise (x, z, and treeNoiseSettings)
+                // using the x and z Generate Domain Noise (x, z, and cactusNoiseSettings)
                 noiseMax[xIndex, zIndex] = domainWarping.GenerateDomainNoise(x, z, cactusNoiseSettings);
 
                 // increment Z

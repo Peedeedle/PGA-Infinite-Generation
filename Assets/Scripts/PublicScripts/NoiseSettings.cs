@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 30/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
-// Brief: Noise settings to be changed and altered in other scripts
+// Date Last Edited: 13/12/21
+// Brief: Noise settings to give the map perlin noise based on the values
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -15,7 +15,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "noiseSettings", menuName = "Data/NoiseSettings")]
 public class NoiseSettings : ScriptableObject
 {
-
 
     // float to zoom in or out of the perlin noise function to see more or less hills in the output
     public float noiseZoom;
@@ -37,6 +36,5 @@ public class NoiseSettings : ScriptableObject
 
     // float for the exponent
     public float exponent;
-
 
 }

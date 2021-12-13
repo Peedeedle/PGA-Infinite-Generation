@@ -17,60 +17,6 @@ public class PresentsLayerHandler : BlockLayerHandler
     // set a height limit for the terrain
     public float terrainHeightLimit = 25;
 
-    /*
-    // COULD BE DELETED?????
-    // public static list of the tree leaves layout
-    public static List<Vector3Int> presents = new List<Vector3Int>() {
-
-        // all of the vector 3 int positions for each of the leaves on the trees which are generated
-        // (Create more refined wayt to set these and different variations)
-        new Vector3Int(-2, 0, -2),
-        new Vector3Int(-2, 0, -1),
-        new Vector3Int(-2, 0, 0),
-        new Vector3Int(-2, 0, 1),
-        new Vector3Int(-2, 0, 2),
-
-        new Vector3Int(-1, 0, -2),
-        new Vector3Int(-1, 0, -1),
-        new Vector3Int(-1, 0, 0),
-        new Vector3Int(-1, 0, 1),
-        new Vector3Int(-1, 0, 2),
-
-        new Vector3Int(0, 0, -2),
-        new Vector3Int(0, 0, -1),
-        new Vector3Int(0, 0, 0),
-        new Vector3Int(0, 0, 1),
-        new Vector3Int(0, 0, 2),
-
-        new Vector3Int(1, 0, -2),
-        new Vector3Int(1, 0, -1),
-        new Vector3Int(1, 0, 0),
-        new Vector3Int(1, 0, 1),
-        new Vector3Int(1, 0, 2),
-
-        new Vector3Int(2, 0, -2),
-        new Vector3Int(2, 0, -1),
-        new Vector3Int(2, 0, 0),
-        new Vector3Int(2, 0, 1),
-        new Vector3Int(2, 0, 2),
-
-        new Vector3Int(-1, 1, -1),
-        new Vector3Int(-1, 1, 0),
-        new Vector3Int(-1, 1, 1),
-
-        new Vector3Int(0, 1, -1),
-        new Vector3Int(0, 1, 0),
-        new Vector3Int(0, 1, 1),
-
-        new Vector3Int(1, 1, -1),
-        new Vector3Int(1, 1, 0),
-        new Vector3Int(1, 1, 1),
-
-        new Vector3Int(0, 2, 0),
-
-    };
-    */
-
     // Try handling method
     protected override bool TryHandling(ChunkData chunkData, int x, int y, int z, int surfaceHeightNoise, Vector2Int mapSeedOffset) {
 
@@ -93,10 +39,10 @@ public class PresentsLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is snow
             if (type == BlockType.Snow) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to snow dirt
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.SnowDirt);
 
                 // for i is less than 5
@@ -105,7 +51,7 @@ public class PresentsLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a present
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Present);
 
                 }

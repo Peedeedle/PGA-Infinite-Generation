@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 02/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/11/21
+// Date Last Edited: 13/12/21
 // Brief: Camera controller to limit the player to a isometric view and boundaries of the map
 //////////////////////////////////////////////////////////// 
 
@@ -23,43 +23,43 @@ public class CameraController : MonoBehaviour
     // vector 2 for the screen limit
     public Vector2 screenLimit;
 
-    //
+    // min X int
     public int minX;
 
-    //
+    // max X int
     public int maxX;
 
-    //
+    // min Z int
     public int minZ;
 
-    //
+    // max Z int
     public int maxZ;
 
-    //
+    // min Y int
     public int minY;
 
-    //
+    // max Y int
     public int maxY;
 
-    //
+    // On start
     private void Start() {
 
-        //
+        // min X value
         minX = -250;
 
-        //
+        // max X value
         maxX = 180;
 
-        //
+        // min Z value
         minZ = -230;
 
-        //
+        // max Z value
         maxZ = 200;
 
-        //
+        // min Y value
         minY = -20;
 
-        //
+        // max Y value
         maxY = 20;
 
     }
@@ -70,7 +70,7 @@ public class CameraController : MonoBehaviour
         // vector 3 position = transform.position
         Vector3 pos = transform.position;
 
-        // if the "W" key is pressed or the mouse position Y is more than or = the screen height - border thickness
+        // if the "W" key is pressed
         if (Input.GetKey("w")) {
 
             // position Z += the camera move speed multiplied by time.deltaTime
@@ -78,7 +78,7 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // if the "S" key is pressed or the mouse position Y is less than or = the border thickness
+        // if the "S" key is pressed
         if (Input.GetKey("s")) {
 
             // position Z -= the camera move speed multiplied by time.deltaTime
@@ -86,7 +86,7 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // if the "D" key is pressed or the mouse position X is more than or = the screen width - border thickness
+        // if the "D" key is pressed
         if (Input.GetKey("d")) {
 
             // position X += the camera move speed multiplied by time.deltaTime
@@ -94,7 +94,7 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // if the "A" key is pressed or the mouse position X is more than or = the border thickness
+        // if the "A" key is pressed
         if (Input.GetKey("a")) {
 
             // position X -= the camera move speed multiplied by time.deltaTime
@@ -102,7 +102,7 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // if the "Q" key is pressed or the mouse position Y is more than or = the border thickness
+        // if the "Q" key is pressed
         if (Input.GetKey("q")){
 
             // position Y -= the camera move speed multiplied by time.deltaTime
@@ -110,7 +110,7 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // if the "E" key is pressed or the mouse position Y is more than or = the border thickness
+        // if the "E" key is pressed
         if (Input.GetKey("e")) {
 
             // position Y += the camera move speed multiplied by time.deltaTime

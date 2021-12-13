@@ -3,8 +3,8 @@
 // Author: Jack Peedle
 // Date Created: 25/11/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 25/11/21
-// Brief: Script for handling the tree layers and data like where they are allowed to spawn
+// Date Last Edited: 13/12/21
+// Brief: Script for handling the cactus layers and data like where they are allowed to spawn
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
@@ -40,10 +40,10 @@ public class CactusLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is sand
             if (type == BlockType.Sand) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to sand
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Sand);
 
                 // for i is less than 5
@@ -52,7 +52,7 @@ public class CactusLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a cactus
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.Cactus);
 
                 }

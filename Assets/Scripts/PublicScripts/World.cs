@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 20/10/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 12/12/21
+// Date Last Edited: 13/12/21
 // Brief: world script for the variables to generate the world
 //////////////////////////////////////////////////////////// 
 
@@ -158,19 +158,19 @@ public class World : MonoBehaviour
             // add the tree leaves using the chunk data
             AddSnowTreeLeaves(chunkData);
 
-            //
+            // add the tree leaves using the chunk data
             AddJungleTreeLeaves(chunkData);
 
-            //
+            // add the tree leaves using the chunk data
             AddCursedTreeLeaves(chunkData);
 
-            //
+            // add the tree leaves using the chunk data
             AddRMushroomTreeLeaves(chunkData);
 
-            //
+            // add the tree leaves using the chunk data
             AddWMushroomTreeLeaves(chunkData);
 
-            //
+            // add the tree leaves using the chunk data
             AddCandyTreeLeaves(chunkData);
 
         }
@@ -223,10 +223,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddSnowTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the snow tree data snow leaves
         foreach (var snowTreeLeaves in chunkData.snowTreeData.snowTreeLeaves) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, snow tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, snowTreeLeaves, BlockType.SnowLeaves);
 
         }
@@ -236,10 +236,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddJungleTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the jungle tree data jungle leaves
         foreach (var jungleTreeLeaves in chunkData.jungleTreeData.jungleTreeLeavesSolid) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, jungle tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, jungleTreeLeaves, BlockType.JungleTreeLeaves);
 
         }
@@ -250,10 +250,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddCursedTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the cursed tree data cursed leaves
         foreach (var cursedTreeLeaves in chunkData.cursedTreeData.cursedTreeLeavesSolid) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, cursed tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, cursedTreeLeaves, BlockType.CursedTreeLeaves);
 
         }
@@ -263,10 +263,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddRMushroomTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the red mushroom data red mushroom leaves
         foreach (var rMushroomTreeLeaves in chunkData.rMushroomTreeData.rMushroomTreeLeavesSolid) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, red mushroom leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, rMushroomTreeLeaves, BlockType.RMushroomTreeLeaves);
 
         }
@@ -276,10 +276,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddWMushroomTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the white mushroom data white mushroom leaves
         foreach (var wMushroomTreeLeaves in chunkData.wMushroomTreeData.wMushroomTreeLeavesSolid) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, white mushroom leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, wMushroomTreeLeaves, BlockType.WMushroomTreeLeaves);
 
         }
@@ -289,10 +289,10 @@ public class World : MonoBehaviour
     // add tree leaves passing in the chunk data
     private void AddCandyTreeLeaves(ChunkData chunkData) {
 
-        // for each tree leaves in the tree data tree leaves solid
+        // for each tree leaves in the candy tree data candy leaves
         foreach (var candyTreeLeaves in chunkData.candyTreeData.candyTreeLeavesSolid) {
 
-            // set block passing chunkData, tree leaves and the tree leaves solid block type
+            // set block passing chunkData, candy tree leaves and the tree leaves solid block type
             Chunk.SetBlock(chunkData, candyTreeLeaves, BlockType.CandyLeaves);
 
         }

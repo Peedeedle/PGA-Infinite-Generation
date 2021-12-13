@@ -3,7 +3,7 @@
 // Author: Jack Peedle
 // Date Created: 09/12/21
 // Last Edited By: Jack Peedle
-// Date Last Edited: 11/12/21
+// Date Last Edited: 13/12/21
 // Brief: Script for handling the tree layers and data like where they are allowed to spawn
 //////////////////////////////////////////////////////////// 
 
@@ -141,10 +141,10 @@ public class WMushroomTreeLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is mushroom grass
             if (type == BlockType.MushroomGrass) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to mushroom grass
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.MushroomGrass);
 
                 // for i is less than 5
@@ -153,7 +153,7 @@ public class WMushroomTreeLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a white mushroom tree
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.WMushroomTree);
 
                 }

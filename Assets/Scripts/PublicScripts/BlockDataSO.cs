@@ -4,10 +4,8 @@
 // Date Created: 21/10/21
 // Last Edited By: Jack Peedle
 // Date Last Edited: 12/11/21
-// Brief: Block data scirptable object
+// Brief: Block data scriptable object
 //////////////////////////////////////////////////////////// 
-
-
 
 using System;
 using System.Collections;

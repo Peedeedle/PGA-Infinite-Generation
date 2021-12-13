@@ -39,10 +39,10 @@ public class SugarCaneLayerHandler : BlockLayerHandler
             // type for the block that is currently under the trees location
             BlockType type = Chunk.GetBlockFromChunkCoordinates(chunkData, chunkCoordinates);
 
-            // if the type of block is grass_Dirt
+            // if the type of block is jungle grass
             if (type == BlockType.JungleGrass) {
 
-                // set the block of the local position to dirt
+                // set the block of the local position to jungle dirt
                 Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.JungleDirt);
 
                 // for i is less than 5
@@ -51,7 +51,7 @@ public class SugarCaneLayerHandler : BlockLayerHandler
                     // local position y = surface noise + 1 (get the position above the surface 5 times)
                     chunkCoordinates.y = surfaceHeightNoise + i;
 
-                    // create a tree log
+                    // create a sugar cane
                     Chunk.SetBlock(chunkData, chunkCoordinates, BlockType.SugarCane);
 
                 }
